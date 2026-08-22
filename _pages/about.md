@@ -35,6 +35,12 @@ latest_posts:
 ---
 
 <style>
+  /* Page title */
+  h1.post-title {
+    font-size: 3.4rem !important;
+    line-height: 1.1;
+  }
+
   /* Profile picture */
   .profile img {
     border-radius: 0 !important;
@@ -65,16 +71,16 @@ latest_posts:
     color: #ffffff !important;
   }
 
-/* Education and Experience toggles */
-details.cv-toggle:first-of-type {
-  margin-top: 1.5rem;
-}
+  /* Education and Experience toggles */
+  details.cv-toggle:first-of-type {
+    margin-top: 2.2rem;
+  }
 
-details.cv-toggle,
-details.cv-toggle:last-of-type {
-  padding: 0.55rem 0;
-  border: 0 !important;
-}
+  details.cv-toggle,
+  details.cv-toggle:last-of-type {
+    padding: 0.55rem 0;
+    border: 0 !important;
+  }
 
   .cv-toggle summary {
     display: flex;
@@ -141,6 +147,10 @@ details.cv-toggle:last-of-type {
 
   /* Mobile profile layout */
   @media (max-width: 575px) {
+    h1.post-title {
+      font-size: 2.5rem !important;
+    }
+
     .profile-links {
       margin-top: 0.6rem;
     }
