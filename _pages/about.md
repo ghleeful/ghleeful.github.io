@@ -14,8 +14,6 @@ profile:
     <p>미안하지만</p>
     <p>번호는</p>
     <p>알려줄 수없어.</p>
-  
-  
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
