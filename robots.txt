@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://ghleeful.github.io//sitemap.xml
+Sitemap: https://ghleeful.github.io/sitemap.xml
