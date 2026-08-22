@@ -41,6 +41,7 @@ latest_posts:
   scrollable: true
   limit: 3
 ---
+
 <style>
   .profile a {
     color: var(--global-text-color);
@@ -56,6 +57,8 @@ latest_posts:
     }
   }
 </style>
+
+Hi!
 
 Hi!
 
