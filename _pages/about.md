@@ -41,6 +41,21 @@ latest_posts:
   scrollable: true
   limit: 3
 ---
+<style>
+  .profile a {
+    color: var(--global-text-color);
+  }
+
+  .profile a:hover {
+    color: var(--global-theme-color);
+  }
+
+  @media (min-width: 576px) {
+    .profile {
+      transform: translateY(-9rem);
+    }
+  }
+</style>
 
 Hi!
 
