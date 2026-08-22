@@ -60,6 +60,39 @@ latest_posts:
       transform: translateY(-6.5rem);
     }
   }
+  .cv-toggle {
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.cv-toggle:last-of-type {
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.cv-toggle summary {
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+}
+
+.cv-toggle summary::marker {
+  color: var(--global-theme-color);
+}
+
+.cv-toggle-content {
+  padding: 0.8rem 0 0.1rem 1.2rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.cv-entry {
+  margin: 0 0 0.9rem;
+}
+
+.cv-entry span {
+  color: var(--global-text-color-light);
+}  
 </style>
 
 Hi there! Welcome to my website.
