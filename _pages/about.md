@@ -28,7 +28,7 @@ profile:
       </a>
     </div>
 
-selected_papers: true
+selected_papers: false
 social: false
 
 announcements:
