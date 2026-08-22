@@ -13,7 +13,7 @@ profile:
   more_info: >
     <p>미안하지만 번호는 알려줄 수 없어;</p>
 
-selected_papers: true # includes a list of papers marked as "{true}"
+selected_papers: true # includes a list of papers marked as "Publications"
 social: true # includes social icons at the bottom of the page
 
 announcements:
