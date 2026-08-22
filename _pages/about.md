@@ -66,7 +66,7 @@ latest_posts:
 
   .cv-toggle summary {
     display: list-item;
-    width: fit-content;
+    width: 250px;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid var(--global-divider-color);
     cursor: pointer;
