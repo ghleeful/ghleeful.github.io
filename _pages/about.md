@@ -5,6 +5,8 @@ permalink: /
 subtitle: >
   <b>Postdoctoral Research Associate</b> at
   <a href="https://www.purdue.edu/" rel="external nofollow noopener" target="_blank">Purdue University</a>
+  <br>
+  <span style="font-size: 0.8em;">Department of Chemistry</span>
 
 profile:
   align: right
