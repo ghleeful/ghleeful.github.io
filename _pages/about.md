@@ -53,7 +53,7 @@ latest_posts:
 
   @media (min-width: 576px) {
     .profile {
-      transform: translateY(-12rem);
+      transform: translateY(-5rem);
     }
   }
 </style>
