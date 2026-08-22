@@ -56,10 +56,12 @@ latest_posts:
   }
 
   @media (min-width: 576px) {
-    .profile {
-      transform: translateY(-6.5rem);
-    }
+  .profile {
+    transform: translateY(-6.5rem);
+    margin-left: 3rem !important;
+    margin-bottom: 1.5rem !important;
   }
+}
   .cv-toggle {
   padding: 0.8rem 0;
   border-top: 1px solid var(--global-divider-color);
