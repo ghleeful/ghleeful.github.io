@@ -53,15 +53,15 @@ latest_posts:
 
   @media (min-width: 576px) {
     .profile {
-      transform: translateY(-9rem);
+      transform: translateY(-12rem);
     }
   }
 </style>
 
-Hi!
-
-Hi!
+Hi there! Welcome to my website.
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
-My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids.
+My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids. Please take a look at my publication list in the tab in the upper right corner for more information.
+
+Feel free to email me if you are interested in collaborating. You are always welcome!
