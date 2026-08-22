@@ -73,18 +73,41 @@ latest_posts:
   }
 
   .cv-toggle summary {
-    display: list-item;
+    display: flex;
+    align-items: center;
     width: 350px;
-    padding-bottom: 0.2rem;
+    max-width: calc(100vw - 2rem);
+    padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--global-divider-color);
+    list-style: none;
     cursor: pointer;
     color: var(--global-text-color);
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  /* Hide browser default arrow */
+  .cv-toggle summary::-webkit-details-marker {
+    display: none;
   }
 
   .cv-toggle summary::marker {
+    content: "";
+  }
+
+  /* Closed toggle */
+  .cv-toggle summary::before {
+    width: 1.2rem;
+    margin-right: 0.25rem;
     color: var(--global-theme-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    content: "+";
+  }
+
+  /* Open toggle */
+  .cv-toggle[open] summary::before {
+    content: "−";
   }
 
   .cv-toggle-content {
@@ -105,10 +128,27 @@ latest_posts:
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
-      max-width: 520px;
+      max-width: 530px;
       margin-left: 3rem !important;
       margin-bottom: 1.5rem !important;
       transform: translateY(-6.5rem);
+    }
+  }
+
+  /* Mobile profile layout */
+  @media (max-width: 575px) {
+    .profile-links {
+      margin-top: 0.6rem;
+    }
+
+    .profile-links a {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.72rem;
+    }
+
+    .cv-toggle summary {
+      width: 220px;
+      max-width: 100%;
     }
   }
 </style>
@@ -158,4 +198,3 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     </p>
   </div>
 </details>
-
