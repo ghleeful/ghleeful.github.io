@@ -13,7 +13,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <div style="display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 20px;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 30px;">
       <a href="/assets/pdf/Gihyun_Lee_CV.pdf" target="_blank" aria-label="CV" title="CV">
         <i class="fa-solid fa-file-pdf"></i>
       </a>
