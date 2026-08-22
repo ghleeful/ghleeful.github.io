@@ -70,3 +70,22 @@ My research interests lie in functional and responsive coordination materials, p
 
 Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you are interested in collaborating. You are always welcome!
 
+
+## Education
+
+**Ph.D. in Chemistry**, University Name  
+*20XX–20XX* · Advisor: Professor Name
+
+**M.S. in Chemistry**, University Name  
+*20XX–20XX*
+
+**B.S. in Chemistry**, University Name  
+*20XX–20XX*
+
+## Experience
+
+**Postdoctoral Research Associate**, Purdue University  
+*20XX–Present*
+
+**Previous Position**, Institution Name  
+*20XX–20XX*
