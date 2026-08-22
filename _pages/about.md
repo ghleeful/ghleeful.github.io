@@ -43,6 +43,10 @@ latest_posts:
 ---
 
 <style>
+  .profile img {
+    border-radius: 0 !important;
+  }
+
   .profile a {
     color: var(--global-text-color);
   }
