@@ -33,3 +33,20 @@ html[data-theme="dark"] {
   --global-footer-text-color: #f5f3ee;
   --global-footer-link-color: #d6b878;
 }
+
+.navbar {
+  background-color: var(--global-footer-bg-color) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+.navbar .active > .nav-link {
+  color: #cfb991 !important;
+}
