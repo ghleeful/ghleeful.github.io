@@ -43,10 +43,12 @@ latest_posts:
 ---
 
 <style>
+  /* Profile picture */
   .profile img {
     border-radius: 0 !important;
   }
 
+  /* Profile icons */
   .profile a {
     color: var(--global-text-color);
   }
@@ -55,46 +57,52 @@ latest_posts:
     color: var(--global-theme-color);
   }
 
-  @media (min-width: 576px) {
-  .profile {
-    transform: translateY(-6.5rem);
-    margin-left: 3rem !important;
-    margin-bottom: 1.5rem !important;
+  /* Education and Experience toggles */
+  details.cv-toggle,
+  details.cv-toggle:last-of-type {
+    padding: 0.55rem 0;
+    border: 0 !important;
   }
-}
-  .cv-toggle {
-  padding: 0.8rem 0;
-  border-top: 1px solid var(--global-divider-color);
-}
 
-.cv-toggle:last-of-type {
-  border-bottom: 1px solid var(--global-divider-color);
-}
+  .cv-toggle summary {
+    display: list-item;
+    width: fit-content;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    cursor: pointer;
+    color: var(--global-text-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
 
-.cv-toggle summary {
-  cursor: pointer;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--global-text-color);
-}
+  .cv-toggle summary::marker {
+    color: var(--global-theme-color);
+  }
 
-.cv-toggle summary::marker {
-  color: var(--global-theme-color);
-}
+  .cv-toggle-content {
+    padding: 0.8rem 0 0.1rem 1.2rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
 
-.cv-toggle-content {
-  padding: 0.8rem 0 0.1rem 1.2rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
-}
+  .cv-entry {
+    margin: 0 0 0.9rem;
+  }
 
-.cv-entry {
-  margin: 0 0 0.9rem;
-}
+  .cv-entry span {
+    color: var(--global-text-color-light);
+  }
 
-.cv-entry span {
-  color: var(--global-text-color-light);
-}  
+  /* Desktop profile layout */
+  @media (min-width: 576px) {
+    .profile {
+      width: 26% !important;
+      max-width: 500px;
+      margin-left: 3rem !important;
+      margin-bottom: 1.5rem !important;
+      transform: translateY(-6.5rem);
+    }
+  }
 </style>
 
 Hi there! Welcome to my website.
@@ -124,7 +132,6 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>B.S. in Chemistry</strong><br>
       <span>University Name · 20XX–20XX</span>
     </p>
-
   </div>
 </details>
 
@@ -141,6 +148,5 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>Previous Position</strong><br>
       <span>Institution Name · 20XX–20XX</span>
     </p>
-
   </div>
 </details>
