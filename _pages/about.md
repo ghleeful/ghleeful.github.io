@@ -71,21 +71,40 @@ My research interests lie in functional and responsive coordination materials, p
 Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you are interested in collaborating. You are always welcome!
 
 
-## Education
+<details class="cv-toggle">
+  <summary>Education</summary>
 
-**Ph.D. in Chemistry**, University Name  
-*20XX–20XX* · Advisor: Professor Name
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      <strong>Ph.D. in Chemistry</strong><br>
+      <span>University Name · 20XX–20XX</span><br>
+      <span>Advisor: Professor Name</span>
+    </p>
 
-**M.S. in Chemistry**, University Name  
-*20XX–20XX*
+    <p class="cv-entry">
+      <strong>M.S. in Chemistry</strong><br>
+      <span>University Name · 20XX–20XX</span>
+    </p>
 
-**B.S. in Chemistry**, University Name  
-*20XX–20XX*
+    <p class="cv-entry">
+      <strong>B.S. in Chemistry</strong><br>
+      <span>University Name · 20XX–20XX</span>
+    </p>
+  </div>
+</details>
 
-## Experience
+<details class="cv-toggle">
+  <summary>Experience</summary>
 
-**Postdoctoral Research Associate**, Purdue University  
-*20XX–Present*
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      <strong>Postdoctoral Research Associate</strong><br>
+      <span>Purdue University · 20XX–Present</span>
+    </p>
 
-**Previous Position**, Institution Name  
-*20XX–20XX*
+    <p class="cv-entry">
+      <strong>Previous Position</strong><br>
+      <span>Institution Name · 20XX–20XX</span>
+    </p>
+  </div>
+</details>
