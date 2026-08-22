@@ -2,7 +2,6 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
-email: ghlee0261@purdue.edu
+email: lee5919@purdue.edu
 scholar_userid: FmEf7ccAAAAJ
-github_username: ghleeful
 linkedin_username: leegh
