@@ -103,7 +103,6 @@ My research interests lie in functional and responsive coordination materials, p
 
 Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you are interested in collaborating. You are always welcome!
 
-
 <details class="cv-toggle">
   <summary>Education</summary>
 
@@ -123,6 +122,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>B.S. in Chemistry</strong><br>
       <span>University Name · 20XX–20XX</span>
     </p>
+
   </div>
 </details>
 
@@ -139,5 +139,6 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>Previous Position</strong><br>
       <span>Institution Name · 20XX–20XX</span>
     </p>
+
   </div>
 </details>
