@@ -27,14 +27,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<style>
-  @media (min-width: 576px) {
-    .profile {
-      margin-top: -3rem;
-    }
-  }
-</style>
-
 Hi!
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
