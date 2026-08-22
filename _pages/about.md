@@ -13,19 +13,11 @@ profile:
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <div style="display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 30px;">
-      <a href="/assets/pdf/Gihyun Lee_CV.pdf" target="_blank" aria-label="CV" title="CV">
-        <i class="fa-solid fa-file-pdf"></i>
-      </a>
-      <a href="https://scholar.google.com/citations?user=FmEf7ccAAAAJ" target="_blank" aria-label="Google Scholar" title="Google Scholar">
-        <i class="ai ai-google-scholar"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/leegh" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
+    <div class="profile-links">
+      <a href="/assets/pdf/Gihyun%20Lee_CV.pdf" target="_blank" aria-label="CV" title="Open CV">CV</a>
+      <a href="https://scholar.google.com/citations?user=FmEf7ccAAAAJ" target="_blank" aria-label="Google Scholar" title="Google Scholar">Scholar</a>
+      <a href="https://www.linkedin.com/in/leegh" target="_blank" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a>
+      <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">Email</a>
     </div>
 
 selected_papers: false
@@ -48,13 +40,29 @@ latest_posts:
     border-radius: 0 !important;
   }
 
-  /* Profile icons */
-  .profile a {
-    color: var(--global-text-color);
+  /* Links below the profile picture */
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.45rem;
+    margin-top: 0.8rem;
   }
 
-  .profile a:hover {
-    color: var(--global-theme-color);
+  .profile-links a {
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--global-divider-color);
+    color: var(--global-text-color) !important;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  .profile-links a:hover {
+    border-color: var(--global-theme-color);
+    background-color: var(--global-theme-color);
+    color: #ffffff !important;
   }
 
   /* Education and Experience toggles */
@@ -66,7 +74,7 @@ latest_posts:
 
   .cv-toggle summary {
     display: list-item;
-    width: 250px;
+    width: 350px;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid var(--global-divider-color);
     cursor: pointer;
@@ -97,7 +105,7 @@ latest_posts:
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
-      max-width: 550px;
+      max-width: 520px;
       margin-left: 3rem !important;
       margin-bottom: 1.5rem !important;
       transform: translateY(-6.5rem);
@@ -150,3 +158,4 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     </p>
   </div>
 </details>
+
