@@ -35,14 +35,25 @@ html[data-theme="dark"] {
 }
 
 .navbar {
+  min-height: 62px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
   background-color: var(--global-footer-bg-color) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-.navbar .navbar-brand,
-.navbar .nav-link {
+.navbar .navbar-brand {
   color: #ffffff !important;
+  font-size: 1.1rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar .nav-link {
+  padding: 0.65rem 0.75rem !important;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .navbar .nav-link:hover,
