@@ -3,8 +3,6 @@
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
 email: ghlee0261@purdue.edu
-scholar_userid: https://scholar.google.com/citations?user=FmEf7ccAAAAJ&hl=en
+scholar_userid: FmEf7ccAAAAJ
 github_username: ghleeful
-linkedin_username: https://www.linkedin.com/in/leegh
-  url: https://mohlab.wixsite.com/home
-  url: https://www.chem.purdue.edu/uyeda/index.html
+linkedin_username: leegh
