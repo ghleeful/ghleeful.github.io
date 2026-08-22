@@ -34,35 +34,34 @@ html[data-theme="dark"] {
   --global-footer-link-color: #d6b878;
 }
 
-/* Navbar background */
+/* Light warm navbar */
 .navbar {
-  min-height: 62px !important;
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
-  background-color: var(--global-footer-bg-color) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  min-height: 58px !important;
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+  background-color: #e9e2d6 !important;
+  border-top: 3px solid #8c6a24 !important;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.12) !important;
 }
 
-/* Left navbar title: GLee */
+/* Left navbar name */
 .navbar .navbar-brand {
-  color: #ffffff !important;
-  font-size: 0 !important;
+  color: #26231f !important;
+  font-size: 1.3rem !important;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
-.navbar .navbar-brand::after {
-  content: "GLee";
-  color: #ffffff !important;
-  font-size: 1.3rem;
-  font-weight: 700;
+.navbar .navbar-brand span,
+.navbar .navbar-brand .font-weight-bold {
+  color: #26231f !important;
 }
 
 /* Navbar menu */
 .navbar .nav-link {
-  padding: 0.65rem 0.75rem !important;
-  color: #ffffff !important;
-  font-size: 1.3rem;
+  padding: 0.6rem 0.75rem !important;
+  color: #26231f !important;
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
@@ -72,5 +71,5 @@ html[data-theme="dark"] {
 .navbar .nav-item.active .nav-link,
 .navbar .active > .nav-link,
 .navbar .nav-link[aria-current="page"] {
-  color: #cfb991 !important;
+  color: #8c6a24 !important;
 }
