@@ -1,8 +1,8 @@
----
+<img width="1184" height="212" alt="image" src="https://github.com/user-attachments/assets/038317c9-0a2b-4eb9-91ea-b67f2b4ee74d" />---
 layout: default
 permalink: /blog/
 title: blog
-nav: true
+nav: false
 nav_order: 1
 pagination:
   enabled: true
