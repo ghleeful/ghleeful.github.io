@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: Profile
 permalink: /
 subtitle: >
   <b>Postdoctoral Research Associate</b> at
