@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Research Associate at Purdue University
+subtitle: <b>Postdoctoral Research</b><a href="https://www.purdue.edu/" rel="external nofollow noopener" target="_blank" Associate at Purdue University </a>
 
 profile:
   align: right
