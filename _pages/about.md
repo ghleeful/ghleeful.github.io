@@ -17,14 +17,14 @@ profile:
       <a href="/assets/pdf/Gihyun Lee_CV.pdf" target="_blank" aria-label="CV" title="CV">
         <i class="fa-solid fa-file-pdf"></i>
       </a>
-      <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
       <a href="https://scholar.google.com/citations?user=FmEf7ccAAAAJ" target="_blank" aria-label="Google Scholar" title="Google Scholar">
         <i class="ai ai-google-scholar"></i>
       </a>
       <a href="https://www.linkedin.com/in/leegh" target="_blank" aria-label="LinkedIn" title="LinkedIn">
         <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">
+        <i class="fa-solid fa-envelope"></i>
       </a>
     </div>
 
