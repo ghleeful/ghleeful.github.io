@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: <b>Postdoctoral Research</b><a href="https://www.purdue.edu/" rel="external nofollow noopener" target="_blank"> Associate at Purdue University </a>
+subtitle: >
+  <b>Postdoctoral Research Associate</b> at
+  <a href="https://www.purdue.edu/" rel="external nofollow noopener" target="_blank">Purdue University</a>
 
 profile:
   align: right
@@ -26,7 +28,9 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
 Hi!
 
-I’m Gihyun Lee, a postdoctoral research associate at Purdue University, US. 
-My research interest lies in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids.
+I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
+
+My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids.
