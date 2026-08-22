@@ -97,7 +97,7 @@ latest_posts:
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
-      max-width: 500px;
+      max-width: 550px;
       margin-left: 3rem !important;
       margin-bottom: 1.5rem !important;
       transform: translateY(-6.5rem);
