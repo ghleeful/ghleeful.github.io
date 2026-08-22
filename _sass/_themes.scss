@@ -61,3 +61,12 @@ html[data-theme="dark"] {
 .navbar .active > .nav-link {
   color: #cfb991 !important;
 }
+
+.navbar .navbar-brand,
+.navbar .navbar-brand span {
+  color: #ffffff !important;
+}
+
+.navbar .navbar-brand .font-weight-bold {
+  color: #cfb991 !important;
+}
