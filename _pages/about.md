@@ -71,7 +71,7 @@ latest_posts:
     color: #ffffff !important;
   }
 
-  /* Education and Experience toggles */
+  /* CV toggles */
   details.cv-toggle:first-of-type {
     margin-top: 2.2rem;
   }
@@ -181,18 +181,15 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
   <div class="cv-toggle-content">
     <p class="cv-entry">
       <strong>Ph.D. in Chemistry</strong><br>
-      <span>University Name · 20XX–20XX</span><br>
-      <span>Advisor: Professor Name</span>
-    </p>
-
-    <p class="cv-entry">
-      <strong>M.S. in Chemistry</strong><br>
-      <span>University Name · 20XX–20XX</span>
+      <span>Yonsei University, South Korea · 2018–2025</span><br>
+      <span>Research Advisor: Professor Moonhyun Oh</span><br>
+      <span>Dissertation: Construction of Hybrid Metal–Organic Frameworks via Structural Adjustment Process</span>
     </p>
 
     <p class="cv-entry">
       <strong>B.S. in Chemistry</strong><br>
-      <span>University Name · 20XX–20XX</span>
+      <span>University of Victoria, Canada · 2013–2018</span><br>
+      <span>Minor in Biochemistry</span>
     </p>
   </div>
 </details>
@@ -203,12 +200,56 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
   <div class="cv-toggle-content">
     <p class="cv-entry">
       <strong>Postdoctoral Research Associate</strong><br>
-      <span>Purdue University · 20XX–Present</span>
+      <span>Purdue University · 2025–Present</span><br>
+      <span>Research Advisor: Professor Christopher Uyeda</span><br>
+      <span>Photoswitchable ligands and stimulus-responsive coordination frameworks</span>
+    </p>
+  </div>
+</details>
+
+<details class="cv-toggle">
+  <summary>Selected Awards</summary>
+
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      <strong>Postdoctoral Supplemental Travel Award</strong><br>
+      <span>Purdue University · 2026</span>
     </p>
 
     <p class="cv-entry">
-      <strong>Previous Position</strong><br>
-      <span>Institution Name · 20XX–20XX</span>
+      <strong>Outstanding BK21 Participant Recognition Award</strong><br>
+      <span>Yonsei University · 2026</span>
+    </p>
+
+    <p class="cv-entry">
+      <strong>Best Oral Presentation Award</strong><br>
+      <span>Inorganic Chemistry Division, Korean Chemical Society · 2022</span>
+    </p>
+
+    <p class="cv-entry">
+      <strong>Excellent Poster Presentation Prize</strong><br>
+      <span>129th Korean Chemical Society Meeting, RSC Poster Prize · 2022</span>
+    </p>
+  </div>
+</details>
+
+<details class="cv-toggle">
+  <summary>Expertise</summary>
+
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      <strong>Synthesis and Sample Preparation</strong><br>
+      <span>Organic ligands, metal–organic frameworks, coordination compounds, Schlenk-line and glovebox techniques</span>
+    </p>
+
+    <p class="cv-entry">
+      <strong>Instrumentation and Data Analysis</strong><br>
+      <span>PXRD, SEM–EDS, FTIR, Raman, TGA, DSC, gas adsorption, NMR and UV–Vis spectroscopy</span>
+    </p>
+
+    <p class="cv-entry">
+      <strong>Computational Chemistry</strong><br>
+      <span>Gaussian 16, GaussView 6, constrained DFT optimization and vibrational frequency analysis</span>
     </p>
   </div>
 </details>
