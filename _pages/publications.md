@@ -2,294 +2,316 @@
 layout: page
 title: Publications
 permalink: /publications/
+description:
 nav: true
 nav_order: 3
 ---
 
 <style>
-  .post > header.post-header {
-    margin-bottom: 1.8rem;
+  /* Hide the default page heading */
+  .post-header {
+    display: none;
   }
 
-  .post-title {
-    margin-bottom: 0 !important;
-    font-size: 2.8rem !important;
+  .publications-page,
+  .publications-page * {
+    color: var(--global-text-color);
+  }
+
+  .publications-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0 0 2.6rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .publications-header h1 {
+    margin: 0;
+    color: var(--global-text-color);
+    font-size: 2.8rem;
+    font-weight: 400;
     line-height: 1.1;
   }
 
-  .publication-page {
-    width: 100%;
-    max-width: none;
+  .author-note {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem 1.25rem;
+    margin: 0;
+    color: var(--global-text-color-light);
+    font-size: 0.82rem;
+    white-space: nowrap;
   }
 
   .publication-year-group {
     display: grid;
-    grid-template-columns: 120px minmax(0, 1fr);
-    column-gap: 2rem;
-    padding: 1.7rem 0;
-    border-top: 1px solid var(--global-divider-color);
+    grid-template-columns: 110px minmax(0, 1fr);
+    column-gap: 2.2rem;
+    padding: 1.6rem 0 1.8rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .publication-year-group:first-of-type {
+    padding-top: 0;
   }
 
   .publication-year {
+    margin: 0;
     color: var(--global-text-color);
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: 700;
     line-height: 1.1;
   }
 
   .publication-list {
-    width: 100%;
     min-width: 0;
   }
 
   .publication-entry {
-    width: 100%;
-    margin-bottom: 2rem;
+    margin: 0 0 2.1rem;
   }
 
   .publication-entry:last-child {
     margin-bottom: 0;
   }
 
-  .publication-title-line {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.5rem;
-    width: 100%;
-    margin-bottom: 0.35rem;
-  }
-
   .publication-title {
+    margin: 0;
     color: var(--global-text-color);
-    font-size: 1.15rem;
+    font-size: 1.16rem;
     font-weight: 700;
     line-height: 1.35;
   }
 
-  .publication-doi {
-    display: inline-block;
-    flex: 0 0 auto;
-    padding: 0.14rem 0.45rem;
-    border: 1px solid var(--global-divider-color);
-    color: var(--global-text-color) !important;
-    font-size: 0.7rem;
-    font-weight: 500;
-    line-height: 1.25;
-    text-decoration: none !important;
-    vertical-align: middle;
+  .doi-row {
+    margin: 0.5rem 0 0.65rem;
   }
 
-  .publication-doi:hover {
+  .doi-link {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--global-divider-color);
+    color: var(--global-text-color) !important;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  .doi-link:hover {
     border-color: var(--global-theme-color);
-    background: var(--global-theme-color);
-    color: #ffffff !important;
+    background-color: var(--global-theme-color);
+    color: var(--global-hover-text-color) !important;
+    text-decoration: none;
   }
 
   .publication-authors {
-    margin-bottom: 0.2rem;
+    margin: 0 0 0.2rem;
     color: var(--global-text-color);
-    font-size: 0.91rem;
-    font-style: normal;
+    font-size: 0.95rem;
     line-height: 1.45;
   }
 
-  .publication-authors .self {
+  .publication-authors .me {
     color: var(--global-text-color);
-    font-style: normal !important;
-    font-weight: 400;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 0.16em;
   }
 
-  .publication-authors sup {
-    margin-left: 0.05rem;
-    font-size: 0.68em;
-  }
-
-  .publication-journal {
+  .publication-citation {
     margin: 0;
     color: var(--global-text-color-light);
-    font-size: 0.88rem;
+    font-size: 0.93rem;
     line-height: 1.45;
   }
 
-  .publication-journal em {
+  .publication-citation em {
     color: var(--global-text-color);
   }
 
-  @media (max-width: 575px) {
-    .post-title {
-      font-size: 2.15rem !important;
+  .author-symbol {
+    margin-left: 0.05em;
+    color: var(--global-text-color);
+    font-size: 0.76em;
+    vertical-align: super;
+  }
+
+  @media (max-width: 767px) {
+    .publications-header {
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    .publications-header h1 {
+      font-size: 2.25rem;
+    }
+
+    .author-note {
+      justify-content: flex-start;
+      margin-top: 0.8rem;
+      white-space: normal;
     }
 
     .publication-year-group {
       display: block;
-      padding: 1.35rem 0;
+      padding: 1.4rem 0 1.6rem;
     }
 
     .publication-year {
-      margin-bottom: 1rem;
-      font-size: 1.65rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.75rem;
     }
 
     .publication-entry {
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.8rem;
     }
 
     .publication-title {
-      font-size: 1.02rem;
-    }
-
-    .publication-authors {
-      font-size: 0.86rem;
-    }
-
-    .publication-journal {
-      font-size: 0.83rem;
+      font-size: 1.05rem;
     }
   }
 </style>
 
-<div class="publication-page">
+<div class="publications-page">
+  <header class="publications-header">
+    <h1>Publications</h1>
+
+    <p class="author-note">
+      <span>* Corresponding author</span>
+      <span>† Contributed equally</span>
+    </p>
+  </header>
+
   <section class="publication-year-group">
-    <div class="publication-year">2025</div>
+    <h2 class="publication-year">2025</h2>
 
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Activating the Gate-Opening of a Metal–Organic Framework and
-            Maximizing Its Adsorption Capacity
-          </span>
-
+        <h3 class="publication-title">
+          Activating the Gate-Opening of a Metal–Organic Framework and Maximizing
+          Its Adsorption Capacity
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1021/jacs.5c01399"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          <span class="self">Gihyun Lee</span>, Dayeon Choi, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          <span class="me">Gihyun Lee</span>, Dayeon Choi, and Moonhyun
+          Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Journal of the American Chemical Society</em>, 147, 12811–12820.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Compositional Complexity of Metal–Organic Frameworks with
-            Programmable Spatial Arrangement of Multi-Metallic Components
-          </span>
-
+        <h3 class="publication-title">
+          Compositional Complexity of Metal–Organic Frameworks with Programmable
+          Spatial Arrangement of Multi-Metallic Components
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1002/smll.202408119"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Hyeongi Lim<sup>†</sup>,
-          <span class="self">Gihyun Lee</span><sup>†</sup>, Jeehyoun Lee, and
-          Moonhyun Oh
-        </div>
-
-        <p class="publication-journal"><em>Small</em>, 21, 2408119.</p>
+        <p class="publication-authors">
+          Hyeongi Lim<span class="author-symbol">†</span>,
+          <span class="me"
+            >Gihyun Lee<span class="author-symbol">†</span></span
+          >, Jeehyoun Lee, and Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation"><em>Small</em>, 21, 2408119.</p>
       </article>
     </div>
   </section>
 
   <section class="publication-year-group">
-    <div class="publication-year">2024</div>
+    <h2 class="publication-year">2024</h2>
 
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            MOF-on-MOF Growth: Inducing Naturally Nonpreferred MOFs and
-            Atypical MOF Growth
-          </span>
-
+        <h3 class="publication-title">
+          MOF-on-MOF Growth: Inducing Naturally Nonpreferred MOFs and Atypical
+          MOF Growth
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1021/acs.accounts.4c00469"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Sujeong Lee<sup>†</sup>,
-          <span class="self">Gihyun Lee</span><sup>†</sup>, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Sujeong Lee<span class="author-symbol">†</span>,
+          <span class="me"
+            >Gihyun Lee<span class="author-symbol">†</span></span
+          >, and Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Accounts of Chemical Research</em>, 57, 3113–3125.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            A Drop-and-Drain Method for Convenient and Efficient Fabrication
-            of MOF/Fiber Composites
-          </span>
-
+        <h3 class="publication-title">
+          A Drop-and-Drain Method for Convenient and Efficient Fabrication of
+          MOF/Fiber Composites
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1002/smll.202306543"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Hyunjeong Oh<sup>†</sup>,
-          <span class="self">Gihyun Lee</span><sup>†</sup>, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal"><em>Small</em>, 20, 2306543.</p>
+        <p class="publication-authors">
+          Hyunjeong Oh<span class="author-symbol">†</span>,
+          <span class="me"
+            >Gihyun Lee<span class="author-symbol">†</span></span
+          >, and Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation"><em>Small</em>, 20, 2306543.</p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Enhanced Early-Stage Adsorption of Chemical Warfare Agent Simulant
-            by MIL-68-(X%OH)
-          </span>
-
+        <h3 class="publication-title">
+          Enhanced Early-Stage Adsorption of Chemical Warfare Agent Simulant by
+          MIL-68-(X%OH)
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1002/bkcs.12794"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          <span class="self">Gihyun Lee</span><sup>†</sup>, Sojin Oh<sup>†</sup>,
-          and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          <span class="me"
+            >Gihyun Lee<span class="author-symbol">†</span></span
+          >, Sojin Oh<span class="author-symbol">†</span>, and Moonhyun
+          Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Bulletin of the Korean Chemical Society</em>, 45, 67–73.
         </p>
       </article>
@@ -297,193 +319,167 @@ nav_order: 3
   </section>
 
   <section class="publication-year-group">
-    <div class="publication-year">2023</div>
+    <h2 class="publication-year">2023</h2>
 
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Structural Compromise Between Conflicted Spatial Arrangements of
-            Two Linkers in Metal–Organic Frameworks
-          </span>
-
+        <h3 class="publication-title">
+          Structural Compromise Between Conflicted Spatial Arrangements of Two
+          Linkers in Metal–Organic Frameworks
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1002/smtd.202201586"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          <span class="self">Gihyun Lee</span>, Haejin Kwon, Sujeong Lee, and
-          Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          <span class="me">Gihyun Lee</span>, Haejin Kwon, Sujeong Lee, and
+          Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Small Methods</em>, 7, 2201586.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Induced Production of Atypical Naturally Non-Preferred
-            Metal–Organic Frameworks and Their Detachment via Provoking
-            Post-Mismatching
-          </span>
-
+        <h3 class="publication-title">
+          Induced Production of Atypical Naturally Non-Preferred Metal–Organic
+          Frameworks and Their Detachment via Provoking Post-Mismatching
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1002/smll.202303580"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Sujeong Lee, <span class="self">Gihyun Lee</span>, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal"><em>Small</em>, 19, 2303580.</p>
+        <p class="publication-authors">
+          Sujeong Lee, <span class="me">Gihyun Lee</span>, and Moonhyun
+          Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation"><em>Small</em>, 19, 2303580.</p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Enhanced Adsorption Capacity of ZIF-8 for Chemical Warfare Agent
-            Simulants Caused by Its Morphology and Surface Charge
-          </span>
-
+        <h3 class="publication-title">
+          Enhanced Adsorption Capacity of ZIF-8 for Chemical Warfare Agent
+          Simulants Caused by Its Morphology and Surface Charge
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1038/s41598-023-39507-6"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Sojin Oh, Sujeong Lee, <span class="self">Gihyun Lee</span>, and
-          Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Sojin Oh, Sujeong Lee, <span class="me">Gihyun Lee</span>, and
+          Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Scientific Reports</em>, 13, 12250.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Defective MOF-74 with Ancillary Open Metal Sites for the Enhanced
-            Adsorption of Chemical Warfare Agent Simulants
-          </span>
-
+        <h3 class="publication-title">
+          Defective MOF-74 with Ancillary Open Metal Sites for the Enhanced
+          Adsorption of Chemical Warfare Agent Simulants
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1039/D3DT02025H"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Sujeong Lee, Sojin Oh, <span class="self">Gihyun Lee</span>, and
-          Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Sujeong Lee, Sojin Oh, <span class="me">Gihyun Lee</span>, and
+          Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Dalton Transactions</em>, 52, 12143–12151.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Boosted Ability of ZIF-8 for Early-Stage Adsorption and Degradation
-            of Chemical Warfare Agent Simulants
-          </span>
-
+        <h3 class="publication-title">
+          Boosted Ability of ZIF-8 for Early-Stage Adsorption and Degradation of
+          Chemical Warfare Agent Simulants
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1039/D3NA00807J"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Sojin Oh, Sujeong Lee, <span class="self">Gihyun Lee</span>, and
-          Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Sojin Oh, Sujeong Lee, <span class="me">Gihyun Lee</span>, and
+          Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Nanoscale Advances</em>, 5, 6449–6457.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Au Octahedral Nanosponges: 3D Plasmonic Nanolenses for Near-Field
-            Focusing
-          </span>
-
+        <h3 class="publication-title">
+          Au Octahedral Nanosponges: 3D Plasmonic Nanolenses for Near-Field
+          Focusing
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1021/jacs.3c08315"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
+        <p class="publication-authors">
           Sunwoo Kwon, Myeong Jin Oh, Soohyun Lee,
-          <span class="self">Gihyun Lee</span>, Insub Jung, Moonhyun Oh, and
-          Sungho Park
-        </div>
-
-        <p class="publication-journal">
+          <span class="me">Gihyun Lee</span>, Insub Jung, Moonhyun
+          Oh<span class="author-symbol">*</span>, and Sungho Park
+        </p>
+        <p class="publication-citation">
           <em>Journal of the American Chemical Society</em>, 145, 27397–27406.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Construction of Defected MOF-74 with Preserved Crystallinity for
-            Efficient Catalytic Cyanosilylation of Benzaldehyde
-          </span>
-
+        <h3 class="publication-title">
+          Construction of Defected MOF-74 with Preserved Crystallinity for
+          Efficient Catalytic Cyanosilylation of Benzaldehyde
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1039/D3RA01222K"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Chul Hwan Shim<sup>†</sup>, Sojin Oh<sup>†</sup>, Sujeong Lee,
-          <span class="self">Gihyun Lee</span>, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Chul Hwan Shim<span class="author-symbol">†</span>, Sojin
+          Oh<span class="author-symbol">†</span>, Sujeong Lee,
+          <span class="me">Gihyun Lee</span>, and Moonhyun
+          Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>RSC Advances</em>, 13, 8220–8226.
         </p>
       </article>
@@ -491,61 +487,55 @@ nav_order: 3
   </section>
 
   <section class="publication-year-group">
-    <div class="publication-year">2022</div>
+    <h2 class="publication-year">2022</h2>
 
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Enhanced Catalytic Activity of MOF-74 via Providing Additional Open
-            Metal Sites for Cyanosilylation of Aldehydes
-          </span>
-
+        <h3 class="publication-title">
+          Enhanced Catalytic Activity of MOF-74 via Providing Additional Open
+          Metal Sites for Cyanosilylation of Aldehydes
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1038/s41598-022-18932-z"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Hyeji Jun<sup>†</sup>, Sojin Oh<sup>†</sup>,
-          <span class="self">Gihyun Lee</span>, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Hyeji Jun<span class="author-symbol">†</span>, Sojin
+          Oh<span class="author-symbol">†</span>,
+          <span class="me">Gihyun Lee</span>, and Moonhyun
+          Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Scientific Reports</em>, 12, 14735.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Investigating the Effect of Phospholipids on Droplet Formation and
-            Surface Property Evolution in Microfluidic Devices for Droplet
-            Interface Bilayer Formation
-          </span>
-
+        <h3 class="publication-title">
+          Investigating the Effect of Phospholipids on Droplet Formation and
+          Surface Property Evolution in Microfluidic Devices for Droplet
+          Interface Bilayer Formation
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1063/5.0096193"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
+        <p class="publication-authors">
           Elanna B. Stephenson, Ricardo Garcia Ramirez, Sean Farley, Katherine
-          Adolph-Hammond, <span class="self">Gihyun Lee</span>, John M. Frostad,
+          Adolph-Hammond, <span class="me">Gihyun Lee</span>, John M. Frostad,
           and Katherine S. Elvira
-        </div>
-
-        <p class="publication-journal">
+        </p>
+        <p class="publication-citation">
           <em>Biomicrofluidics</em>, 16, 044112.
         </p>
       </article>
@@ -553,61 +543,55 @@ nav_order: 3
   </section>
 
   <section class="publication-year-group">
-    <div class="publication-year">2021</div>
+    <h2 class="publication-year">2021</h2>
 
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Lattice-Guided Construction and Harvest of a Naturally Nonpreferred
-            Metal–Organic Framework
-          </span>
-
+        <h3 class="publication-title">
+          Lattice-Guided Construction and Harvest of a Naturally Nonpreferred
+          Metal–Organic Framework
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1021/acsnano.1c06207"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Sujeong Lee<sup>†</sup>,
-          <span class="self">Gihyun Lee</span><sup>†</sup>, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Sujeong Lee<span class="author-symbol">†</span>,
+          <span class="me"
+            >Gihyun Lee<span class="author-symbol">†</span></span
+          >, and Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>ACS Nano</em>, 15, 17907–17916.
         </p>
       </article>
 
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Rational Manufacture of Yolk–Shell and Core–Shell Metal Oxide
-            Double Layers from Silica-Templated Coordination Polymer Double
-            Layers
-          </span>
-
+        <h3 class="publication-title">
+          Rational Manufacture of Yolk–Shell and Core–Shell Metal Oxide Double
+          Layers from Silica-Templated Coordination Polymer Double Layers
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1039/D1QM00034A"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Jian Yeo<sup>†</sup>,
-          <span class="self">Gihyun Lee</span><sup>†</sup>, Sujeong Lee, and
-          Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Jian Yeo<span class="author-symbol">†</span>,
+          <span class="me"
+            >Gihyun Lee<span class="author-symbol">†</span></span
+          >, Sujeong Lee, and Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Materials Chemistry Frontiers</em>, 5, 3404–3412.
         </p>
       </article>
@@ -615,32 +599,28 @@ nav_order: 3
   </section>
 
   <section class="publication-year-group">
-    <div class="publication-year">2020</div>
+    <h2 class="publication-year">2020</h2>
 
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Tip-to-Middle Anisotropic MOF-on-MOF Growth with a Structural
-            Adjustment
-          </span>
-
+        <h3 class="publication-title">
+          Tip-to-Middle Anisotropic MOF-on-MOF Growth with a Structural
+          Adjustment
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1021/jacs.9b12193"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          <span class="self">Gihyun Lee</span>, Sujeong Lee, Sojin Oh, Dooyoung
-          Kim, and Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          <span class="me">Gihyun Lee</span>, Sujeong Lee, Sojin Oh, Dooyoung
+          Kim, and Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Journal of the American Chemical Society</em>, 142, 3042–3049.
         </p>
       </article>
@@ -648,32 +628,28 @@ nav_order: 3
   </section>
 
   <section class="publication-year-group">
-    <div class="publication-year">2019</div>
+    <h2 class="publication-year">2019</h2>
 
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-title-line">
-          <span class="publication-title">
-            Unbalanced MOF-on-MOF Growth for the Production of Lopsided
-            Core–Shell MIL-88B@MIL-88A with Mismatched Cell Parameters
-          </span>
-
+        <h3 class="publication-title">
+          Unbalanced MOF-on-MOF Growth for the Production of Lopsided Core–Shell
+          MIL-88B@MIL-88A with Mismatched Cell Parameters
+        </h3>
+        <div class="doi-row">
           <a
-            class="publication-doi"
+            class="doi-link"
             href="https://doi.org/10.1039/C8CC08456D"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            >DOI</a
           >
-            DOI
-          </a>
         </div>
-
-        <div class="publication-authors">
-          Dooyoung Kim, <span class="self">Gihyun Lee</span>, Sojin Oh, and
-          Moonhyun Oh
-        </div>
-
-        <p class="publication-journal">
+        <p class="publication-authors">
+          Dooyoung Kim, <span class="me">Gihyun Lee</span>, Sojin Oh, and
+          Moonhyun Oh<span class="author-symbol">*</span>
+        </p>
+        <p class="publication-citation">
           <em>Chemical Communications</em>, 55, 43–46.
         </p>
       </article>
