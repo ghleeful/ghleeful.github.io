@@ -8,174 +8,140 @@ nav_order: 4
 ---
 
 <style>
-  /* Overall page width */
+  /* Page width */
   .container[role="main"] {
-    width: 86% !important;
-    max-width: 1320px !important;
+    width: 86%;
+    max-width: 1320px;
   }
 
-  /* Page heading */
-  .post-header {
-    margin-bottom: 0.9rem !important;
-  }
-
-  .post-header .post-title {
-    margin: 0 !important;
-    color: var(--global-text-color);
-    font-size: 2.25rem !important;
-    font-weight: 500 !important;
+  /* Page title */
+  h1.post-title {
+    margin-bottom: 2.2rem;
+    font-size: 2.5rem !important;
+    font-weight: 400;
     line-height: 1.15;
   }
 
-  .post-header .post-description {
-    display: none !important;
-  }
-
-  /* Patent list */
-  .patent-list {
-    margin-top: 0.45rem;
-  }
-
+  /* Patent entry */
   .patent-entry {
     display: grid;
-    grid-template-columns: 58px minmax(0, 1fr);
-    column-gap: 1.25rem;
-    padding: 0.9rem 0 1.5rem;
+    grid-template-columns: 100px minmax(0, 1fr);
+    column-gap: 2rem;
+    padding: 1.3rem 0 1.55rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
   /* Year */
   .patent-year {
+    margin: 0;
     color: var(--global-text-color);
-    font-size: 0.92rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.2;
   }
 
-  /* Patent information */
+  /* Patent content */
   .patent-content {
-    max-width: 1050px;
+    min-width: 0;
   }
 
+  /* Patent title */
   .patent-title {
-    margin: 0 0 0.3rem;
+    margin: 0 0 0.32rem;
     color: var(--global-text-color);
-    font-size: 1.03rem;
-    font-weight: 600;
-    line-height: 1.4;
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.35;
   }
 
+  /* Inventors */
   .patent-inventors {
     margin: 0 0 0.2rem;
     color: var(--global-text-color);
-    font-size: 0.9rem;
-    line-height: 1.45;
+    font-size: 0.82rem;
+    line-height: 1.4;
   }
 
+  /* Patent number */
   .patent-details {
     margin: 0;
     color: var(--global-text-color-light);
-    font-size: 0.87rem;
-    line-height: 1.45;
+    font-size: 0.78rem;
+    line-height: 1.4;
   }
 
-  .patent-status {
-    display: inline-block;
-    margin-left: 0.35rem;
-    padding: 0.12rem 0.4rem;
-    border: 1px solid var(--global-divider-color);
+  /* Current author's name */
+  .patent-inventors .current-author {
     color: var(--global-text-color);
-    font-size: 0.66rem;
-    font-weight: 500;
-    line-height: 1.2;
-    vertical-align: middle;
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
   }
 
   /* Mobile layout */
   @media (max-width: 575px) {
     .container[role="main"] {
-      width: 100% !important;
-      max-width: 100% !important;
-      padding-right: 1rem !important;
-      padding-left: 1rem !important;
+      width: calc(100% - 2rem);
     }
 
-    .post-header {
-      margin-bottom: 0.6rem !important;
-    }
-
-    .post-header .post-title {
-      font-size: 1.8rem !important;
+    h1.post-title {
+      margin-bottom: 1.5rem;
+      font-size: 2rem !important;
     }
 
     .patent-entry {
-      grid-template-columns: 38px minmax(0, 1fr);
-      column-gap: 0.6rem;
-      padding: 0.75rem 0 1.2rem;
+      display: block;
+      padding: 1rem 0 1.2rem;
     }
 
     .patent-year {
-      font-size: 0.76rem;
+      margin-bottom: 0.7rem;
+      font-size: 1.4rem;
     }
 
     .patent-title {
-      font-size: 0.94rem;
+      font-size: 1.02rem;
     }
 
     .patent-inventors {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
     }
 
     .patent-details {
-      font-size: 0.8rem;
-    }
-
-    .patent-status {
-      margin-top: 0.2rem;
-      margin-left: 0;
-      font-size: 0.62rem;
+      font-size: 0.74rem;
     }
   }
 </style>
 
 <div class="patent-list">
   <article class="patent-entry">
-    <div class="patent-year">2026</div>
+    <p class="patent-year">2026</p>
 
     <div class="patent-content">
       <h2 class="patent-title">
-        Drop-and-Drain Method for Convenient and Efficient Fabrication of
-        MOF/Fiber Composites
+        Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites
       </h2>
 
       <p class="patent-inventors">
-        Moonhyun Oh, Hyunjeong Oh, and <u>Gihyun Lee</u>
+        Moonhyun Oh, Hyunjeong Oh, and <span class="current-author">Gihyun Lee</span>
       </p>
 
-      <p class="patent-details">
-        Korean Patent Registration No. 10-2986030
-        <span class="patent-status">Registered</span>
-      </p>
+      <p class="patent-details">Korean Patent Registration No. 10-2986030</p>
     </div>
   </article>
 
   <article class="patent-entry">
-    <div class="patent-year">2023</div>
+    <p class="patent-year">2023</p>
 
     <div class="patent-content">
       <h2 class="patent-title">
-        Drop-and-Drain Method for Convenient and Efficient Fabrication of
-        MOF/Fiber Composites
+        Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites
       </h2>
 
       <p class="patent-inventors">
-        Moonhyun Oh, Hyunjeong Oh, and <u>Gihyun Lee</u>
+        Moonhyun Oh, Hyunjeong Oh, and <span class="current-author">Gihyun Lee</span>
       </p>
 
-      <p class="patent-details">
-        Korean Patent Application No. 10-2023-0135860
-        <span class="patent-status">Application</span>
-      </p>
+      <p class="patent-details">Korean Patent Application No. 10-2023-0135860</p>
     </div>
   </article>
 </div>
