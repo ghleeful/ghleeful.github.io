@@ -1,433 +1,375 @@
 ---
 layout: page
-permalink: /research/
 title: Research
+permalink: /research/
 description:
 nav: true
 nav_order: 2
 ---
 
 <style>
-  /* Page width */
-  .container[role="main"] {
-    width: 86%;
-    max-width: 1320px;
-  }
-
-  /* Page title */
-  h1.post-title {
-    margin-bottom: 1.2rem;
-    font-size: 2.5rem !important;
-    font-weight: 400;
-    line-height: 1.15;
-  }
-
-  /* Introductory statement */
-  .research-intro {
-    max-width: 960px;
-    margin: 0 0 3rem;
+  .research-page,
+  .research-page * {
     color: var(--global-text-color);
-    font-size: 1.02rem;
-    line-height: 1.7;
   }
 
-  .research-intro strong {
-    font-weight: 600;
+  .research-intro {
+    max-width: 920px;
+    margin: 0 0 3.5rem;
+    color: var(--global-text-color);
+    font-size: 1.05rem;
+    line-height: 1.75;
   }
 
-  /* Complete research section */
   .research-section {
     display: grid;
-    grid-template-columns: 115px minmax(0, 1fr) 340px;
-    column-gap: 2.2rem;
-    align-items: start;
-    padding: 2rem 0 2.3rem;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 3.5rem;
+    align-items: center;
+    padding: 3rem 0;
     border-top: 1px solid var(--global-divider-color);
   }
 
-  /* Left-side number and career stage */
-  .research-index {
-    padding-top: 0.15rem;
+  .research-section:first-of-type {
+    padding-top: 2.5rem;
   }
 
-  .research-number {
-    display: block;
-    margin-bottom: 0.4rem;
-    color: var(--global-theme-color);
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1;
-  }
-
-  .research-stage {
-    display: block;
-    color: var(--global-text-color-light);
-    font-size: 0.72rem;
-    font-weight: 600;
-    line-height: 1.35;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  /* Research text */
   .research-content {
     min-width: 0;
   }
 
+  .research-number {
+    margin: 0 0 0.45rem;
+    color: var(--global-theme-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .research-stage {
+    margin: 0 0 0.55rem;
+    color: var(--global-text-color-light);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
   .research-title {
-    margin: 0 0 0.7rem;
+    margin: 0 0 1rem;
     color: var(--global-text-color);
-    font-size: 1.3rem;
+    font-size: 1.65rem;
     font-weight: 700;
     line-height: 1.3;
   }
 
-  /* Central research question */
   .research-question {
-    margin: 0 0 1rem;
-    padding-left: 0.85rem;
+    margin: 0 0 1.1rem;
+    padding-left: 1rem;
     border-left: 3px solid var(--global-theme-color);
     color: var(--global-text-color);
-    font-size: 0.92rem;
+    font-size: 1rem;
     font-style: italic;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .research-description {
     margin: 0;
     color: var(--global-text-color);
-    font-size: 0.88rem;
-    line-height: 1.65;
+    font-size: 0.95rem;
+    line-height: 1.75;
   }
 
-  /* Research keywords */
-  .research-keywords {
+  .research-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-top: 1.15rem;
+    gap: 0.45rem;
+    margin-top: 1.4rem;
   }
 
-  .research-keyword {
+  .research-tag {
     display: inline-block;
-    padding: 0.2rem 0.48rem;
+    padding: 0.3rem 0.65rem;
     border: 1px solid var(--global-divider-color);
     color: var(--global-text-color-light);
-    font-size: 0.67rem;
+    font-size: 0.72rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 
-  /* Image area */
-  .research-media {
-    width: 100%;
-    min-height: 225px;
+  .research-figure {
+    margin: 0;
   }
 
   .research-image {
     display: block;
     width: 100%;
-    height: 225px;
+    aspect-ratio: 4 / 3;
     border: 1px solid var(--global-divider-color);
     border-radius: 0;
     background-color: var(--global-card-bg-color);
-    object-fit: contain;
+    object-fit: cover;
   }
 
-  /* Placeholder shown until an image is uploaded */
-  .research-placeholder {
-    display: flex;
-    width: 100%;
-    height: 225px;
-    padding: 1.2rem;
-    border: 1px solid var(--global-divider-color);
-    background-color: var(--global-card-bg-color);
+  .research-caption {
+    margin-top: 0.65rem;
     color: var(--global-text-color-light);
-    align-items: center;
-    justify-content: center;
     font-size: 0.72rem;
-    line-height: 1.5;
-    text-align: center;
+    line-height: 1.45;
   }
 
-  .research-placeholder strong {
-    display: block;
-    margin-bottom: 0.35rem;
-    color: var(--global-theme-color);
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
+  .research-caption strong {
+    color: var(--global-text-color);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
   }
 
-  .research-placeholder[hidden] {
-    display: none !important;
-  }
-
-  /* Subtle emphasis for future direction */
-  .research-section.future .research-title {
-    color: var(--global-theme-color);
-  }
-
-  /* Tablet */
-  @media (max-width: 991px) {
-    .research-section {
-      grid-template-columns: 90px minmax(0, 1fr);
+  @media (min-width: 768px) {
+    .research-section:nth-of-type(even) .research-content {
+      order: 2;
     }
 
-    .research-media {
-      grid-column: 2;
-      width: 100%;
-      max-width: 520px;
-      margin-top: 1.4rem;
+    .research-section:nth-of-type(even) .research-figure {
+      order: 1;
     }
   }
 
-  /* Mobile */
-  @media (max-width: 575px) {
-    .container[role="main"] {
-      width: calc(100% - 2rem);
-    }
-
-    h1.post-title {
-      font-size: 2rem !important;
-    }
-
+  @media (max-width: 767px) {
     .research-intro {
       margin-bottom: 2rem;
-      font-size: 0.9rem;
-      line-height: 1.6;
+      font-size: 0.96rem;
     }
 
     .research-section {
-      display: block;
-      padding: 1.5rem 0 1.8rem;
-    }
-
-    .research-index {
-      margin-bottom: 0.8rem;
+      grid-template-columns: 1fr;
+      gap: 1.7rem;
+      padding: 2.3rem 0;
     }
 
     .research-number {
-      display: inline-block;
-      margin-right: 0.55rem;
-      margin-bottom: 0;
-      font-size: 1.25rem;
-    }
-
-    .research-stage {
-      display: inline-block;
-      font-size: 0.65rem;
+      font-size: 2rem;
     }
 
     .research-title {
-      font-size: 1.12rem;
+      font-size: 1.35rem;
     }
 
     .research-question {
-      font-size: 0.84rem;
+      font-size: 0.92rem;
     }
 
     .research-description {
-      font-size: 0.82rem;
+      font-size: 0.9rem;
     }
 
-    .research-media {
-      width: 100%;
-      max-width: none;
-      margin-top: 1.2rem;
-    }
-
-    .research-image,
-    .research-placeholder {
-      height: 200px;
+    .research-figure {
+      max-width: 520px;
     }
   }
 </style>
 
-<div class="research-intro">
-  My research focuses on the design of <strong>functional and responsive coordination materials</strong>. I am particularly interested in understanding how molecular-level composition, structure, and dynamics translate into collective properties within crystalline solids.
+<div class="research-page">
+  <p class="research-intro">
+    My research focuses on the design of
+    <strong>functional and responsive coordination materials</strong>. I am
+    particularly interested in understanding how molecular-level composition,
+    structure, and dynamics translate into collective properties within
+    crystalline solids.
+  </p>
+
+  <!-- RESEARCH 01 -->
+  <section class="research-section">
+    <div class="research-content">
+      <div class="research-number">01</div>
+      <div class="research-stage">PhD Research</div>
+
+      <h2 class="research-title">
+        Structural Control in Metal–Organic Frameworks
+      </h2>
+
+      <p class="research-question">
+        How do MOF structures accommodate compositional and structural
+        perturbations?
+      </p>
+
+      <p class="research-description">
+        My PhD research focused on understanding and controlling structural
+        changes in metal–organic frameworks (MOFs). I studied how framework
+        structures respond to lattice mismatch, mixed-linker composition,
+        defects, and guest adsorption. Through these studies, I became
+        particularly interested in how small changes in molecular components can
+        lead to significant changes in crystalline structures and their
+        properties.
+      </p>
+
+      <div class="research-tags">
+        <span class="research-tag">MOF-on-MOF Growth</span>
+        <span class="research-tag">Lattice Mismatch</span>
+        <span class="research-tag">Mixed-Linker Systems</span>
+        <span class="research-tag">Defects</span>
+        <span class="research-tag">Gate Opening</span>
+      </div>
+    </div>
+
+    <figure class="research-figure">
+      <img
+        class="research-image"
+        src="/assets/img/research-01.jpg"
+        alt="Structural control in metal–organic frameworks"
+      >
+      <figcaption class="research-caption">
+        <strong>RESEARCH IMAGE 01</strong><br>
+        Representative structures from MOF-on-MOF, mixed-linker, defect, and
+        gate-opening studies.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- RESEARCH 02 -->
+  <section class="research-section">
+    <div class="research-content">
+      <div class="research-number">02</div>
+      <div class="research-stage">Postdoctoral Research</div>
+
+      <h2 class="research-title">
+        Stimulus-Responsive Coordination Materials
+      </h2>
+
+      <p class="research-question">
+        Can a functional molecule retain its dynamic behavior when incorporated
+        into a coordination solid?
+      </p>
+
+      <p class="research-description">
+        My current postdoctoral research expands my interest from framework-level
+        structural changes to molecular-level dynamics within coordination
+        solids. I design and synthesize functional ligands that can change their
+        molecular states in response to external stimuli and investigate whether
+        these properties are retained after incorporation into crystalline
+        coordination materials. This work combines ligand synthesis,
+        coordination chemistry, structural characterization, and computational
+        analysis.
+      </p>
+
+      <div class="research-tags">
+        <span class="research-tag">Functional Ligands</span>
+        <span class="research-tag">Photoswitching</span>
+        <span class="research-tag">Coordination Solids</span>
+        <span class="research-tag">Structural Characterization</span>
+        <span class="research-tag">Computational Analysis</span>
+      </div>
+    </div>
+
+    <figure class="research-figure">
+      <img
+        class="research-image"
+        src="/assets/img/research-02.jpg"
+        alt="Stimulus-responsive coordination materials"
+      >
+      <figcaption class="research-caption">
+        <strong>RESEARCH IMAGE 02</strong><br>
+        Functional ligand structures, stimulus-induced molecular changes, or a
+        representative coordination-solid structure.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- RESEARCH 03 -->
+  <section class="research-section">
+    <div class="research-content">
+      <div class="research-number">03</div>
+      <div class="research-stage">Independent Research Direction</div>
+
+      <h2 class="research-title">Molecular-to-Solid Function</h2>
+
+      <p class="research-question">
+        What determines whether molecular function is preserved, suppressed, or
+        transformed in a crystalline solid?
+      </p>
+
+      <p class="research-description">
+        My future independent research will focus on understanding how molecular
+        functions change when functional molecules are incorporated into
+        crystalline solids. A molecule that works well in solution may retain,
+        lose, or show a different function in the solid state because of
+        coordination, molecular packing, and local environments. I aim to
+        understand the structural factors that determine these differences and
+        ultimately develop more predictable strategies for designing functional
+        solid materials.
+      </p>
+
+      <div class="research-tags">
+        <span class="research-tag">Molecular Function</span>
+        <span class="research-tag">Solid-State Environment</span>
+        <span class="research-tag">Molecular Packing</span>
+        <span class="research-tag">Structure–Function Relationships</span>
+        <span class="research-tag">Predictive Materials Design</span>
+      </div>
+    </div>
+
+    <figure class="research-figure">
+      <img
+        class="research-image"
+        src="/assets/img/research-03.jpg"
+        alt="Molecular-to-solid function"
+      >
+      <figcaption class="research-caption">
+        <strong>RESEARCH IMAGE 03</strong><br>
+        A conceptual connection between molecular structure, coordination,
+        packing, crystalline structure, and material function.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- RESEARCH 04 -->
+  <section class="research-section">
+    <div class="research-content">
+      <div class="research-number">04</div>
+      <div class="research-stage">Collaborative Research Direction</div>
+
+      <h2 class="research-title">
+        Data-Driven Design of Functional Solids
+      </h2>
+
+      <p class="research-question">
+        How can experimental structure–function data guide the prediction of
+        functional crystalline materials?
+      </p>
+
+      <p class="research-description">
+        I am also interested in developing data-driven approaches for the design
+        of functional crystalline solids through collaborative research. By
+        combining experimental structure–function data from my research with
+        machine learning and deep learning, we aim to identify molecular and
+        structural factors that determine the functions of crystalline
+        materials. Ultimately, I hope this collaboration will help us screen
+        promising molecular and solid-state candidates before synthesis and make
+        the discovery of functional materials more efficient and predictable.
+      </p>
+
+      <div class="research-tags">
+        <span class="research-tag">Experimental Data</span>
+        <span class="research-tag">Machine Learning</span>
+        <span class="research-tag">Deep Learning</span>
+        <span class="research-tag">Descriptor Identification</span>
+        <span class="research-tag">Candidate Prediction</span>
+        <span class="research-tag">Experimental Validation</span>
+      </div>
+    </div>
+
+    <figure class="research-figure">
+      <img
+        class="research-image"
+        src="/assets/img/research-04.jpg"
+        alt="Data-driven design of functional solids"
+      >
+      <figcaption class="research-caption">
+        <strong>RESEARCH IMAGE 04</strong><br>
+        Experimental structure–function data, computational prediction, and
+        experimental validation of candidate materials.
+      </figcaption>
+    </figure>
+  </section>
 </div>
-
-<section class="research-section">
-  <div class="research-index">
-    <span class="research-number">01</span>
-    <span class="research-stage">PhD Research</span>
-  </div>
-
-  <div class="research-content">
-    <h2 class="research-title">Structural Control in Metal–Organic Frameworks</h2>
-
-    <p class="research-question">
-      How do MOF structures accommodate compositional and structural perturbations?
-    </p>
-
-    <p class="research-description">
-      My PhD research focused on understanding and controlling structural changes in metal–organic frameworks (MOFs). I studied how framework structures respond to lattice mismatch, mixed-linker composition, defects, and guest adsorption. Through these studies, I became particularly interested in how small changes in molecular components can lead to significant changes in crystalline structures and their properties.
-    </p>
-
-    <div class="research-keywords">
-      <span class="research-keyword">MOF-on-MOF Growth</span>
-      <span class="research-keyword">Lattice Mismatch</span>
-      <span class="research-keyword">Mixed-Linker Systems</span>
-      <span class="research-keyword">Defects</span>
-      <span class="research-keyword">Gate Opening</span>
-    </div>
-  </div>
-
-  <div class="research-media">
-    <img
-      class="research-image"
-      src="{{ '/assets/img/research/research-01.jpg' | relative_url }}"
-      alt="Structural control in metal–organic frameworks"
-      onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
-    >
-    <div class="research-placeholder" hidden>
-      <div>
-        <strong>RESEARCH IMAGE 01</strong>
-        Suggested image: a collage of representative structural figures from MOF-on-MOF, mixed-linker, defect, and gate-opening studies.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="research-section">
-  <div class="research-index">
-    <span class="research-number">02</span>
-    <span class="research-stage">Postdoctoral Research</span>
-  </div>
-
-  <div class="research-content">
-    <h2 class="research-title">Stimulus-Responsive Coordination Materials</h2>
-
-    <p class="research-question">
-      Can a functional molecule retain its dynamic behavior when incorporated into a coordination solid?
-    </p>
-
-    <p class="research-description">
-      My current postdoctoral research expands my interest from framework-level structural changes to molecular-level dynamics within coordination solids. I design and synthesize functional ligands that can change their molecular states in response to external stimuli and investigate whether these properties are retained after incorporation into crystalline coordination materials. This work combines ligand synthesis, coordination chemistry, structural characterization, and computational analysis.
-    </p>
-
-    <div class="research-keywords">
-      <span class="research-keyword">Functional Ligands</span>
-      <span class="research-keyword">Photoswitching</span>
-      <span class="research-keyword">Coordination Solids</span>
-      <span class="research-keyword">Structural Characterization</span>
-      <span class="research-keyword">Computational Analysis</span>
-    </div>
-  </div>
-
-  <div class="research-media">
-    <img
-      class="research-image"
-      src="{{ '/assets/img/research/research-02.jpg' | relative_url }}"
-      alt="Stimulus-responsive coordination materials"
-      onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
-    >
-    <div class="research-placeholder" hidden>
-      <div>
-        <strong>RESEARCH IMAGE 02</strong>
-        Suggested image: ligand structures, stimulus-induced molecular changes, or a representative coordination-solid structure.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="research-section future">
-  <div class="research-index">
-    <span class="research-number">03</span>
-    <span class="research-stage">Independent Direction</span>
-  </div>
-
-  <div class="research-content">
-    <h2 class="research-title">Molecular-to-Solid Function</h2>
-
-    <p class="research-question">
-      What determines whether molecular function is preserved, suppressed, or transformed in a crystalline solid?
-    </p>
-
-    <p class="research-description">
-      My future independent research will focus on understanding how molecular functions change when functional molecules are incorporated into crystalline solids. A molecule that works well in solution may retain, lose, or show a different function in the solid state because of coordination, molecular packing, and local environments. I aim to understand the structural factors that determine these differences and ultimately develop more predictable strategies for designing functional solid materials.
-    </p>
-
-    <div class="research-keywords">
-      <span class="research-keyword">Molecular Function</span>
-      <span class="research-keyword">Solid-State Environment</span>
-      <span class="research-keyword">Molecular Packing</span>
-      <span class="research-keyword">Structure–Function Relationships</span>
-      <span class="research-keyword">Predictive Materials Design</span>
-    </div>
-  </div>
-
-  <div class="research-media">
-    <img
-      class="research-image"
-      src="{{ '/assets/img/research/research-03.jpg' | relative_url }}"
-      alt="Molecular-to-solid function"
-      onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
-    >
-    <div class="research-placeholder" hidden>
-      <div>
-        <strong>RESEARCH IMAGE 03</strong>
-        Suggested image: a conceptual diagram connecting molecule, coordination, packing, crystalline structure, and material function.
-      </div>
-    </div>
-  </div>
-</section>
-<section class="research-item">
-  <div class="research-number">04</div>
-
-  <div class="research-content">
-    <p class="research-stage">Collaborative Research Direction</p>
-
-    <h2>Data-Driven Design of Functional Solids</h2>
-
-    <p class="research-question">
-      How can experimental structure–function data guide the prediction of
-      functional crystalline materials?
-    </p>
-
-    <p>
-      I am also interested in developing data-driven approaches for the design
-      of functional crystalline solids through collaborative research. By
-      combining experimental structure–function data from my research with
-      machine learning and deep learning, we aim to identify molecular and
-      structural factors that determine the functions of crystalline materials.
-    </p>
-
-    <p>
-      Ultimately, I hope this collaboration will help us screen promising
-      molecular and solid-state candidates before synthesis and make the
-      discovery of functional materials more efficient and predictable.
-    </p>
-
-    <div class="research-workflow">
-      <div>
-        <strong>Experimental platform</strong>
-        <span>
-          Molecular and material design, synthesis, crystal structures, and
-          structure–function measurements
-        </span>
-      </div>
-
-      <div>
-        <strong>Computational collaboration</strong>
-        <span>
-          Machine learning, deep learning, descriptor identification, and
-          candidate prediction
-        </span>
-      </div>
-
-      <div>
-        <strong>Experimental validation</strong>
-        <span>
-          Synthesis and characterization of predicted molecular and solid-state
-          candidates
-        </span>
-      </div>
-    </div>
-  </div>
-
-  <div class="research-visual research-placeholder">
-    <span>Research image</span>
-    <small>data-driven-design.jpg</small>
-  </div>
-</section>
