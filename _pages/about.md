@@ -9,14 +9,14 @@ subtitle: >
 
 profile:
   align: right
-  image: profile-01.jpg
+  image: profile-01.png
   image_circular: false
   more_info: >
     <div class="profile-carousel" aria-label="Profile photo gallery">
       <div class="profile-carousel-viewport">
         <img
           class="profile-carousel-image active"
-          src="/assets/img/profile-01.jpg"
+          src="/assets/img/profile-01.png"
           alt="Gihyun Lee profile photo 1"
         >
         <img
