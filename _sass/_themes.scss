@@ -102,3 +102,35 @@ summary {
   color: #8c6a24 !important;
   font-weight: 700 !important;
 }
+/* YESL easter egg */
+footer {
+  position: relative;
+}
+
+footer::after {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.45rem;
+  color: var(--global-footer-text-color);
+  content: "y·e·s·l";
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  opacity: 0.08;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+footer:hover::after {
+  color: var(--global-footer-link-color);
+  opacity: 0.7;
+}
+
+@media (max-width: 575px) {
+  footer::after {
+    right: 0.45rem;
+    bottom: 0.25rem;
+    font-size: 0.5rem;
+  }
+}
