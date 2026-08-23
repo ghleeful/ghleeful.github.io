@@ -18,6 +18,14 @@ profile:
       <a href="https://www.linkedin.com/in/leegh" target="_blank" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a>
       <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">Email</a>
     </div>
+    <div class="affiliation-logos">
+      <a href="https://www.purdue.edu/" target="_blank" rel="external nofollow noopener" aria-label="Purdue University" title="Purdue University">
+        <img src="/assets/img/purdue-logo.png" alt="Purdue University logo" class="affiliation-logo purdue-logo">
+      </a>
+      <a href="https://www.yonsei.ac.kr/" target="_blank" rel="external nofollow noopener" aria-label="Yonsei University" title="Yonsei University">
+        <img src="/assets/img/yonsei-logo.png" alt="Yonsei University logo" class="affiliation-logo yonsei-logo">
+      </a>
+    </div>
 
 selected_papers: false
 social: false
@@ -41,7 +49,7 @@ latest_posts:
   }
 
   /* Profile picture */
-  .profile img {
+  .profile > img {
     border-radius: 0 !important;
   }
 
@@ -68,6 +76,58 @@ latest_posts:
     border-color: var(--global-theme-color);
     background-color: var(--global-theme-color);
     color: #ffffff !important;
+  }
+
+  /* University logos */
+  .affiliation-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.15rem;
+    margin-top: 1.7rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .affiliation-logos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  .affiliation-logos a:hover {
+    border: 0;
+    background: transparent;
+  }
+
+  .affiliation-logo {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    object-fit: contain;
+    opacity: 0.82;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .purdue-logo {
+    height: 38px !important;
+  }
+
+  .yonsei-logo {
+    height: 34px !important;
+  }
+
+  .affiliation-logos a:hover .affiliation-logo {
+    opacity: 1;
+    transform: translateY(-2px);
   }
 
   /* CV toggles */
@@ -157,6 +217,20 @@ latest_posts:
     .profile-links a {
       padding: 0.25rem 0.5rem;
       font-size: 0.72rem;
+    }
+
+    .affiliation-logos {
+      gap: 0.9rem;
+      margin-top: 1.2rem;
+      padding-top: 0.9rem;
+    }
+
+    .purdue-logo {
+      height: 30px !important;
+    }
+
+    .yonsei-logo {
+      height: 27px !important;
     }
 
     .cv-toggle summary {
