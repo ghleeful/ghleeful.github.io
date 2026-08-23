@@ -9,7 +9,7 @@
     max-width: 1320px;
   }
 
-  /* Publications page title */
+  /* Page title */
   h1.post-title {
     margin-bottom: 2.2rem;
     font-size: 2.5rem !important;
@@ -17,7 +17,7 @@
     line-height: 1.15;
   }
 
-  /* Place the year to the left of its publication list */
+  /* Year on the left and publications on the right */
   .publications {
     display: grid;
     grid-template-columns: 100px minmax(0, 1fr);
@@ -37,24 +37,24 @@
     line-height: 1.2;
   }
 
-  /* Publication lists */
+  /* Publication list */
   .publications ol.bibliography {
     grid-column: 2;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     border-top: 1px solid var(--global-divider-color);
     list-style: none !important;
   }
 
-  /* Remove automatic numbering */
+  /* Remove publication numbering */
   .publications ol.bibliography > li {
     margin: 0;
     padding: 1.35rem 0 1.5rem;
     list-style: none !important;
   }
 
-  .publications ol.bibliography > li + li {
-    border-top: 0;
+  .publications ol.bibliography > li::marker {
+    content: "";
   }
 
   /* Remove JACS, Small, ACR and other abbreviation labels */
@@ -62,7 +62,7 @@
     display: none !important;
   }
 
-  /* Recover the space previously occupied by abbreviation labels */
+  /* Recover the space previously used by abbreviation labels */
   .publications ol.bibliography > li > .row {
     display: block;
     margin-right: 0;
@@ -78,28 +78,28 @@
     flex: 0 0 100%;
   }
 
-  /* Publication title */
+  /* Larger publication title */
   .publications .title {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     color: var(--global-text-color);
-    font-size: 1.08rem;
+    font-size: 1.22rem;
     font-weight: 700;
     line-height: 1.35;
   }
 
   /* Author list */
   .publications .author {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.28rem;
     color: var(--global-text-color);
-    font-size: 0.94rem;
+    font-size: 0.95rem;
     line-height: 1.45;
   }
 
   /* Journal, volume and page information */
   .publications .periodical {
-    display: inline;
+    display: block;
     color: var(--global-text-color-light);
-    font-size: 0.9rem;
+    font-size: 0.91rem;
     line-height: 1.45;
   }
 
@@ -107,18 +107,18 @@
     color: var(--global-text-color);
   }
 
-  /* DOI button positioned beside the journal information */
+  /* DOI button beside the publication title */
   .publications .inline-doi {
     display: inline-block;
     margin-left: 0.55rem;
-    padding: 0.18rem 0.48rem;
+    padding: 0.14rem 0.42rem;
     border: 1px solid var(--global-divider-color);
     color: var(--global-text-color) !important;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
-    vertical-align: middle;
+    vertical-align: 0.12rem;
   }
 
   .publications .inline-doi:hover {
@@ -127,12 +127,12 @@
     color: #ffffff !important;
   }
 
-  /* Hide the original link area after moving DOI */
+  /* Hide the original link area */
   .publications .links {
     display: none;
   }
 
-  /* Hide optional abstracts and extra information by default */
+  /* Optional information */
   .publications .abstract,
   .publications .award,
   .publications .additional-info {
@@ -165,11 +165,12 @@
     }
 
     .publications ol.bibliography > li {
-      padding: 0.9rem 0 1.1rem;
+      padding: 0.9rem 0 1.15rem;
     }
 
     .publications .title {
-      font-size: 1rem;
+      font-size: 1.08rem;
+      line-height: 1.35;
     }
 
     .publications .author {
@@ -179,15 +180,21 @@
     .publications .periodical {
       font-size: 0.84rem;
     }
+
+    .publications .inline-doi {
+      margin-left: 0.35rem;
+      padding: 0.12rem 0.35rem;
+      font-size: 0.64rem;
+    }
   }
 </style> <h2 class="bibliography">2025</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">JACS</abbr> </div> <div id="lee2025activating" class="col-sm-8"> <div class="title">Activating the Gate-Opening of a Metal-Organic Framework and Maximizing Its Adsorption Capacity</div> <div class="author"> <em>Gihyun Lee</em>, Dayeon Choi, and Moonhyun Oh </div> <div class="periodical"> <em>Journal of the American Chemical Society</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1021/jacs.5c01399" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Small</abbr> </div> <div id="lim2025compositional" class="col-sm-8"> <div class="title">Compositional Complexity of Metal-Organic Frameworks with Programmable Spatial Arrangement of Multi-Metallic Components</div> <div class="author"> Hyeongi Lim<sup>†</sup>, <em>Gihyun Lee<sup>†</sup></em>, Jeehyoun Lee, and Moonhyun Oh </div> <div class="periodical"> <em>Small</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1002/smll.202408119" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> </ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ACR</abbr> </div> <div id="lee2024mof" class="col-sm-8"> <div class="title">MOF-on-MOF Growth: Inducing Naturally Nonpreferred MOFs and Atypical MOF Growth</div> <div class="author"> Sujeong Lee<sup>†</sup>, <em>Gihyun Lee<sup>†</sup></em>, and Moonhyun Oh </div> <div class="periodical"> <em>Accounts of Chemical Research</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1021/acs.accounts.4c00469" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Small</abbr> </div> <div id="oh2024drop" class="col-sm-8"> <div class="title">A Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites</div> <div class="author"> Hyunjeong Oh<sup>†</sup>, <em>Gihyun Lee<sup>†</sup></em>, and Moonhyun Oh </div> <div class="periodical"> <em>Small</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1002/smll.202306543" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">BKCS</abbr> </div> <div id="lee2024enhanced" class="col-sm-8"> <div class="title">Enhanced Early-Stage Adsorption of Chemical Warfare Agent Simulant by MIL-68-(X%OH)</div> <div class="author"> <em>Gihyun Lee<sup>†</sup></em>, Sojin Oh<sup>†</sup>, and Moonhyun Oh </div> <div class="periodical"> <em>Bulletin of the Korean Chemical Society</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1002/bkcs.12794" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> </ol> <h2 class="bibliography">2023</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Small Methods</abbr> </div> <div id="lee2023structural" class="col-sm-8"> <div class="title">Structural Compromise Between Conflicted Spatial-Arrangements of Two Linkers in Metal-Organic Frameworks</div> <div class="author"> <em>Gihyun Lee</em>, Haejin Kwon, Sujeong Lee, and Moonhyun Oh </div> <div class="periodical"> <em>Small Methods</em>, 2023 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1002/smtd.202201586" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Small</abbr> </div> <div id="lee2023induced" class="col-sm-8"> <div class="title">Induced Production of Atypical Naturally Non-Preferred Metal-Organic Frameworks and Their Detachment via Provoking Post-Mismatching</div> <div class="author"> Sujeong Lee, <em>Gihyun Lee</em>, and Moonhyun Oh </div> <div class="periodical"> <em>Small</em>, 2023 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1002/smll.202303580" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Sci. Rep.</abbr> </div> <div id="oh2023enhanced" class="col-sm-8"> <div class="title">Enhanced Adsorption Capacity of ZIF-8 for Chemical Warfare Agent Simulants Caused by Its Morphology and Surface Charge</div> <div class="author"> Sojin Oh, Sujeong Lee, <em>Gihyun Lee</em>, and Moonhyun Oh </div> <div class="periodical"> <em>Scientific Reports</em>, 2023 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1038/s41598-023-39507-6" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Dalton Trans.</abbr> </div> <div id="lee2023defective" class="col-sm-8"> <div class="title">Defective MOF-74 with Ancillary Open Metal Sites for the Enhanced Adsorption of Chemical Warfare Agent Simulants</div> <div class="author"> Sujeong Lee, Sojin Oh, <em>Gihyun Lee</em>, and Moonhyun Oh </div> <div class="periodical"> <em>Dalton Transactions</em>, 2023 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1039/D3DT02025H" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Nanoscale Adv.</abbr> </div> <div id="oh2023boosted" class="col-sm-8"> <div class="title">Boosted Ability of ZIF-8 for Early-Stage Adsorption and Degradation of Chemical Warfare Agent Simulants</div> <div class="author"> Sojin Oh, Sujeong Lee, <em>Gihyun Lee</em>, and Moonhyun Oh </div> <div class="periodical"> <em>Nanoscale Advances</em>, 2023 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1039/D3NA00807J" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">JACS</abbr> </div> <div id="kwon2023octahedral" class="col-sm-8"> <div class="title">Au Octahedral Nanosponges: 3D Plasmonic Nanolenses for Near-Field Focusing</div> <div class="author"> Sunwoo Kwon, Myeong Jin Oh, Soohyun Lee, <em>Gihyun Lee</em>, Insub Jung, Moonhyun Oh, and Sungho Park </div> <div class="periodical"> <em>Journal of the American Chemical Society</em>, 2023 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1021/jacs.3c08315" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">RSC Adv.</abbr> </div> <div id="shim2023construction" class="col-sm-8"> <div class="title">Construction of Defected MOF-74 with Preserved Crystallinity for Efficient Catalytic Cyanosilylation of Benzaldehyde</div> <div class="author"> Chul Hwan Shim<sup>†</sup>, Sojin Oh<sup>†</sup>, Sujeong Lee, <em>Gihyun Lee</em>, and Moonhyun Oh </div> <div class="periodical"> <em>RSC Advances</em>, 2023 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1039/D3RA01222K" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> </ol> <h2 class="bibliography">2022</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Sci. Rep.</abbr> </div> <div id="jun2022enhanced" class="col-sm-8"> <div class="title">Enhanced Catalytic Activity of MOF-74 via Providing Additional Open Metal Sites for Cyanosilylation of Aldehydes</div> <div class="author"> Hyeji Jun<sup>†</sup>, Sojin Oh<sup>†</sup>, <em>Gihyun Lee</em>, and Moonhyun Oh </div> <div class="periodical"> <em>Scientific Reports</em>, 2022 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1038/s41598-022-18932-z" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Biomicrofluidics</abbr> </div> <div id="stephenson2022investigating" class="col-sm-8"> <div class="title">Investigating the Effect of Phospholipids on Droplet Formation and Surface Property Evolution in Microfluidic Devices for Droplet Interface Bilayer (DIB) Formation</div> <div class="author"> Elanna B. Stephenson, Ricardo Garcia Ramirez, Sean Farley, Katherine Adolph-Hammond, <em>Gihyun Lee</em>, John M. Frostad, and Katherine S. Elvira </div> <div class="periodical"> <em>Biomicrofluidics</em>, 2022 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1063/5.0096193" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> </ol> <h2 class="bibliography">2021</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ACS Nano</abbr> </div> <div id="lee2021lattice" class="col-sm-8"> <div class="title">Lattice-Guided Construction and Harvest of a Naturally Nonpreferred Metal-Organic Framework</div> <div class="author"> Sujeong Lee<sup>†</sup>, <em>Gihyun Lee<sup>†</sup></em>, and Moonhyun Oh </div> <div class="periodical"> <em>ACS Nano</em>, 2021 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1021/acsnano.1c06207" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">MCF</abbr> </div> <div id="yeo2021rational" class="col-sm-8"> <div class="title">Rational Manufacture of Yolk-Shell and Core-Shell Metal Oxide Double Layers from Silica-Templated Coordination Polymer Double Layers</div> <div class="author"> Jian Yeo<sup>†</sup>, <em>Gihyun Lee<sup>†</sup></em>, Sujeong Lee, and Moonhyun Oh </div> <div class="periodical"> <em>Materials Chemistry Frontiers</em>, 2021 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1039/D1QM00034A" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> </ol> <h2 class="bibliography">2020</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">JACS</abbr> </div> <div id="lee2020tip" class="col-sm-8"> <div class="title">Tip-to-Middle Anisotropic MOF-on-MOF Growth with a Structural Adjustment</div> <div class="author"> <em>Gihyun Lee</em>, Sujeong Lee, Sojin Oh, Dooyoung Kim, and Moonhyun Oh </div> <div class="periodical"> <em>Journal of the American Chemical Society</em>, 2020 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1021/jacs.9b12193" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li></ol> <h2 class="bibliography">2019</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Chem. Commun.</abbr> </div> <div id="kim2019unbalanced" class="col-sm-8"> <div class="title">Unbalanced MOF-on-MOF Growth for the Production of Lopsided Core-Shell of MIL-88B@MIL-88A with Mismatched Cell Parameters</div> <div class="author"> Dooyoung Kim, <em>Gihyun Lee</em>, Sojin Oh, and Moonhyun Oh </div> <div class="periodical"> <em>Chemical Communications</em>, 2019 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1039/C8CC08456D" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li></ol> <script>
   document.addEventListener("DOMContentLoaded", function () {
-    /* Automatically show every author */
+    /* Automatically display all authors */
     document.querySelectorAll(".more-authors").forEach(function (button) {
       button.click();
     });
 
-    /* Remove the repeated year from each journal-information line */
+    /* Remove the duplicate year from the journal-information line */
     document.querySelectorAll(".publications h2.bibliography").forEach(function (heading) {
       const year = heading.textContent.trim();
       const list = heading.nextElementSibling;
@@ -204,17 +211,17 @@
       });
     });
 
-    /* Move each DOI button beside the journal information */
+    /* Move the DOI button beside the publication title */
     document.querySelectorAll(".publications ol.bibliography > li").forEach(function (entry) {
-      const periodical = entry.querySelector(".periodical");
+      const title = entry.querySelector(".title");
       const doiLink = entry.querySelector('.links a[href*="doi.org"]');
 
-      if (!periodical || !doiLink) return;
+      if (!title || !doiLink) return;
 
       doiLink.classList.remove("btn", "btn-sm", "z-depth-0");
       doiLink.classList.add("inline-doi");
       doiLink.textContent = "DOI";
-      periodical.insertAdjacentElement("afterend", doiLink);
+      title.appendChild(doiLink);
     });
   });
 </script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gihyun Lee. Department of Chemistry · Purdue University · 560 Oval Drive · West Lafayette, IN 47907, USA </div> </footer> <script>
