@@ -1,290 +1,206 @@
 ---
-layout: page
-title: Publications
-permalink: /publications/
-description:
-nav: true
-nav_order: 3
+layout: about
+title: Profile
+permalink: /
+subtitle: >
+  <b>Postdoctoral Research Associate</b> at
+  <a href="https://www.purdue.edu/" rel="external nofollow noopener" target="_blank">Purdue University</a>,
+  Department of Chemistry
 
-publications:
-  - year: 2025
-    title: Activating the Gate-Opening of a Metal–Organic Framework and Maximizing Its Adsorption Capacity
-    doi: https://doi.org/10.1021/jacs.5c01399
-    authors: >-
-      <span class="my-name">Gihyun Lee</span>, Dayeon Choi, and
-      Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Journal of the American Chemical Society</em>, 147, 12811–12820.
+profile:
+  align: right
+  image: profile-01.jpg
+  image_circular: false
+  more_info: >
+    <div class="profile-carousel" aria-label="Profile photo gallery">
+      <div class="profile-carousel-viewport">
+        <img
+          class="profile-carousel-image active"
+          src="/assets/img/profile-01.jpg"
+          alt="Gihyun Lee profile photo 1"
+        >
+        <img
+          class="profile-carousel-image"
+          src="/assets/img/profile-02.jpg"
+          alt="Gihyun Lee profile photo 2"
+        >
 
-  - year: 2025
-    title: Compositional Complexity of Metal–Organic Frameworks with Programmable Spatial Arrangement of Multi-Metallic Components
-    doi: https://doi.org/10.1002/smll.202408119
-    authors: >-
-      Hyeongi Lim<sup>†</sup>,
-      <span class="my-name">Gihyun Lee</span><sup>†</sup>,
-      Jeehyoun Lee, and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Small</em>, 21, 2408119.
+        <button
+          class="profile-carousel-arrow profile-carousel-prev"
+          type="button"
+          aria-label="Previous photo"
+        >
+          ‹
+        </button>
 
-  - year: 2024
-    title: "MOF-on-MOF Growth: Inducing Naturally Nonpreferred MOFs and Atypical MOF Growth"
-    doi: https://doi.org/10.1021/acs.accounts.4c00469
-    authors: >-
-      Sujeong Lee<sup>†</sup>,
-      <span class="my-name">Gihyun Lee</span><sup>†</sup>,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Accounts of Chemical Research</em>, 57, 3113–3125.
+        <button
+          class="profile-carousel-arrow profile-carousel-next"
+          type="button"
+          aria-label="Next photo"
+        >
+          ›
+        </button>
+      </div>
 
-  - year: 2024
-    title: A Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites
-    doi: https://doi.org/10.1002/smll.202306543
-    authors: >-
-      Hyunjeong Oh<sup>†</sup>,
-      <span class="my-name">Gihyun Lee</span><sup>†</sup>,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Small</em>, 20, 2306543.
+      <div class="profile-carousel-dots" aria-label="Select profile photo">
+        <button
+          class="profile-carousel-dot active"
+          type="button"
+          aria-label="Show photo 1"
+          aria-current="true"
+        ></button>
+        <button
+          class="profile-carousel-dot"
+          type="button"
+          aria-label="Show photo 2"
+          aria-current="false"
+        ></button>
+      </div>
+    </div>
 
-  - year: 2024
-    title: Enhanced Early-Stage Adsorption of Chemical Warfare Agent Simulant by MIL-68-(X%OH)
-    doi: https://doi.org/10.1002/bkcs.12794
-    authors: >-
-      <span class="my-name">Gihyun Lee</span><sup>†</sup>,
-      Sojin Oh<sup>†</sup>, and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Bulletin of the Korean Chemical Society</em>, 45, 67–73.
+    <div class="profile-links">
+      <a href="/assets/pdf/Gihyun%20Lee_CV.pdf" target="_blank" aria-label="CV" title="Open CV">CV</a>
+      <a href="https://scholar.google.com/citations?user=FmEf7ccAAAAJ" target="_blank" aria-label="Google Scholar" title="Google Scholar">Scholar</a>
+      <a href="https://www.linkedin.com/in/leegh" target="_blank" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a>
+      <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">Email</a>
+    </div>
 
-  - year: 2023
-    title: Structural Compromise Between Conflicted Spatial Arrangements of Two Linkers in Metal–Organic Frameworks
-    doi: https://doi.org/10.1002/smtd.202201586
-    authors: >-
-      <span class="my-name">Gihyun Lee</span>, Haejin Kwon,
-      Sujeong Lee, and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Small Methods</em>, 7, 2201586.
+selected_papers: false
+social: false
 
-  - year: 2023
-    title: Induced Production of Atypical Naturally Non-Preferred Metal–Organic Frameworks and Their Detachment via Provoking Post-Mismatching
-    doi: https://doi.org/10.1002/smll.202303580
-    authors: >-
-      Sujeong Lee, <span class="my-name">Gihyun Lee</span>,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Small</em>, 19, 2303580.
+announcements:
+  enabled: false
+  scrollable: true
+  limit: 5
 
-  - year: 2023
-    title: Enhanced Adsorption Capacity of ZIF-8 for Chemical Warfare Agent Simulants Caused by Its Morphology and Surface Charge
-    doi: https://doi.org/10.1038/s41598-023-39507-6
-    authors: >-
-      Sojin Oh, Sujeong Lee, <span class="my-name">Gihyun Lee</span>,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Scientific Reports</em>, 13, 12250.
-
-  - year: 2023
-    title: Defective MOF-74 with Ancillary Open Metal Sites for the Enhanced Adsorption of Chemical Warfare Agent Simulants
-    doi: https://doi.org/10.1039/D3DT02025H
-    authors: >-
-      Sujeong Lee, Sojin Oh, <span class="my-name">Gihyun Lee</span>,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Dalton Transactions</em>, 52, 12143–12151.
-
-  - year: 2023
-    title: Boosted Ability of ZIF-8 for Early-Stage Adsorption and Degradation of Chemical Warfare Agent Simulants
-    doi: https://doi.org/10.1039/D3NA00807J
-    authors: >-
-      Sojin Oh, Sujeong Lee, <span class="my-name">Gihyun Lee</span>,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Nanoscale Advances</em>, 5, 6449–6457.
-
-  - year: 2023
-    title: "Au Octahedral Nanosponges: 3D Plasmonic Nanolenses for Near-Field Focusing"
-    doi: https://doi.org/10.1021/jacs.3c08315
-    authors: >-
-      Sunwoo Kwon, Myeong Jin Oh, Soohyun Lee,
-      <span class="my-name">Gihyun Lee</span>, Insub Jung,
-      Moonhyun Oh<sup>*</sup>, and Sungho Park
-    citation: >-
-      <em>Journal of the American Chemical Society</em>, 145, 27397–27406.
-
-  - year: 2023
-    title: Construction of Defected MOF-74 with Preserved Crystallinity for Efficient Catalytic Cyanosilylation of Benzaldehyde
-    doi: https://doi.org/10.1039/D3RA01222K
-    authors: >-
-      Chul Hwan Shim<sup>†</sup>, Sojin Oh<sup>†</sup>, Sujeong Lee,
-      <span class="my-name">Gihyun Lee</span>, and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>RSC Advances</em>, 13, 8220–8226.
-
-  - year: 2022
-    title: Enhanced Catalytic Activity of MOF-74 via Providing Additional Open Metal Sites for Cyanosilylation of Aldehydes
-    doi: https://doi.org/10.1038/s41598-022-18932-z
-    authors: >-
-      Hyeji Jun<sup>†</sup>, Sojin Oh<sup>†</sup>,
-      <span class="my-name">Gihyun Lee</span>, and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Scientific Reports</em>, 12, 14735.
-
-  - year: 2022
-    title: Investigating the Effect of Phospholipids on Droplet Formation and Surface Property Evolution in Microfluidic Devices for Droplet Interface Bilayer Formation
-    doi: https://doi.org/10.1063/5.0096193
-    authors: >-
-      Elanna B. Stephenson, Ricardo Garcia Ramirez, Sean Farley,
-      Katherine Adolph-Hammond, <span class="my-name">Gihyun Lee</span>,
-      John M. Frostad, and Katherine S. Elvira
-    citation: >-
-      <em>Biomicrofluidics</em>, 16, 044112.
-
-  - year: 2021
-    title: Lattice-Guided Construction and Harvest of a Naturally Nonpreferred Metal–Organic Framework
-    doi: https://doi.org/10.1021/acsnano.1c06207
-    authors: >-
-      Sujeong Lee<sup>†</sup>,
-      <span class="my-name">Gihyun Lee</span><sup>†</sup>,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>ACS Nano</em>, 15, 17907–17916.
-
-  - year: 2021
-    title: Rational Manufacture of Yolk–Shell and Core–Shell Metal Oxide Double Layers from Silica-Templated Coordination Polymer Double Layers
-    doi: https://doi.org/10.1039/D1QM00034A
-    authors: >-
-      Jian Yeo<sup>†</sup>,
-      <span class="my-name">Gihyun Lee</span><sup>†</sup>,
-      Sujeong Lee, and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Materials Chemistry Frontiers</em>, 5, 3404–3412.
-
-  - year: 2020
-    title: Tip-to-Middle Anisotropic MOF-on-MOF Growth with a Structural Adjustment
-    doi: https://doi.org/10.1021/jacs.9b12193
-    authors: >-
-      <span class="my-name">Gihyun Lee</span>, Sujeong Lee, Sojin Oh,
-      Dooyoung Kim, and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Journal of the American Chemical Society</em>, 142, 3042–3049.
-
-  - year: 2019
-    title: Unbalanced MOF-on-MOF Growth for the Production of Lopsided Core–Shell MIL-88B@MIL-88A with Mismatched Cell Parameters
-    doi: https://doi.org/10.1039/C8CC08456D
-    authors: >-
-      Dooyoung Kim, <span class="my-name">Gihyun Lee</span>, Sojin Oh,
-      and Moonhyun Oh<sup>*</sup>
-    citation: >-
-      <em>Chemical Communications</em>, 55, 43–46.
+latest_posts:
+  enabled: false
+  scrollable: true
+  limit: 3
 ---
 
 <style>
-  /* Hide the title generated automatically by the page layout */
-  .post-header {
-    display: none;
+  /* Page title */
+  h1.post-title {
+    font-size: 3.4rem !important;
+    line-height: 1.1;
   }
 
-  .publications-page {
+  /* Hide the original al-folio profile image after the carousel loads */
+  .profile > img,
+  .profile > figure,
+  .profile > picture {
+    display: none !important;
+  }
+
+  /* Profile carousel */
+  .profile-carousel {
+    position: relative;
     width: 100%;
-    max-width: 100%;
-    overflow: visible;
   }
 
-  .publications-page,
-  .publications-page * {
-    box-sizing: border-box;
+  .profile-carousel-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--global-card-bg-color);
+    box-shadow: 0 0.2rem 0.75rem rgba(0, 0, 0, 0.12);
   }
 
-  /* Page heading */
-  .publications-header {
+  .profile-carousel-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 0 !important;
+    object-fit: cover;
+  }
+
+  .profile-carousel-image.active {
+    display: block;
+  }
+
+  /* Carousel arrows */
+  .profile-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 0 0 2.5rem;
-  }
-
-  .publications-header h1 {
-    flex: 0 0 auto;
-    margin: 0;
-    color: var(--global-text-color);
-    font-size: 2.65rem;
+    width: 2rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(38, 35, 31, 0.72);
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.15;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition:
+      opacity 0.18s ease,
+      background-color 0.18s ease;
   }
 
-  .publication-legend {
+  .profile-carousel:hover .profile-carousel-arrow,
+  .profile-carousel:focus-within .profile-carousel-arrow {
+    opacity: 1;
+  }
+
+  .profile-carousel-arrow:hover,
+  .profile-carousel-arrow:focus-visible {
+    background-color: var(--global-theme-color);
+    outline: none;
+  }
+
+  .profile-carousel-prev {
+    left: 0.45rem;
+  }
+
+  .profile-carousel-next {
+    right: 0.45rem;
+  }
+
+  /* Carousel dots */
+  .profile-carousel-dots {
+    display: flex;
+    min-height: 1.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+  }
+
+  .profile-carousel-dot {
+    width: 0.48rem;
+    height: 0.48rem;
+    padding: 0;
+    border: 1px solid var(--global-text-color-light);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .profile-carousel-dot.active {
+    border-color: var(--global-theme-color);
+    background-color: var(--global-theme-color);
+  }
+
+  /* Links below profile pictures */
+  .profile-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 0.4rem 1.1rem;
-    margin: 0;
-    color: var(--global-text-color-light);
-    font-size: 0.76rem;
-    line-height: 1.4;
+    margin-top: 0.45rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
   }
 
-  /* Year and publication list */
-  .publication-year-group {
-    display: grid;
-    grid-template-columns: 130px minmax(0, 1fr);
-    gap: 2rem;
-    width: 100%;
-    padding: 1.8rem 0;
-    border-top: 1px solid var(--global-divider-color);
-  }
-
-  .publication-year {
-    margin: 0;
-    color: var(--global-text-color);
-    font-size: 1.9rem;
-    font-weight: 700;
-    line-height: 1.15;
-  }
-
-  .publication-list {
-    min-width: 0;
-    width: 100%;
-    overflow: visible;
-  }
-
-  .publication-entry {
-    min-width: 0;
-    width: 100%;
-    margin: 0 0 1.8rem;
-    overflow: visible;
-  }
-
-  .publication-entry:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Long titles must wrap instead of being clipped */
-  .publication-title {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto !important;
-    max-height: none !important;
-    margin: 0;
-    overflow: visible !important;
-    color: var(--global-text-color);
-    font-size: 1.05rem;
-    font-weight: 700;
-    line-height: 1.4;
-    text-overflow: clip !important;
-    white-space: normal !important;
-    overflow-wrap: anywhere;
-    word-break: normal;
-  }
-
-  /* DOI directly below each title */
-  .doi-row {
-    margin: 0.5rem 0 0.55rem;
-  }
-
-  .doi-link {
-    display: inline-block;
-    padding: 0.3rem 0.75rem;
+  .profile-links a {
+    padding: 0.3rem 0.65rem;
     border: 1px solid var(--global-divider-color);
     color: var(--global-text-color) !important;
     font-size: 0.78rem;
@@ -293,151 +209,393 @@ publications:
     text-decoration: none;
   }
 
-  .doi-link:hover {
+  .profile-links a:hover {
     border-color: var(--global-theme-color);
     background-color: var(--global-theme-color);
-    color: var(--global-hover-text-color) !important;
-    text-decoration: none;
+    color: #ffffff !important;
   }
 
-  /* Authors */
-  .publication-authors {
-    width: 100%;
-    margin: 0 0 0.2rem;
-    overflow: visible;
+  /* CV toggles */
+  details.cv-toggle:first-of-type {
+    margin-top: 2.25rem;
+  }
+
+  details.cv-toggle,
+  details.cv-toggle:last-of-type {
+    padding: 0.55rem 0;
+    border: 0 !important;
+  }
+
+  .cv-toggle summary {
+    display: flex;
+    width: 250px;
+    max-width: calc(100vw - 2rem);
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    align-items: center;
     color: var(--global-text-color);
-    font-size: 0.88rem;
-    line-height: 1.45;
-    white-space: normal;
-    overflow-wrap: anywhere;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    list-style: none;
   }
 
-  .my-name {
-    color: var(--global-text-color);
-    font-style: normal;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.14em;
+  .cv-toggle summary::-webkit-details-marker {
+    display: none;
   }
 
-  .publication-authors sup {
-    position: relative;
-    top: -0.1em;
-    margin-left: 0.04em;
-    color: var(--global-text-color);
-    font-size: 0.7em;
+  .cv-toggle summary::marker {
+    content: "";
   }
 
-  /* Journal information */
-  .publication-citation {
-    width: 100%;
-    margin: 0;
-    overflow: visible;
+  .cv-toggle summary::before {
+    width: 1.2rem;
+    margin-right: 0.25rem;
+    color: var(--global-theme-color);
+    content: "+";
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .cv-toggle[open] summary::before {
+    content: "−";
+  }
+
+  .cv-toggle-content {
+    padding: 0.8rem 0 0.1rem 1.2rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .cv-entry {
+    margin: 0 0 0.9rem;
+  }
+
+  .cv-entry span {
     color: var(--global-text-color-light);
-    font-size: 0.84rem;
-    line-height: 1.45;
-    white-space: normal;
-    overflow-wrap: anywhere;
   }
 
-  .publication-citation em {
-    color: var(--global-text-color);
+  /* Institution logos */
+  .institution-logos {
+    display: flex;
+    width: 100%;
+    margin: 1.8rem auto 0;
+    padding: 1.25rem 0 0.65rem;
+    border-top: 1px solid var(--global-divider-color);
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 5vw, 4.5rem);
   }
 
-  /* Tablet: use a narrower year column */
-  @media (max-width: 991px) {
-    .publication-year-group {
-      grid-template-columns: 90px minmax(0, 1fr);
-      gap: 1.4rem;
-    }
+  .institution-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .publication-year {
-      font-size: 1.65rem;
+  .institution-logo {
+    display: block;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Visually balanced logo sizes */
+  .institution-logo.uvic {
+    height: 42px;
+  }
+
+  .institution-logo.yonsei {
+    height: 48px;
+  }
+
+  .institution-logo.purdue {
+    height: 44px;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 576px) {
+    .profile {
+      width: 26% !important;
+      max-width: 530px;
+      margin-bottom: 1.5rem !important;
+      margin-left: 3rem !important;
+      transform: translateY(-6.5rem);
     }
   }
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    .publications-header {
-      display: block;
-      margin-bottom: 1.8rem;
+  /* Mobile layout */
+  @media (max-width: 575px) {
+    h1.post-title {
+      font-size: 2.5rem !important;
     }
 
-    .publications-header h1 {
-      font-size: 2.2rem;
+    .profile-carousel-arrow {
+      width: 1.8rem;
+      height: 2.2rem;
+      font-size: 1.5rem;
+      opacity: 0.82;
     }
 
-    .publication-legend {
-      justify-content: flex-start;
-      margin-top: 0.75rem;
+    .profile-links {
+      margin-top: 0.35rem;
     }
 
-    .publication-year-group {
-      display: block;
-      padding: 1.5rem 0;
+    .profile-links a {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.72rem;
     }
 
-    .publication-year {
-      margin-bottom: 1.25rem;
-      font-size: 1.6rem;
+    .cv-toggle summary {
+      width: 220px;
+      max-width: 100%;
     }
 
-    .publication-entry {
-      margin-bottom: 1.6rem;
+    .institution-logos {
+      flex-wrap: wrap;
+      gap: 1.1rem 1.6rem;
     }
 
-    .publication-title {
-      font-size: 1rem;
-      line-height: 1.4;
+    .institution-logo.uvic {
+      height: 32px;
     }
 
-    .publication-authors {
-      font-size: 0.85rem;
+    .institution-logo.yonsei {
+      height: 37px;
     }
 
-    .publication-citation {
-      font-size: 0.82rem;
+    .institution-logo.purdue {
+      height: 34px;
     }
   }
 </style>
 
-<div class="publications-page">
-  <header class="publications-header">
-    <h1>Publications</h1>
+Hi there! Welcome to my website. :)
 
-    <p class="publication-legend">
-      <span>* Corresponding author</span>
-      <span>† Contributed equally</span>
+I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
+
+My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids. Please take a look at my publication list in the tab in the upper right corner for more information.
+
+Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you are interested in collaborating. You are always welcome!
+
+<details class="cv-toggle">
+  <summary>Education</summary>
+
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      <strong>Ph.D. in Chemistry</strong><br>
+      <span>University Name · 20XX–20XX</span><br>
+      <span>Advisor: Professor Name</span>
     </p>
-  </header>
 
-  {% assign publication_years = page.publications | group_by: "year" %}
-  {% for year_group in publication_years %}
-    <section class="publication-year-group">
-      <h2 class="publication-year">{{ year_group.name }}</h2>
+    <p class="cv-entry">
+      <strong>M.S. in Chemistry</strong><br>
+      <span>University Name · 20XX–20XX</span>
+    </p>
 
-      <div class="publication-list">
-        {% for publication in year_group.items %}
-          <article class="publication-entry">
-            <h3 class="publication-title">{{ publication.title }}</h3>
+    <p class="cv-entry">
+      <strong>B.S. in Chemistry</strong><br>
+      <span>University Name · 20XX–20XX</span>
+    </p>
+  </div>
+</details>
 
-            <div class="doi-row">
-              <a
-                class="doi-link"
-                href="{{ publication.doi }}"
-                target="_blank"
-                rel="noopener"
-              >
-                DOI
-              </a>
-            </div>
+<details class="cv-toggle">
+  <summary>Experience</summary>
 
-            <p class="publication-authors">{{ publication.authors }}</p>
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      <strong>Postdoctoral Research Associate</strong><br>
+      <span>Purdue University · 20XX–Present</span>
+    </p>
 
-            <p class="publication-citation">{{ publication.citation }}</p>
-          </article>
-        {% endfor %}
-      </div>
-    </section>
-  {% endfor %}
+    <p class="cv-entry">
+      <strong>Previous Position</strong><br>
+      <span>Institution Name · 20XX–20XX</span>
+    </p>
+  </div>
+</details>
+
+<details class="cv-toggle">
+  <summary>Selected Awards</summary>
+
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      <strong>Award Name</strong><br>
+      <span>Awarding organization · Year</span>
+    </p>
+
+    <p class="cv-entry">
+      <strong>Award Name</strong><br>
+      <span>Awarding organization · Year</span>
+    </p>
+  </div>
+</details>
+
+<details class="cv-toggle">
+  <summary>Expertise</summary>
+
+  <div class="cv-toggle-content">
+    <p class="cv-entry">
+      Metal–organic frameworks · Coordination chemistry · Single-crystal X-ray diffraction
+    </p>
+
+    <p class="cv-entry">
+      Functional ligands · Responsive crystalline materials · Structure–property relationships
+    </p>
+  </div>
+</details>
+
+<div class="institution-logos">
+  <a
+    class="institution-logo-link"
+    href="https://www.uvic.ca/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="University of Victoria"
+  >
+    <img
+      class="institution-logo uvic"
+      src="/assets/img/uvic-logo.png"
+      alt="University of Victoria"
+    >
+  </a>
+
+  <a
+    class="institution-logo-link"
+    href="https://www.yonsei.ac.kr/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="Yonsei University"
+  >
+    <img
+      class="institution-logo yonsei"
+      src="/assets/img/yonsei-logo.png"
+      alt="Yonsei University"
+    >
+  </a>
+
+  <a
+    class="institution-logo-link"
+    href="https://www.purdue.edu/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="Purdue University"
+  >
+    <img
+      class="institution-logo purdue"
+      src="/assets/img/purdue-logo.png"
+      alt="Purdue University"
+    >
+  </a>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const profile = document.querySelector(".profile");
+    const carousel = profile?.querySelector(".profile-carousel");
+
+    if (!profile || !carousel) return;
+
+    /*
+     * al-folio still renders profile.image.
+     * Hide that original image and place the custom carousel first.
+     */
+    const originalImages = Array.from(profile.querySelectorAll("img")).filter(
+      (image) => !image.classList.contains("profile-carousel-image")
+    );
+
+    originalImages.forEach((image) => {
+      const logo = image.closest(".institution-logo-link");
+
+      if (!logo) {
+        image.style.display = "none";
+      }
+    });
+
+    profile.insertBefore(carousel, profile.firstChild);
+
+    const slides = Array.from(
+      carousel.querySelectorAll(".profile-carousel-image")
+    );
+    const dots = Array.from(
+      carousel.querySelectorAll(".profile-carousel-dot")
+    );
+    const previousButton = carousel.querySelector(
+      ".profile-carousel-prev"
+    );
+    const nextButton = carousel.querySelector(".profile-carousel-next");
+
+    if (slides.length < 2) return;
+
+    let currentIndex = 0;
+    let touchStartX = 0;
+
+    const showSlide = (index) => {
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("active", slideIndex === currentIndex);
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        const active = dotIndex === currentIndex;
+
+        dot.classList.toggle("active", active);
+        dot.setAttribute("aria-current", active ? "true" : "false");
+      });
+    };
+
+    previousButton?.addEventListener("click", () => {
+      showSlide(currentIndex - 1);
+    });
+
+    nextButton?.addEventListener("click", () => {
+      showSlide(currentIndex + 1);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showSlide(index);
+      });
+    });
+
+    carousel.setAttribute("tabindex", "0");
+
+    carousel.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        showSlide(currentIndex - 1);
+      }
+
+      if (event.key === "ArrowRight") {
+        showSlide(currentIndex + 1);
+      }
+    });
+
+    carousel.addEventListener(
+      "touchstart",
+      (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      },
+      { passive: true }
+    );
+
+    carousel.addEventListener(
+      "touchend",
+      (event) => {
+        const touchEndX = event.changedTouches[0].clientX;
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) < 40) return;
+
+        if (distance > 0) {
+          showSlide(currentIndex - 1);
+        } else {
+          showSlide(currentIndex + 1);
+        }
+      },
+      { passive: true }
+    );
+
+    showSlide(0);
+  });
+</script>
