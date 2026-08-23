@@ -1,0 +1,192 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Research | Gihyun Lee </title> <meta name="author" content="Gihyun Lee"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 1050px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="apple-touch-icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://ghleeful.github.io/research/"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Gihyun</span> Lee </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Profile </a> </li> <li class="nav-item active"> <a class="nav-link" href="/research/">Research <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/patents/">Patents </a> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Research</h1> <p class="post-description"></p> </header> <article> <style>
+  /* Page width and heading */
+  .container[role="main"] {
+    width: 86%;
+    max-width: 1320px;
+  }
+
+  h1.post-title {
+    margin-bottom: 2.2rem;
+    font-size: 2.5rem !important;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  .research-page,
+  .research-page * {
+    color: var(--global-text-color);
+  }
+
+  .research-intro {
+    max-width: 920px;
+    margin: 0 0 2.8rem;
+    color: var(--global-text-color);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .research-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+    gap: 3rem;
+    align-items: center;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .research-content {
+    min-width: 0;
+  }
+
+  .research-number {
+    margin: 0 0 0.4rem;
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .research-stage {
+    margin: 0 0 0.5rem;
+    color: var(--global-text-color-light);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .research-title {
+    margin: 0 0 0.85rem;
+    color: var(--global-text-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .research-question {
+    margin: 0 0 1rem;
+    padding-left: 0.9rem;
+    border-left: 3px solid var(--global-theme-color);
+    color: var(--global-text-color);
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .research-description {
+    margin: 0;
+    color: var(--global-text-color);
+    font-size: 0.84rem;
+    line-height: 1.7;
+  }
+
+  .research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+  }
+
+  .research-tag {
+    display: inline-block;
+    padding: 0.28rem 0.6rem;
+    border: 1px solid var(--global-divider-color);
+    color: var(--global-text-color-light);
+    font-size: 0.68rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .research-figure {
+    margin: 0;
+  }
+
+  .research-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0;
+    background-color: var(--global-card-bg-color);
+    object-fit: cover;
+  }
+
+  .research-caption {
+    margin-top: 0.55rem;
+    color: var(--global-text-color-light);
+    font-size: 0.67rem;
+    line-height: 1.45;
+  }
+
+  .research-caption strong {
+    color: var(--global-text-color);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  /* Alternate image position */
+  @media (min-width: 768px) {
+    .research-section:nth-of-type(even) .research-content {
+      order: 2;
+    }
+
+    .research-section:nth-of-type(even) .research-figure {
+      order: 1;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .container[role="main"] {
+      width: calc(100% - 2rem);
+    }
+
+    h1.post-title {
+      margin-bottom: 1.5rem;
+      font-size: 2rem !important;
+    }
+
+    .research-intro {
+      margin-bottom: 2rem;
+      font-size: 0.86rem;
+    }
+
+    .research-section {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+    }
+
+    .research-number {
+      font-size: 1.7rem;
+    }
+
+    .research-title {
+      font-size: 1.18rem;
+    }
+
+    .research-question {
+      font-size: 0.84rem;
+    }
+
+    .research-description {
+      font-size: 0.8rem;
+    }
+
+    .research-figure {
+      max-width: 520px;
+    }
+  }
+</style> <div class="research-page"> <p class="research-intro"> My research focuses on the design of <strong>functional and responsive coordination materials</strong>. I am particularly interested in understanding how molecular-level composition, structure, and dynamics translate into collective properties within crystalline solids. </p> <section class="research-section"> <div class="research-content"> <div class="research-number">01</div> <div class="research-stage">PhD Research</div> <h2 class="research-title"> Structural Control in Metal–Organic Frameworks </h2> <p class="research-question"> How do MOF structures accommodate compositional and structural perturbations? </p> <p class="research-description"> My PhD research focused on understanding and controlling structural changes in metal–organic frameworks (MOFs). I studied how framework structures respond to lattice mismatch, mixed-linker composition, defects, and guest adsorption. Through these studies, I became particularly interested in how small changes in molecular components can lead to significant changes in crystalline structures and their properties. </p> <div class="research-tags"> <span class="research-tag">MOF-on-MOF Growth</span> <span class="research-tag">Lattice Mismatch</span> <span class="research-tag">Mixed-Linker Systems</span> <span class="research-tag">Defects</span> <span class="research-tag">Gate Opening</span> </div> </div> <figure class="research-figure"> <img class="research-image" src="/assets/img/research-01.jpg" alt="Structural control in metal–organic frameworks"> <figcaption class="research-caption"> <strong>STRUCTURAL CONTROL IN MOFs</strong><br> Representative structures from MOF-on-MOF, mixed-linker, defect, and gate-opening studies. </figcaption> </figure> </section> <section class="research-section"> <div class="research-content"> <div class="research-number">02</div> <div class="research-stage">Postdoctoral Research</div> <h2 class="research-title"> Stimulus-Responsive Coordination Materials </h2> <p class="research-question"> Can a functional molecule retain its dynamic behavior when incorporated into a coordination solid? </p> <p class="research-description"> My current postdoctoral research expands my interest from framework-level structural changes to molecular-level dynamics within coordination solids. I design and synthesize functional ligands that can change their molecular states in response to external stimuli and investigate whether these properties are retained after incorporation into crystalline coordination materials. This work combines ligand synthesis, coordination chemistry, structural characterization, and computational analysis. </p> <div class="research-tags"> <span class="research-tag">Functional Ligands</span> <span class="research-tag">Photoswitching</span> <span class="research-tag">Coordination Solids</span> <span class="research-tag">Structural Characterization</span> <span class="research-tag">Computational Analysis</span> </div> </div> <figure class="research-figure"> <img class="research-image" src="/assets/img/research-02.jpg" alt="Stimulus-responsive coordination materials"> <figcaption class="research-caption"> <strong>STIMULUS-RESPONSIVE MATERIALS</strong><br> Functional ligand structures and stimulus-induced molecular changes within coordination solids. </figcaption> </figure> </section> <section class="research-section"> <div class="research-content"> <div class="research-number">03</div> <div class="research-stage">Independent Research Direction</div> <h2 class="research-title">Molecular-to-Solid Function</h2> <p class="research-question"> What determines whether molecular function is preserved, suppressed, or transformed in a crystalline solid? </p> <p class="research-description"> My future independent research will focus on understanding how molecular functions change when functional molecules are incorporated into crystalline solids. A molecule that works well in solution may retain, lose, or show a different function in the solid state because of coordination, molecular packing, and local environments. I aim to understand the structural factors that determine these differences and ultimately develop more predictable strategies for designing functional solid materials. </p> <div class="research-tags"> <span class="research-tag">Molecular Function</span> <span class="research-tag">Solid-State Environment</span> <span class="research-tag">Molecular Packing</span> <span class="research-tag">Structure–Function Relationships</span> <span class="research-tag">Predictive Materials Design</span> </div> </div> <figure class="research-figure"> <img class="research-image" src="/assets/img/research-03.jpg" alt="Molecular-to-solid function"> <figcaption class="research-caption"> <strong>MOLECULAR-TO-SOLID FUNCTION</strong><br> Connecting molecular structure, coordination, packing, and crystalline material function. </figcaption> </figure> </section> <section class="research-section"> <div class="research-content"> <div class="research-number">04</div> <div class="research-stage">Collaborative Research Direction</div> <h2 class="research-title"> Data-Driven Design of Functional Solids </h2> <p class="research-question"> How can experimental structure–function data guide the prediction of functional crystalline materials? </p> <p class="research-description"> I am also interested in developing data-driven approaches for the design of functional crystalline solids through collaborative research. By combining experimental structure–function data from my research with machine learning and deep learning, we aim to identify molecular and structural factors that determine the functions of crystalline materials. Ultimately, I hope this collaboration will help us screen promising molecular and solid-state candidates before synthesis and make the discovery of functional materials more efficient and predictable. </p> <div class="research-tags"> <span class="research-tag">Experimental Data</span> <span class="research-tag">Machine Learning</span> <span class="research-tag">Deep Learning</span> <span class="research-tag">Descriptor Identification</span> <span class="research-tag">Candidate Prediction</span> <span class="research-tag">Experimental Validation</span> </div> </div> <figure class="research-figure"> <img class="research-image" src="/assets/img/research-04.jpg" alt="Data-driven design of functional solids"> <figcaption class="research-caption"> <strong>DATA-DRIVEN MATERIALS DESIGN</strong><br> Experimental structure–function data, computational prediction, and validation of candidate materials. </figcaption> </figure> </section> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gihyun Lee. Department of Chemistry · Purdue University · 560 Oval Drive · West Lafayette, IN 47907, USA </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> </body> </html>
