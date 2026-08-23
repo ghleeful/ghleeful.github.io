@@ -9,7 +9,7 @@ subtitle: >
 
 profile:
   align: right
-  image: prof_pic01.jpg
+  image: profile-01.png
   image_circular: false
   more_info: >
     <div id="profile-carousel" class="carousel slide profile-carousel" data-bs-ride="false">
@@ -17,14 +17,14 @@ profile:
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="/assets/img/prof_pic01.jpg"
+            src="/assets/img/profile-01.png"
             alt="Gihyun Lee profile photograph 1"
           >
         </div>
 
         <div class="carousel-item">
           <img
-            src="/assets/img/prof_pic02.jpg"
+            src="/assets/img/profile-02.jpg"
             alt="Gihyun Lee profile photograph 2"
           >
         </div>
