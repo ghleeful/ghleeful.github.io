@@ -3,197 +3,240 @@
     --max-content-width: 1050px;
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="apple-touch-icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://ghleeful.github.io/research/"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Gihyun</span> Lee </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Profile </a> </li> <li class="nav-item active"> <a class="nav-link" href="/research/">Research <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/patents/">Patents </a> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Research</h1> <p class="post-description"></p> </header> <article> <style>
-  /* Overall page width */
+  /* Page width */
   .container[role="main"] {
-    width: 86% !important;
-    max-width: 1320px !important;
+    width: 86%;
+    max-width: 1320px;
   }
 
-  /* Page heading */
-  .post-header {
-    margin-bottom: 1.1rem !important;
-  }
-
-  .post-header .post-title {
-    margin: 0 !important;
-    color: var(--global-text-color);
-    font-size: 2.25rem !important;
-    font-weight: 500 !important;
+  /* Page title */
+  h1.post-title {
+    margin-bottom: 1.2rem;
+    font-size: 2.5rem !important;
+    font-weight: 400;
     line-height: 1.15;
   }
 
-  .post-header .post-description {
-    display: none !important;
-  }
-
-  /* Intro */
+  /* Introductory statement */
   .research-intro {
-    max-width: 900px;
-    margin-bottom: 2.4rem;
+    max-width: 960px;
+    margin: 0 0 3rem;
     color: var(--global-text-color);
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     line-height: 1.7;
   }
 
   .research-intro strong {
-    color: var(--global-theme-color);
     font-weight: 600;
   }
 
-  /* Research sections */
+  /* Complete research section */
   .research-section {
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: 2.2rem;
-    align-items: center;
-    padding: 2rem 0;
+    grid-template-columns: 115px minmax(0, 1fr) 340px;
+    column-gap: 2.2rem;
+    align-items: start;
+    padding: 2rem 0 2.3rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
-  .research-section:nth-of-type(even) .research-text {
-    order: 2;
-  }
-
-  .research-section:nth-of-type(even) .research-visual {
-    order: 1;
+  /* Left-side number and career stage */
+  .research-index {
+    padding-top: 0.15rem;
   }
 
   .research-number {
     display: block;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.4rem;
     color: var(--global-theme-color);
-    font-size: 0.76rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    line-height: 1;
+  }
+
+  .research-stage {
+    display: block;
+    color: var(--global-text-color-light);
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Research text */
+  .research-content {
+    min-width: 0;
   }
 
   .research-title {
-    margin: 0 0 0.65rem;
+    margin: 0 0 0.7rem;
     color: var(--global-text-color);
-    font-size: 1.35rem;
-    font-weight: 600;
-    line-height: 1.35;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.3;
   }
 
-  .research-text p {
+  /* Central research question */
+  .research-question {
+    margin: 0 0 1rem;
+    padding-left: 0.85rem;
+    border-left: 3px solid var(--global-theme-color);
+    color: var(--global-text-color);
+    font-size: 0.92rem;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .research-description {
     margin: 0;
-    color: var(--global-text-color-light);
-    font-size: 0.95rem;
+    color: var(--global-text-color);
+    font-size: 0.88rem;
     line-height: 1.65;
   }
 
-  /* Image placeholders */
-  .research-visual {
+  /* Research keywords */
+  .research-keywords {
     display: flex;
-    min-height: 220px;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 1.15rem;
+  }
+
+  .research-keyword {
+    display: inline-block;
+    padding: 0.2rem 0.48rem;
     border: 1px solid var(--global-divider-color);
-    background:
-      linear-gradient(
-        135deg,
-        rgba(140, 106, 36, 0.07),
-        rgba(140, 106, 36, 0.015)
-      );
     color: var(--global-text-color-light);
-    text-align: center;
+    font-size: 0.67rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
-  .research-placeholder span {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: var(--global-theme-color);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
+  /* Image area */
+  .research-media {
+    width: 100%;
+    min-height: 225px;
   }
 
-  .research-placeholder small {
-    font-size: 0.75rem;
-  }
-
-  /* Actual research images */
   .research-image {
     display: block;
     width: 100%;
-    height: 250px;
+    height: 225px;
+    border: 1px solid var(--global-divider-color);
     border-radius: 0;
-    object-fit: cover;
+    background-color: var(--global-card-bg-color);
+    object-fit: contain;
   }
 
-  /* Future direction */
-  .research-future {
-    margin-top: 0.5rem;
-    padding: 2rem;
-    border-top: 1px solid var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
-  }
-
-  .research-future h2 {
-    margin: 0 0 0.65rem;
-    color: var(--global-text-color);
-    font-size: 1.35rem;
-    font-weight: 600;
-  }
-
-  .research-future p {
-    max-width: 950px;
-    margin: 0;
+  /* Placeholder shown until an image is uploaded */
+  .research-placeholder {
+    display: flex;
+    width: 100%;
+    height: 225px;
+    padding: 1.2rem;
+    border: 1px solid var(--global-divider-color);
+    background-color: var(--global-card-bg-color);
     color: var(--global-text-color-light);
-    font-size: 0.95rem;
-    line-height: 1.7;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .research-placeholder strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--global-theme-color);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+
+  .research-placeholder[hidden] {
+    display: none !important;
+  }
+
+  /* Subtle emphasis for future direction */
+  .research-section.future .research-title {
+    color: var(--global-theme-color);
+  }
+
+  /* Tablet */
+  @media (max-width: 991px) {
+    .research-section {
+      grid-template-columns: 90px minmax(0, 1fr);
+    }
+
+    .research-media {
+      grid-column: 2;
+      width: 100%;
+      max-width: 520px;
+      margin-top: 1.4rem;
+    }
   }
 
   /* Mobile */
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     .container[role="main"] {
-      width: 100% !important;
-      max-width: 100% !important;
-      padding-right: 1rem !important;
-      padding-left: 1rem !important;
+      width: calc(100% - 2rem);
     }
 
-    .post-header .post-title {
-      font-size: 1.8rem !important;
+    h1.post-title {
+      font-size: 2rem !important;
     }
 
     .research-intro {
-      margin-bottom: 1.6rem;
-      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
     }
 
     .research-section {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      padding: 1.5rem 0;
+      display: block;
+      padding: 1.5rem 0 1.8rem;
     }
 
-    .research-section:nth-of-type(even) .research-text,
-    .research-section:nth-of-type(even) .research-visual {
-      order: initial;
+    .research-index {
+      margin-bottom: 0.8rem;
+    }
+
+    .research-number {
+      display: inline-block;
+      margin-right: 0.55rem;
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+
+    .research-stage {
+      display: inline-block;
+      font-size: 0.65rem;
     }
 
     .research-title {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
     }
 
-    .research-text p {
-      font-size: 0.88rem;
+    .research-question {
+      font-size: 0.84rem;
     }
 
-    .research-visual {
-      min-height: 180px;
+    .research-description {
+      font-size: 0.82rem;
     }
 
-    .research-image {
-      height: 210px;
+    .research-media {
+      width: 100%;
+      max-width: none;
+      margin-top: 1.2rem;
     }
 
-    .research-future {
-      padding: 1.5rem 0;
+    .research-image,
+    .research-placeholder {
+      height: 200px;
     }
   }
-</style> <div class="research-intro"> My research focuses on the design of <strong>functional and responsive coordination materials</strong>. I am particularly interested in understanding how molecular-level composition, structure, and dynamics translate into collective properties within crystalline solids. </div> <section class="research-section"> <div class="research-text"> <span class="research-number">RESEARCH 01</span> <h2 class="research-title">Responsive Porous Frameworks</h2> <p> I study structurally responsive metal–organic frameworks, including materials that undergo gate-opening behavior in response to guest adsorption. My goal is to understand the relationship between molecular structure, framework flexibility, and adsorption performance, and to use this understanding to improve the accessible capacity of porous materials. </p> </div> <div class="research-visual research-placeholder"> <div> <span>IMAGE 01</span> <small>Gate-opening or adsorption figure</small> </div> </div> </section> <section class="research-section"> <div class="research-text"> <span class="research-number">RESEARCH 02</span> <h2 class="research-title">Multicomponent Frameworks</h2> <p> I explore how multiple metallic components can be positioned within metal–organic frameworks to create compositional and spatial complexity. This work includes programmable multimetallic arrangements and MOF-on-MOF growth, with an emphasis on controlling interactions between chemically distinct framework domains. </p> </div> <div class="research-visual research-placeholder"> <div> <span>IMAGE 02</span> <small>Multimetallic MOF or MOF-on-MOF figure</small> </div> </div> </section> <section class="research-section"> <div class="research-text"> <span class="research-number">RESEARCH 03</span> <h2 class="research-title">Hybrid Materials and Processing</h2> <p> I am interested in integrating crystalline coordination materials with practical substrates and macroscopic structures. My previous work on MOF/fiber composites investigated convenient fabrication strategies for combining porous framework functionality with flexible fibrous materials. </p> </div> <div class="research-visual research-placeholder"> <div> <span>IMAGE 03</span> <small>MOF/fiber composite or fabrication image</small> </div> </div> </section> <section class="research-future"> <h2>Current and Future Directions</h2> <p> My continuing research aims to connect precise molecular and structural control with adaptive solid-state functions. I am interested in developing coordination materials whose responses can be programmed through composition, spatial organization, and framework dynamics, ultimately creating materials that actively respond to their chemical environment. </p> </section> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gihyun Lee. Department of Chemistry · Purdue University · 560 Oval Drive · West Lafayette, IN 47907, USA </div> </footer> <script>
+</style> <div class="research-intro"> My research focuses on the design of <strong>functional and responsive coordination materials</strong>. I am particularly interested in understanding how molecular-level composition, structure, and dynamics translate into collective properties within crystalline solids. </div> <section class="research-section"> <div class="research-index"> <span class="research-number">01</span> <span class="research-stage">PhD Research</span> </div> <div class="research-content"> <h2 class="research-title">Structural Control in Metal–Organic Frameworks</h2> <p class="research-question"> How do MOF structures accommodate compositional and structural perturbations? </p> <p class="research-description"> My PhD research focused on understanding and controlling structural changes in metal–organic frameworks (MOFs). I studied how framework structures respond to lattice mismatch, mixed-linker composition, defects, and guest adsorption. Through these studies, I became particularly interested in how small changes in molecular components can lead to significant changes in crystalline structures and their properties. </p> <div class="research-keywords"> <span class="research-keyword">MOF-on-MOF Growth</span> <span class="research-keyword">Lattice Mismatch</span> <span class="research-keyword">Mixed-Linker Systems</span> <span class="research-keyword">Defects</span> <span class="research-keyword">Gate Opening</span> </div> </div> <div class="research-media"> <img class="research-image" src="/assets/img/research/research-01.jpg" alt="Structural control in metal–organic frameworks" onerror="this.hidden = true; this.nextElementSibling.hidden = false;"> <div class="research-placeholder" hidden=""> <div> <strong>RESEARCH IMAGE 01</strong> Suggested image: a collage of representative structural figures from MOF-on-MOF, mixed-linker, defect, and gate-opening studies. </div> </div> </div> </section> <section class="research-section"> <div class="research-index"> <span class="research-number">02</span> <span class="research-stage">Postdoctoral Research</span> </div> <div class="research-content"> <h2 class="research-title">Stimulus-Responsive Coordination Materials</h2> <p class="research-question"> Can a functional molecule retain its dynamic behavior when incorporated into a coordination solid? </p> <p class="research-description"> My current postdoctoral research expands my interest from framework-level structural changes to molecular-level dynamics within coordination solids. I design and synthesize functional ligands that can change their molecular states in response to external stimuli and investigate whether these properties are retained after incorporation into crystalline coordination materials. This work combines ligand synthesis, coordination chemistry, structural characterization, and computational analysis. </p> <div class="research-keywords"> <span class="research-keyword">Functional Ligands</span> <span class="research-keyword">Photoswitching</span> <span class="research-keyword">Coordination Solids</span> <span class="research-keyword">Structural Characterization</span> <span class="research-keyword">Computational Analysis</span> </div> </div> <div class="research-media"> <img class="research-image" src="/assets/img/research/research-02.jpg" alt="Stimulus-responsive coordination materials" onerror="this.hidden = true; this.nextElementSibling.hidden = false;"> <div class="research-placeholder" hidden=""> <div> <strong>RESEARCH IMAGE 02</strong> Suggested image: ligand structures, stimulus-induced molecular changes, or a representative coordination-solid structure. </div> </div> </div> </section> <section class="research-section future"> <div class="research-index"> <span class="research-number">03</span> <span class="research-stage">Independent Direction</span> </div> <div class="research-content"> <h2 class="research-title">Molecular-to-Solid Function</h2> <p class="research-question"> What determines whether molecular function is preserved, suppressed, or transformed in a crystalline solid? </p> <p class="research-description"> My future independent research will focus on understanding how molecular functions change when functional molecules are incorporated into crystalline solids. A molecule that works well in solution may retain, lose, or show a different function in the solid state because of coordination, molecular packing, and local environments. I aim to understand the structural factors that determine these differences and ultimately develop more predictable strategies for designing functional solid materials. </p> <div class="research-keywords"> <span class="research-keyword">Molecular Function</span> <span class="research-keyword">Solid-State Environment</span> <span class="research-keyword">Molecular Packing</span> <span class="research-keyword">Structure–Function Relationships</span> <span class="research-keyword">Predictive Materials Design</span> </div> </div> <div class="research-media"> <img class="research-image" src="/assets/img/research/research-03.jpg" alt="Molecular-to-solid function" onerror="this.hidden = true; this.nextElementSibling.hidden = false;"> <div class="research-placeholder" hidden=""> <div> <strong>RESEARCH IMAGE 03</strong> Suggested image: a conceptual diagram connecting molecule, coordination, packing, crystalline structure, and material function. </div> </div> </div> </section> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gihyun Lee. Department of Chemistry · Purdue University · 560 Oval Drive · West Lafayette, IN 47907, USA </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
