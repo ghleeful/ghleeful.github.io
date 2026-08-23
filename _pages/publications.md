@@ -14,7 +14,7 @@ nav_order: 3
     max-width: 1320px;
   }
 
-  /* Publications page title */
+  /* Page title */
   h1.post-title {
     margin-bottom: 2.2rem;
     font-size: 2.5rem !important;
@@ -22,7 +22,7 @@ nav_order: 3
     line-height: 1.15;
   }
 
-  /* Place the year to the left of its publication list */
+  /* Year on the left and publications on the right */
   .publications {
     display: grid;
     grid-template-columns: 100px minmax(0, 1fr);
@@ -42,24 +42,24 @@ nav_order: 3
     line-height: 1.2;
   }
 
-  /* Publication lists */
+  /* Publication list */
   .publications ol.bibliography {
     grid-column: 2;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     border-top: 1px solid var(--global-divider-color);
     list-style: none !important;
   }
 
-  /* Remove automatic numbering */
+  /* Remove publication numbering */
   .publications ol.bibliography > li {
     margin: 0;
     padding: 1.35rem 0 1.5rem;
     list-style: none !important;
   }
 
-  .publications ol.bibliography > li + li {
-    border-top: 0;
+  .publications ol.bibliography > li::marker {
+    content: "";
   }
 
   /* Remove JACS, Small, ACR and other abbreviation labels */
@@ -67,7 +67,7 @@ nav_order: 3
     display: none !important;
   }
 
-  /* Recover the space previously occupied by abbreviation labels */
+  /* Recover the space previously used by abbreviation labels */
   .publications ol.bibliography > li > .row {
     display: block;
     margin-right: 0;
@@ -83,28 +83,28 @@ nav_order: 3
     flex: 0 0 100%;
   }
 
-  /* Publication title */
+  /* Larger publication title */
   .publications .title {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     color: var(--global-text-color);
-    font-size: 1.08rem;
+    font-size: 1.22rem;
     font-weight: 700;
     line-height: 1.35;
   }
 
   /* Author list */
   .publications .author {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.28rem;
     color: var(--global-text-color);
-    font-size: 0.94rem;
+    font-size: 0.95rem;
     line-height: 1.45;
   }
 
   /* Journal, volume and page information */
   .publications .periodical {
-    display: inline;
+    display: block;
     color: var(--global-text-color-light);
-    font-size: 0.9rem;
+    font-size: 0.91rem;
     line-height: 1.45;
   }
 
@@ -112,18 +112,18 @@ nav_order: 3
     color: var(--global-text-color);
   }
 
-  /* DOI button positioned beside the journal information */
+  /* DOI button beside the publication title */
   .publications .inline-doi {
     display: inline-block;
     margin-left: 0.55rem;
-    padding: 0.18rem 0.48rem;
+    padding: 0.14rem 0.42rem;
     border: 1px solid var(--global-divider-color);
     color: var(--global-text-color) !important;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
-    vertical-align: middle;
+    vertical-align: 0.12rem;
   }
 
   .publications .inline-doi:hover {
@@ -132,12 +132,12 @@ nav_order: 3
     color: #ffffff !important;
   }
 
-  /* Hide the original link area after moving DOI */
+  /* Hide the original link area */
   .publications .links {
     display: none;
   }
 
-  /* Hide optional abstracts and extra information by default */
+  /* Optional information */
   .publications .abstract,
   .publications .award,
   .publications .additional-info {
@@ -170,11 +170,12 @@ nav_order: 3
     }
 
     .publications ol.bibliography > li {
-      padding: 0.9rem 0 1.1rem;
+      padding: 0.9rem 0 1.15rem;
     }
 
     .publications .title {
-      font-size: 1rem;
+      font-size: 1.08rem;
+      line-height: 1.35;
     }
 
     .publications .author {
@@ -184,6 +185,12 @@ nav_order: 3
     .publications .periodical {
       font-size: 0.84rem;
     }
+
+    .publications .inline-doi {
+      margin-left: 0.35rem;
+      padding: 0.12rem 0.35rem;
+      font-size: 0.64rem;
+    }
   }
 </style>
 
@@ -191,12 +198,12 @@ nav_order: 3
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    /* Automatically show every author */
+    /* Automatically display all authors */
     document.querySelectorAll(".more-authors").forEach(function (button) {
       button.click();
     });
 
-    /* Remove the repeated year from each journal-information line */
+    /* Remove the duplicate year from the journal-information line */
     document.querySelectorAll(".publications h2.bibliography").forEach(function (heading) {
       const year = heading.textContent.trim();
       const list = heading.nextElementSibling;
@@ -213,17 +220,17 @@ nav_order: 3
       });
     });
 
-    /* Move each DOI button beside the journal information */
+    /* Move the DOI button beside the publication title */
     document.querySelectorAll(".publications ol.bibliography > li").forEach(function (entry) {
-      const periodical = entry.querySelector(".periodical");
+      const title = entry.querySelector(".title");
       const doiLink = entry.querySelector('.links a[href*="doi.org"]');
 
-      if (!periodical || !doiLink) return;
+      if (!title || !doiLink) return;
 
       doiLink.classList.remove("btn", "btn-sm", "z-depth-0");
       doiLink.classList.add("inline-doi");
       doiLink.textContent = "DOI";
-      periodical.insertAdjacentElement("afterend", doiLink);
+      title.appendChild(doiLink);
     });
   });
 </script>
