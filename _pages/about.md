@@ -5,13 +5,59 @@ permalink: /
 subtitle: >
   <b>Postdoctoral Research Associate</b> at
   <a href="https://www.purdue.edu/" rel="external nofollow noopener" target="_blank">Purdue University</a>,
-  <span>Department of Chemistry</span>
+  Department of Chemistry
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile-01.jpg
   image_circular: false
   more_info: >
+    <div class="profile-carousel" aria-label="Profile photo gallery">
+      <div class="profile-carousel-viewport">
+        <img
+          class="profile-carousel-image active"
+          src="/assets/img/profile-01.jpg"
+          alt="Gihyun Lee profile photo 1"
+        >
+        <img
+          class="profile-carousel-image"
+          src="/assets/img/profile-02.jpg"
+          alt="Gihyun Lee profile photo 2"
+        >
+
+        <button
+          class="profile-carousel-arrow profile-carousel-prev"
+          type="button"
+          aria-label="Previous photo"
+        >
+          ‹
+        </button>
+
+        <button
+          class="profile-carousel-arrow profile-carousel-next"
+          type="button"
+          aria-label="Next photo"
+        >
+          ›
+        </button>
+      </div>
+
+      <div class="profile-carousel-dots" aria-label="Select profile photo">
+        <button
+          class="profile-carousel-dot active"
+          type="button"
+          aria-label="Show photo 1"
+          aria-current="true"
+        ></button>
+        <button
+          class="profile-carousel-dot"
+          type="button"
+          aria-label="Show photo 2"
+          aria-current="false"
+        ></button>
+      </div>
+    </div>
+
     <div class="profile-links">
       <a href="/assets/pdf/Gihyun%20Lee_CV.pdf" target="_blank" aria-label="CV" title="Open CV">CV</a>
       <a href="https://scholar.google.com/citations?user=FmEf7ccAAAAJ" target="_blank" aria-label="Google Scholar" title="Google Scholar">Scholar</a>
@@ -40,18 +86,117 @@ latest_posts:
     line-height: 1.1;
   }
 
-  /* Profile picture */
-  .profile img {
-    border-radius: 0 !important;
+  /* Hide the original al-folio profile image after the carousel loads */
+  .profile > img,
+  .profile > figure,
+  .profile > picture {
+    display: none !important;
   }
 
-  /* Links below the profile picture */
+  /* Profile carousel */
+  .profile-carousel {
+    position: relative;
+    width: 100%;
+  }
+
+  .profile-carousel-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--global-card-bg-color);
+    box-shadow: 0 0.2rem 0.75rem rgba(0, 0, 0, 0.12);
+  }
+
+  .profile-carousel-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 0 !important;
+    object-fit: cover;
+  }
+
+  .profile-carousel-image.active {
+    display: block;
+  }
+
+  /* Carousel arrows */
+  .profile-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    width: 2rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(38, 35, 31, 0.72);
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition:
+      opacity 0.18s ease,
+      background-color 0.18s ease;
+  }
+
+  .profile-carousel:hover .profile-carousel-arrow,
+  .profile-carousel:focus-within .profile-carousel-arrow {
+    opacity: 1;
+  }
+
+  .profile-carousel-arrow:hover,
+  .profile-carousel-arrow:focus-visible {
+    background-color: var(--global-theme-color);
+    outline: none;
+  }
+
+  .profile-carousel-prev {
+    left: 0.45rem;
+  }
+
+  .profile-carousel-next {
+    right: 0.45rem;
+  }
+
+  /* Carousel dots */
+  .profile-carousel-dots {
+    display: flex;
+    min-height: 1.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+  }
+
+  .profile-carousel-dot {
+    width: 0.48rem;
+    height: 0.48rem;
+    padding: 0;
+    border: 1px solid var(--global-text-color-light);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .profile-carousel-dot.active {
+    border-color: var(--global-theme-color);
+    background-color: var(--global-theme-color);
+  }
+
+  /* Links below profile pictures */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 0.45rem;
+    align-items: center;
     justify-content: center;
     gap: 0.45rem;
-    margin-top: 0.8rem;
   }
 
   .profile-links a {
@@ -72,7 +217,7 @@ latest_posts:
 
   /* CV toggles */
   details.cv-toggle:first-of-type {
-    margin-top: 2.2rem;
+    margin-top: 2.25rem;
   }
 
   details.cv-toggle,
@@ -83,16 +228,16 @@ latest_posts:
 
   .cv-toggle summary {
     display: flex;
-    align-items: center;
     width: 250px;
     max-width: calc(100vw - 2rem);
     padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--global-divider-color);
-    list-style: none;
-    cursor: pointer;
+    align-items: center;
     color: var(--global-text-color);
+    cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
+    list-style: none;
   }
 
   .cv-toggle summary::-webkit-details-marker {
@@ -107,9 +252,9 @@ latest_posts:
     width: 1.2rem;
     margin-right: 0.25rem;
     color: var(--global-theme-color);
+    content: "+";
     font-size: 1.1rem;
     font-weight: 700;
-    content: "+";
   }
 
   .cv-toggle[open] summary::before {
@@ -130,52 +275,50 @@ latest_posts:
     color: var(--global-text-color-light);
   }
 
-  /* Affiliation logos */
-  .affiliation-logos {
+  /* Institution logos */
+  .institution-logos {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.2rem;
     width: 100%;
-    margin: 1.35rem auto 0;
-    padding: 1rem 0 0.6rem;
+    margin: 1.8rem auto 0;
+    padding: 1.25rem 0 0.65rem;
     border-top: 1px solid var(--global-divider-color);
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 5vw, 4.5rem);
   }
 
-  .affiliation-logos a {
+  .institution-logo-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 0;
   }
 
-  .affiliation-logos img {
+  .institution-logo {
     display: block;
     width: auto;
-    max-width: 100%;
     object-fit: contain;
   }
 
-  /* Visual size correction for each logo */
-  .affiliation-logos .uvic-logo {
+  /* Visually balanced logo sizes */
+  .institution-logo.uvic {
+    height: 42px;
+  }
+
+  .institution-logo.yonsei {
     height: 48px;
   }
 
-  .affiliation-logos .yonsei-logo {
-    height: 43px;
+  .institution-logo.purdue {
+    height: 44px;
   }
 
-  .affiliation-logos .purdue-logo {
-    height: 35px;
-  }
-
-  /* Desktop profile layout */
+  /* Desktop layout */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
       max-width: 530px;
-      margin-left: 3rem !important;
       margin-bottom: 1.5rem !important;
+      margin-left: 3rem !important;
       transform: translateY(-6.5rem);
     }
   }
@@ -186,8 +329,15 @@ latest_posts:
       font-size: 2.5rem !important;
     }
 
+    .profile-carousel-arrow {
+      width: 1.8rem;
+      height: 2.2rem;
+      font-size: 1.5rem;
+      opacity: 0.82;
+    }
+
     .profile-links {
-      margin-top: 0.6rem;
+      margin-top: 0.35rem;
     }
 
     .profile-links a {
@@ -200,28 +350,26 @@ latest_posts:
       max-width: 100%;
     }
 
-    .affiliation-logos {
+    .institution-logos {
       flex-wrap: wrap;
-      gap: 1.2rem 1.6rem;
-      margin-top: 1rem;
-      padding: 0.8rem 0 0.35rem;
+      gap: 1.1rem 1.6rem;
     }
 
-    .affiliation-logos .uvic-logo {
+    .institution-logo.uvic {
+      height: 32px;
+    }
+
+    .institution-logo.yonsei {
+      height: 37px;
+    }
+
+    .institution-logo.purdue {
       height: 34px;
-    }
-
-    .affiliation-logos .yonsei-logo {
-      height: 31px;
-    }
-
-    .affiliation-logos .purdue-logo {
-      height: 26px;
     }
   }
 </style>
 
-Hi there! Welcome to my website.
+Hi there! Welcome to my website. :)
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
@@ -235,15 +383,18 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
   <div class="cv-toggle-content">
     <p class="cv-entry">
       <strong>Ph.D. in Chemistry</strong><br>
-      <span>Yonsei University, South Korea · 2018–2025</span><br>
-      <span>Research Advisor: Professor Moonhyun Oh</span><br>
-      <span>Dissertation: Construction of Hybrid Metal–Organic Frameworks via Structural Adjustment Process</span>
+      <span>University Name · 20XX–20XX</span><br>
+      <span>Advisor: Professor Name</span>
+    </p>
+
+    <p class="cv-entry">
+      <strong>M.S. in Chemistry</strong><br>
+      <span>University Name · 20XX–20XX</span>
     </p>
 
     <p class="cv-entry">
       <strong>B.S. in Chemistry</strong><br>
-      <span>University of Victoria, Canada · 2013–2018</span><br>
-      <span>Minor in Biochemistry</span>
+      <span>University Name · 20XX–20XX</span>
     </p>
   </div>
 </details>
@@ -254,9 +405,12 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
   <div class="cv-toggle-content">
     <p class="cv-entry">
       <strong>Postdoctoral Research Associate</strong><br>
-      <span>Purdue University · 2025–Present</span><br>
-      <span>Research Advisor: Professor Christopher Uyeda</span><br>
-      <span>Photoswitchable ligands and stimulus-responsive coordination frameworks</span>
+      <span>Purdue University · 20XX–Present</span>
+    </p>
+
+    <p class="cv-entry">
+      <strong>Previous Position</strong><br>
+      <span>Institution Name · 20XX–20XX</span>
     </p>
   </div>
 </details>
@@ -266,23 +420,13 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
   <div class="cv-toggle-content">
     <p class="cv-entry">
-      <strong>Postdoctoral Supplemental Travel Award</strong><br>
-      <span>Purdue University · 2026</span>
+      <strong>Award Name</strong><br>
+      <span>Awarding organization · Year</span>
     </p>
 
     <p class="cv-entry">
-      <strong>Outstanding BK21 Participant Recognition Award</strong><br>
-      <span>Yonsei University · 2026</span>
-    </p>
-
-    <p class="cv-entry">
-      <strong>Best Oral Presentation Award</strong><br>
-      <span>Inorganic Chemistry Division, Korean Chemical Society · 2022</span>
-    </p>
-
-    <p class="cv-entry">
-      <strong>Excellent Poster Presentation Prize</strong><br>
-      <span>129th Korean Chemical Society Meeting, RSC Poster Prize · 2022</span>
+      <strong>Award Name</strong><br>
+      <span>Awarding organization · Year</span>
     </p>
   </div>
 </details>
@@ -292,32 +436,166 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
   <div class="cv-toggle-content">
     <p class="cv-entry">
-      <strong>Synthesis and Sample Preparation</strong><br>
-      <span>Organic ligands, metal–organic frameworks, coordination compounds, Schlenk-line and glovebox techniques</span>
+      Metal–organic frameworks · Coordination chemistry · Single-crystal X-ray diffraction
     </p>
 
     <p class="cv-entry">
-      <strong>Instrumentation and Data Analysis</strong><br>
-      <span>PXRD, SEM–EDS, FTIR, Raman, TGA, DSC, gas adsorption, NMR and UV–Vis spectroscopy</span>
-    </p>
-
-    <p class="cv-entry">
-      <strong>Computational Chemistry</strong><br>
-      <span>Gaussian 16, GaussView 6, constrained DFT optimization and vibrational frequency analysis</span>
+      Functional ligands · Responsive crystalline materials · Structure–property relationships
     </p>
   </div>
 </details>
 
-<div class="affiliation-logos">
-  <a href="https://www.uvic.ca/" target="_blank" rel="external nofollow noopener" aria-label="University of Victoria">
-    <img class="uvic-logo" src="/assets/img/uvic-logo.png" alt="University of Victoria">
+<div class="institution-logos">
+  <a
+    class="institution-logo-link"
+    href="https://www.uvic.ca/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="University of Victoria"
+  >
+    <img
+      class="institution-logo uvic"
+      src="/assets/img/uvic-logo.png"
+      alt="University of Victoria"
+    >
   </a>
 
-  <a href="https://www.yonsei.ac.kr/" target="_blank" rel="external nofollow noopener" aria-label="Yonsei University">
-    <img class="yonsei-logo" src="/assets/img/yonsei-logo.png" alt="Yonsei University">
+  <a
+    class="institution-logo-link"
+    href="https://www.yonsei.ac.kr/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="Yonsei University"
+  >
+    <img
+      class="institution-logo yonsei"
+      src="/assets/img/yonsei-logo.png"
+      alt="Yonsei University"
+    >
   </a>
 
-  <a href="https://www.purdue.edu/" target="_blank" rel="external nofollow noopener" aria-label="Purdue University">
-    <img class="purdue-logo" src="/assets/img/purdue-logo.png" alt="Purdue University">
+  <a
+    class="institution-logo-link"
+    href="https://www.purdue.edu/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="Purdue University"
+  >
+    <img
+      class="institution-logo purdue"
+      src="/assets/img/purdue-logo.png"
+      alt="Purdue University"
+    >
   </a>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const profile = document.querySelector(".profile");
+    const carousel = profile?.querySelector(".profile-carousel");
+
+    if (!profile || !carousel) return;
+
+    /*
+     * al-folio still renders profile.image.
+     * Hide that original image and place the custom carousel first.
+     */
+    const originalImages = Array.from(profile.querySelectorAll("img")).filter(
+      (image) => !image.classList.contains("profile-carousel-image")
+    );
+
+    originalImages.forEach((image) => {
+      const logo = image.closest(".institution-logo-link");
+
+      if (!logo) {
+        image.style.display = "none";
+      }
+    });
+
+    profile.insertBefore(carousel, profile.firstChild);
+
+    const slides = Array.from(
+      carousel.querySelectorAll(".profile-carousel-image")
+    );
+    const dots = Array.from(
+      carousel.querySelectorAll(".profile-carousel-dot")
+    );
+    const previousButton = carousel.querySelector(
+      ".profile-carousel-prev"
+    );
+    const nextButton = carousel.querySelector(".profile-carousel-next");
+
+    if (slides.length < 2) return;
+
+    let currentIndex = 0;
+    let touchStartX = 0;
+
+    const showSlide = (index) => {
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("active", slideIndex === currentIndex);
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        const active = dotIndex === currentIndex;
+
+        dot.classList.toggle("active", active);
+        dot.setAttribute("aria-current", active ? "true" : "false");
+      });
+    };
+
+    previousButton?.addEventListener("click", () => {
+      showSlide(currentIndex - 1);
+    });
+
+    nextButton?.addEventListener("click", () => {
+      showSlide(currentIndex + 1);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showSlide(index);
+      });
+    });
+
+    carousel.setAttribute("tabindex", "0");
+
+    carousel.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        showSlide(currentIndex - 1);
+      }
+
+      if (event.key === "ArrowRight") {
+        showSlide(currentIndex + 1);
+      }
+    });
+
+    carousel.addEventListener(
+      "touchstart",
+      (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      },
+      { passive: true }
+    );
+
+    carousel.addEventListener(
+      "touchend",
+      (event) => {
+        const touchEndX = event.changedTouches[0].clientX;
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) < 40) return;
+
+        if (distance > 0) {
+          showSlide(currentIndex - 1);
+        } else {
+          showSlide(currentIndex + 1);
+        }
+      },
+      { passive: true }
+    );
+
+    showSlide(0);
+  });
+</script>
