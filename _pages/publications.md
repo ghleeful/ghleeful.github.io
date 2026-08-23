@@ -8,22 +8,22 @@ nav_order: 2
 ---
 
 <style>
-  /* Widen the Publications page */
+  /* Overall page width */
   .container[role="main"] {
-    width: 92% !important;
-    max-width: 1500px !important;
+    width: 86% !important;
+    max-width: 1320px !important;
   }
 
   /* Page heading */
   .post-header {
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.9rem !important;
   }
 
   .post-header .post-title {
     margin: 0 !important;
     color: var(--global-text-color);
-    font-size: 2.6rem !important;
-    font-weight: 500;
+    font-size: 2.25rem !important;
+    font-weight: 500 !important;
     line-height: 1.15;
   }
 
@@ -31,11 +31,11 @@ nav_order: 2
     display: none !important;
   }
 
-  /* Year and publication list layout */
+  /* Year and publication layout */
   .publications {
     display: grid;
-    grid-template-columns: 75px minmax(0, 1fr);
-    column-gap: 1.5rem;
+    grid-template-columns: 58px minmax(0, 1fr);
+    column-gap: 1.25rem;
     width: 100%;
     align-items: start;
   }
@@ -45,11 +45,11 @@ nav_order: 2
     position: static !important;
     grid-column: 1;
     width: auto !important;
-    margin: 0.5rem 0 0 !important;
-    padding-top: 1rem;
+    margin: 0.45rem 0 0 !important;
+    padding-top: 0.85rem;
     border-top: 1px solid var(--global-divider-color);
     color: var(--global-text-color) !important;
-    font-size: 1.05rem !important;
+    font-size: 0.92rem !important;
     font-weight: 600 !important;
     line-height: 1.2;
     text-align: left !important;
@@ -60,15 +60,15 @@ nav_order: 2
   .publications ol.bibliography {
     grid-column: 2;
     width: 100%;
-    margin: 0.5rem 0 0 !important;
-    padding-top: 1rem;
+    margin: 0.45rem 0 0 !important;
+    padding-top: 0.85rem;
     padding-left: 0;
     border-top: 1px solid var(--global-divider-color);
   }
 
   .publications ol.bibliography > li {
     width: 100%;
-    margin-bottom: 1.7rem !important;
+    margin-bottom: 1.45rem !important;
   }
 
   .publications ol.bibliography li .row {
@@ -78,13 +78,13 @@ nav_order: 2
     align-items: flex-start;
   }
 
-  /* Completely remove journal abbreviation badges */
+  /* Hide journal abbreviation badges */
   body .publications ol.bibliography li .row > .abbr,
   body .publications .abbr {
     display: none !important;
   }
 
-  /* Let publication information use the entire available width */
+  /* Allow publication information to use the available width */
   body .publications ol.bibliography li .row > .col-sm-8,
   body .publications ol.bibliography li .row > .col-sm-10 {
     width: 100% !important;
@@ -96,54 +96,53 @@ nav_order: 2
 
   /* Publication title */
   .publications .title {
-    max-width: none !important;
-    margin-bottom: 0.3rem !important;
+    max-width: 1050px;
+    margin-bottom: 0.22rem !important;
     color: var(--global-text-color);
-    font-size: 1.12rem !important;
+    font-size: 1.03rem !important;
     font-weight: 600 !important;
     line-height: 1.35;
   }
 
   /* Authors */
   .publications .author {
-    max-width: none !important;
-    margin-bottom: 0.2rem !important;
+    max-width: 1050px;
+    margin-bottom: 0.15rem !important;
     color: var(--global-text-color);
-    font-size: 0.94rem;
-    line-height: 1.45;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   /* Journal, volume, pages and year */
   .publications .periodical {
     display: inline;
-    max-width: none !important;
     margin: 0 !important;
     color: var(--global-text-color-light);
-    font-size: 0.9rem;
-    line-height: 1.45;
+    font-size: 0.87rem;
+    line-height: 1.4;
   }
 
   .publications .periodical em {
     color: var(--global-text-color);
-    font-weight: 500;
+    font-weight: 400;
   }
 
-  /* DOI and other links */
+  /* DOI link */
   .publications .links {
     display: inline;
-    margin-left: 0.45rem;
+    margin-left: 0.35rem;
     white-space: normal;
   }
 
   .publications .links a {
     display: inline-block;
-    margin: 0 0.2rem 0.2rem 0 !important;
-    padding: 0.16rem 0.48rem !important;
+    margin: 0 0.15rem 0.15rem 0 !important;
+    padding: 0.12rem 0.4rem !important;
     border: 1px solid var(--global-divider-color) !important;
     border-radius: 0 !important;
     background-color: transparent !important;
     color: var(--global-text-color) !important;
-    font-size: 0.7rem !important;
+    font-size: 0.66rem !important;
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
@@ -156,11 +155,11 @@ nav_order: 2
     color: #ffffff !important;
   }
 
-  /* Extra publication information */
+  /* Additional publication information */
   .publications .additional-info {
-    margin-top: 0.3rem;
+    margin-top: 0.25rem;
     color: var(--global-text-color-light);
-    font-size: 0.86rem;
+    font-size: 0.82rem;
     line-height: 1.4;
   }
 
@@ -174,53 +173,53 @@ nav_order: 2
     }
 
     .post-header {
-      margin-bottom: 0.7rem !important;
+      margin-bottom: 0.6rem !important;
     }
 
     .post-header .post-title {
-      font-size: 2rem !important;
+      font-size: 1.8rem !important;
     }
 
     .publications {
-      grid-template-columns: 42px minmax(0, 1fr);
-      column-gap: 0.65rem;
+      grid-template-columns: 38px minmax(0, 1fr);
+      column-gap: 0.6rem;
     }
 
     .publications h2.bibliography {
-      margin-top: 0.35rem !important;
-      padding-top: 0.8rem;
-      font-size: 0.82rem !important;
+      margin-top: 0.3rem !important;
+      padding-top: 0.7rem;
+      font-size: 0.76rem !important;
     }
 
     .publications ol.bibliography {
-      margin-top: 0.35rem !important;
-      padding-top: 0.8rem;
+      margin-top: 0.3rem !important;
+      padding-top: 0.7rem;
     }
 
     .publications ol.bibliography > li {
-      margin-bottom: 1.4rem !important;
+      margin-bottom: 1.25rem !important;
     }
 
     .publications .title {
-      font-size: 1rem !important;
+      font-size: 0.94rem !important;
       line-height: 1.35;
     }
 
     .publications .author {
-      font-size: 0.86rem;
+      font-size: 0.82rem;
     }
 
     .publications .periodical {
-      font-size: 0.83rem;
+      font-size: 0.8rem;
     }
 
     .publications .links {
-      margin-left: 0.25rem;
+      margin-left: 0.2rem;
     }
 
     .publications .links a {
-      padding: 0.13rem 0.4rem !important;
-      font-size: 0.66rem !important;
+      padding: 0.1rem 0.35rem !important;
+      font-size: 0.62rem !important;
     }
   }
 </style>
