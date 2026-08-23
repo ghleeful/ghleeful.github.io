@@ -3,6 +3,12 @@
     --max-content-width: 1050px;
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="apple-touch-icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://ghleeful.github.io/publications/"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Gihyun</span> Lee </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Profile </a> </li> <li class="nav-item active"> <a class="nav-link" href="/publications/">Publications <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/patents/">Patents </a> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Publications</h1> <p class="post-description"></p> </header> <article> <style>
+  /* Widen the Publications page */
+  .container[role="main"] {
+    width: 92% !important;
+    max-width: 1500px !important;
+  }
+
   /* Page heading */
   .post-header {
     margin-bottom: 1rem !important;
@@ -25,6 +31,7 @@
     display: grid;
     grid-template-columns: 75px minmax(0, 1fr);
     column-gap: 1.5rem;
+    width: 100%;
     align-items: start;
   }
 
@@ -47,6 +54,7 @@
   /* Publication list for each year */
   .publications ol.bibliography {
     grid-column: 2;
+    width: 100%;
     margin: 0.5rem 0 0 !important;
     padding-top: 1rem;
     padding-left: 0;
@@ -54,32 +62,36 @@
   }
 
   .publications ol.bibliography > li {
+    width: 100%;
     margin-bottom: 1.7rem !important;
   }
 
   .publications ol.bibliography li .row {
-    align-items: flex-start;
+    width: 100%;
     margin-right: 0;
     margin-left: 0;
+    align-items: flex-start;
   }
 
-  /* Hide journal abbreviation badges */
-  .publications .abbr {
+  /* Completely remove journal abbreviation badges */
+  body .publications ol.bibliography li .row > .abbr,
+  body .publications .abbr {
     display: none !important;
   }
 
-  /* Use the space previously occupied by the badges */
-  .publications ol.bibliography li .col-sm-8,
-  .publications ol.bibliography li .col-sm-10 {
-    width: 100%;
-    max-width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    flex: 0 0 100%;
+  /* Let publication information use the entire available width */
+  body .publications ol.bibliography li .row > .col-sm-8,
+  body .publications ol.bibliography li .row > .col-sm-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    flex: 0 0 100% !important;
   }
 
   /* Publication title */
   .publications .title {
+    max-width: none !important;
     margin-bottom: 0.3rem !important;
     color: var(--global-text-color);
     font-size: 1.12rem !important;
@@ -89,6 +101,7 @@
 
   /* Authors */
   .publications .author {
+    max-width: none !important;
     margin-bottom: 0.2rem !important;
     color: var(--global-text-color);
     font-size: 0.94rem;
@@ -98,6 +111,7 @@
   /* Journal, volume, pages and year */
   .publications .periodical {
     display: inline;
+    max-width: none !important;
     margin: 0 !important;
     color: var(--global-text-color-light);
     font-size: 0.9rem;
@@ -137,7 +151,7 @@
     color: #ffffff !important;
   }
 
-  /* Extra information */
+  /* Extra publication information */
   .publications .additional-info {
     margin-top: 0.3rem;
     color: var(--global-text-color-light);
@@ -147,6 +161,13 @@
 
   /* Mobile layout */
   @media (max-width: 575px) {
+    .container[role="main"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+    }
+
     .post-header {
       margin-bottom: 0.7rem !important;
     }
