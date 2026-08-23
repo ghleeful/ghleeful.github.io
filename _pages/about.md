@@ -34,18 +34,15 @@ latest_posts:
 ---
 
 <style>
-  /* Main name */
   h1.post-title {
     font-size: 3.4rem !important;
     line-height: 1.1;
   }
 
-  /* Profile picture */
   .profile img {
     border-radius: 0 !important;
   }
 
-  /* Links below the profile picture */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +67,6 @@ latest_posts:
     color: #ffffff !important;
   }
 
-  /* CV toggles */
   details.cv-toggle:first-of-type {
     margin-top: 2.2rem;
   }
@@ -95,7 +91,6 @@ latest_posts:
     font-weight: 600;
   }
 
-  /* Hide browser default arrow */
   .cv-toggle summary::-webkit-details-marker {
     display: none;
   }
@@ -104,7 +99,6 @@ latest_posts:
     content: "";
   }
 
-  /* Closed toggle */
   .cv-toggle summary::before {
     width: 1.2rem;
     margin-right: 0.25rem;
@@ -114,7 +108,6 @@ latest_posts:
     content: "+";
   }
 
-  /* Open toggle */
   .cv-toggle[open] summary::before {
     content: "−";
   }
@@ -133,43 +126,47 @@ latest_posts:
     color: var(--global-text-color-light);
   }
 
-  /* University logos above the footer */
-  .affiliation-logos-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.2rem;
-    width: 100%;
-    margin-top: 4rem;
-    padding: 1.4rem 0 0.7rem;
-    border-top: 1px solid var(--global-divider-color);
-  }
-
-  .affiliation-logos-bottom a {
+  /* University logos */
+  .institution-logos {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 165px;
-    height: 58px;
-    padding: 0.35rem 0.5rem;
-    text-decoration: none;
+    gap: 3rem;
+    width: 100%;
+    margin: 4.5rem auto 1.5rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid var(--global-divider-color);
   }
 
-  .affiliation-logos-bottom img {
+  .institution-logos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 72px;
+  }
+
+  .institution-logos img {
     display: block;
     width: auto;
+    max-width: 100%;
     height: auto;
-    max-width: 150px;
-    max-height: 42px;
+    max-height: 58px;
     object-fit: contain;
   }
 
-  .affiliation-logos-bottom a:hover img {
-    opacity: 0.72;
+  .institution-logos .uvic-logo {
+    max-height: 52px;
   }
 
-  /* Desktop profile layout */
+  .institution-logos .yonsei-logo {
+    max-height: 58px;
+  }
+
+  .institution-logos .purdue-logo {
+    max-height: 54px;
+  }
+
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -180,7 +177,6 @@ latest_posts:
     }
   }
 
-  /* Mobile profile layout */
   @media (max-width: 575px) {
     h1.post-title {
       font-size: 2.5rem !important;
@@ -200,29 +196,28 @@ latest_posts:
       max-width: 100%;
     }
 
-    .affiliation-logos-bottom {
-      justify-content: center;
-      gap: 0.45rem;
-      margin-top: 2.5rem;
-      padding-top: 1rem;
+    .institution-logos {
+      flex-wrap: wrap;
+      gap: 1.2rem 1.5rem;
+      margin-top: 3rem;
+      padding-top: 1.3rem;
     }
 
-    .affiliation-logos-bottom a {
-      width: 105px;
-      height: 46px;
-      padding: 0.25rem;
+    .institution-logos a {
+      width: 120px;
+      height: 55px;
     }
 
-    .affiliation-logos-bottom img {
-      max-width: 92px;
-      max-height: 32px;
+    .institution-logos img,
+    .institution-logos .uvic-logo,
+    .institution-logos .yonsei-logo,
+    .institution-logos .purdue-logo {
+      max-height: 42px;
     }
   }
 </style>
 
-
-Hi there! 
-Welcome to my website.
+Hi there! Welcome to my website.
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
@@ -238,10 +233,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>Ph.D. in Chemistry</strong><br>
       <span>Yonsei University, South Korea · 2018–2025</span><br>
       <span>Research Advisor: Professor Moonhyun Oh</span><br>
-      <span
-        >Dissertation: Construction of Hybrid Metal–Organic Frameworks via
-        Structural Adjustment Process</span
-      >
+      <span>Dissertation: Construction of Hybrid Metal–Organic Frameworks via Structural Adjustment Process</span>
     </p>
 
     <p class="cv-entry">
@@ -260,10 +252,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>Postdoctoral Research Associate</strong><br>
       <span>Purdue University · 2025–Present</span><br>
       <span>Research Advisor: Professor Christopher Uyeda</span><br>
-      <span
-        >Photoswitchable ligands and stimulus-responsive coordination
-        frameworks</span
-      >
+      <span>Photoswitchable ligands and stimulus-responsive coordination frameworks</span>
     </p>
   </div>
 </details>
@@ -284,16 +273,12 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
     <p class="cv-entry">
       <strong>Best Oral Presentation Award</strong><br>
-      <span
-        >Inorganic Chemistry Division, Korean Chemical Society · 2022</span
-      >
+      <span>Inorganic Chemistry Division, Korean Chemical Society · 2022</span>
     </p>
 
     <p class="cv-entry">
       <strong>Excellent Poster Presentation Prize</strong><br>
-      <span
-        >129th Korean Chemical Society Meeting, RSC Poster Prize · 2022</span
-      >
+      <span>129th Korean Chemical Society Meeting, RSC Poster Prize · 2022</span>
     </p>
   </div>
 </details>
@@ -304,67 +289,31 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
   <div class="cv-toggle-content">
     <p class="cv-entry">
       <strong>Synthesis and Sample Preparation</strong><br>
-      <span
-        >Organic ligands, metal–organic frameworks, coordination compounds,
-        Schlenk-line and glovebox techniques</span
-      >
+      <span>Organic ligands, metal–organic frameworks, coordination compounds, Schlenk-line and glovebox techniques</span>
     </p>
 
     <p class="cv-entry">
       <strong>Instrumentation and Data Analysis</strong><br>
-      <span
-        >PXRD, SEM–EDS, FTIR, Raman, TGA, DSC, gas adsorption, NMR and UV–Vis
-        spectroscopy</span
-      >
+      <span>PXRD, SEM–EDS, FTIR, Raman, TGA, DSC, gas adsorption, NMR and UV–Vis spectroscopy</span>
     </p>
 
     <p class="cv-entry">
       <strong>Computational Chemistry</strong><br>
-      <span
-        >Gaussian 16, GaussView 6, constrained DFT optimization and vibrational
-        frequency analysis</span
-      >
+      <span>Gaussian 16, GaussView 6, constrained DFT optimization and vibrational frequency analysis</span>
     </p>
   </div>
 </details>
 
-<div class="affiliation-logos-bottom">
-  <a
-    href="https://www.purdue.edu/"
-    target="_blank"
-    rel="external nofollow noopener"
-    aria-label="Purdue University"
-    title="Purdue University"
-  >
-    <img
-      src="{{ '/assets/img/purdue-logo.png' | relative_url }}"
-      alt="Purdue University"
-    >
+<div class="institution-logos">
+  <a href="https://www.uvic.ca/" target="_blank" rel="external nofollow noopener" aria-label="University of Victoria">
+    <img class="uvic-logo" src="/assets/img/uvic-logo.png" alt="University of Victoria">
   </a>
 
-  <a
-    href="https://www.yonsei.ac.kr/"
-    target="_blank"
-    rel="external nofollow noopener"
-    aria-label="Yonsei University"
-    title="Yonsei University"
-  >
-    <img
-      src="{{ '/assets/img/yonsei-logo.png' | relative_url }}"
-      alt="Yonsei University"
-    >
+  <a href="https://www.yonsei.ac.kr/" target="_blank" rel="external nofollow noopener" aria-label="Yonsei University">
+    <img class="yonsei-logo" src="/assets/img/yonsei-logo.png" alt="Yonsei University">
   </a>
 
-  <a
-    href="https://www.uvic.ca/"
-    target="_blank"
-    rel="external nofollow noopener"
-    aria-label="University of Victoria"
-    title="University of Victoria"
-  >
-    <img
-      src="{{ '/assets/img/uvic-logo.png' | relative_url }}"
-      alt="University of Victoria"
-    >
+  <a href="https://www.purdue.edu/" target="_blank" rel="external nofollow noopener" aria-label="Purdue University">
+    <img class="purdue-logo" src="/assets/img/purdue-logo.png" alt="Purdue University">
   </a>
 </div>
