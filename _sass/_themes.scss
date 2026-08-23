@@ -134,3 +134,17 @@ footer:hover::after {
     font-size: 0.5rem;
   }
 }
+/* Remove empty space below footer */
+html,
+body {
+  margin-bottom: 0 !important;
+}
+
+body,
+body.sticky-bottom-footer {
+  padding-bottom: 0 !important;
+}
+
+footer {
+  margin-bottom: 0 !important;
+}
