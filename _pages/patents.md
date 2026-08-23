@@ -141,7 +141,7 @@ nav_order: 4
     <p class="patent-year">2026</p>
 
     <!-- 실제 등록 월·일로 변경 -->
-    <p class="patent-date">MM.DD</p>
+    <p class="patent-date">06.30</p>
 
     <div class="patent-content">
       <h2 class="patent-title">
@@ -163,7 +163,7 @@ nav_order: 4
     <p class="patent-year">2023</p>
 
     <!-- 실제 출원 월·일로 변경 -->
-    <p class="patent-date">MM.DD</p>
+    <p class="patent-date">10.12</p>
 
     <div class="patent-content">
       <h2 class="patent-title">
