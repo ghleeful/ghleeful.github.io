@@ -34,15 +34,18 @@ latest_posts:
 ---
 
 <style>
+  /* Page title */
   h1.post-title {
     font-size: 3.4rem !important;
     line-height: 1.1;
   }
 
+  /* Profile picture */
   .profile img {
     border-radius: 0 !important;
   }
 
+  /* Links below the profile picture */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -67,6 +70,7 @@ latest_posts:
     color: #ffffff !important;
   }
 
+  /* CV toggles */
   details.cv-toggle:first-of-type {
     margin-top: 2.2rem;
   }
@@ -126,47 +130,46 @@ latest_posts:
     color: var(--global-text-color-light);
   }
 
-  /* University logos */
-  .institution-logos {
+  /* Affiliation logos */
+  .affiliation-logos {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 3.2rem;
     width: 100%;
-    margin: 4.5rem auto 1.5rem;
-    padding-top: 1.8rem;
+    margin: 1.35rem auto 0;
+    padding: 1rem 0 0.6rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
-  .institution-logos a {
+  .affiliation-logos a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 190px;
-    height: 72px;
+    line-height: 0;
   }
 
-  .institution-logos img {
+  .affiliation-logos img {
     display: block;
     width: auto;
     max-width: 100%;
-    height: auto;
-    max-height: 58px;
     object-fit: contain;
   }
 
-  .institution-logos .uvic-logo {
-    max-height: 52px;
+  /* Visual size correction for each logo */
+  .affiliation-logos .uvic-logo {
+    height: 48px;
   }
 
-  .institution-logos .yonsei-logo {
-    max-height: 58px;
+  .affiliation-logos .yonsei-logo {
+    height: 43px;
   }
 
-  .institution-logos .purdue-logo {
-    max-height: 54px;
+  .affiliation-logos .purdue-logo {
+    height: 35px;
   }
 
+  /* Desktop profile layout */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -177,6 +180,7 @@ latest_posts:
     }
   }
 
+  /* Mobile layout */
   @media (max-width: 575px) {
     h1.post-title {
       font-size: 2.5rem !important;
@@ -196,29 +200,28 @@ latest_posts:
       max-width: 100%;
     }
 
-    .institution-logos {
+    .affiliation-logos {
       flex-wrap: wrap;
-      gap: 1.2rem 1.5rem;
-      margin-top: 3rem;
-      padding-top: 1.3rem;
+      gap: 1.2rem 1.6rem;
+      margin-top: 1rem;
+      padding: 0.8rem 0 0.35rem;
     }
 
-    .institution-logos a {
-      width: 120px;
-      height: 55px;
+    .affiliation-logos .uvic-logo {
+      height: 34px;
     }
 
-    .institution-logos img,
-    .institution-logos .uvic-logo,
-    .institution-logos .yonsei-logo,
-    .institution-logos .purdue-logo {
-      max-height: 42px;
+    .affiliation-logos .yonsei-logo {
+      height: 31px;
+    }
+
+    .affiliation-logos .purdue-logo {
+      height: 26px;
     }
   }
 </style>
 
-Hi there! 
-Welcome to my website :)
+Hi there! Welcome to my website.
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
@@ -305,7 +308,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
   </div>
 </details>
 
-<div class="institution-logos">
+<div class="affiliation-logos">
   <a href="https://www.uvic.ca/" target="_blank" rel="external nofollow noopener" aria-label="University of Victoria">
     <img class="uvic-logo" src="/assets/img/uvic-logo.png" alt="University of Victoria">
   </a>
