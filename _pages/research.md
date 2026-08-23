@@ -372,3 +372,62 @@ nav_order: 2
     </div>
   </div>
 </section>
+<section class="research-item">
+  <div class="research-number">04</div>
+
+  <div class="research-content">
+    <p class="research-stage">Collaborative Research Direction</p>
+
+    <h2>Data-Driven Design of Functional Solids</h2>
+
+    <p class="research-question">
+      How can experimental structure–function data guide the prediction of
+      functional crystalline materials?
+    </p>
+
+    <p>
+      I am also interested in developing data-driven approaches for the design
+      of functional crystalline solids through collaborative research. By
+      combining experimental structure–function data from my research with
+      machine learning and deep learning, we aim to identify molecular and
+      structural factors that determine the functions of crystalline materials.
+    </p>
+
+    <p>
+      Ultimately, I hope this collaboration will help us screen promising
+      molecular and solid-state candidates before synthesis and make the
+      discovery of functional materials more efficient and predictable.
+    </p>
+
+    <div class="research-workflow">
+      <div>
+        <strong>Experimental platform</strong>
+        <span>
+          Molecular and material design, synthesis, crystal structures, and
+          structure–function measurements
+        </span>
+      </div>
+
+      <div>
+        <strong>Computational collaboration</strong>
+        <span>
+          Machine learning, deep learning, descriptor identification, and
+          candidate prediction
+        </span>
+      </div>
+
+      <div>
+        <strong>Experimental validation</strong>
+        <span>
+          Synthesis and characterization of predicted molecular and solid-state
+          candidates
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="research-visual research-placeholder">
+    <span>Research image</span>
+    <small>data-driven-design.jpg</small>
+  </div>
+</section>
