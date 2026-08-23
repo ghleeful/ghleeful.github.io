@@ -10,7 +10,7 @@ nav_order: 2
 <style>
   /* Page heading */
   .post-header {
-    margin-bottom: 1.2rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .post-header .post-title {
@@ -38,7 +38,7 @@ nav_order: 2
     position: static !important;
     grid-column: 1;
     width: auto !important;
-    margin: 0.7rem 0 0 !important;
+    margin: 0.5rem 0 0 !important;
     padding-top: 1rem;
     border-top: 1px solid var(--global-divider-color);
     color: var(--global-text-color) !important;
@@ -49,10 +49,10 @@ nav_order: 2
     opacity: 1 !important;
   }
 
-  /* Publications belonging to each year */
+  /* Publication list for each year */
   .publications ol.bibliography {
     grid-column: 2;
-    margin: 0.7rem 0 0 !important;
+    margin: 0.5rem 0 0 !important;
     padding-top: 1rem;
     padding-left: 0;
     border-top: 1px solid var(--global-divider-color);
@@ -62,27 +62,30 @@ nav_order: 2
     margin-bottom: 1.7rem !important;
   }
 
-  /* Remove unnecessary indentation inside each entry */
   .publications ol.bibliography li .row {
     align-items: flex-start;
+    margin-right: 0;
+    margin-left: 0;
   }
 
-  /* Journal abbreviation */
+  /* Hide journal abbreviation badges */
   .publications .abbr {
-    padding-top: 0.15rem;
+    display: none !important;
   }
 
-  .publications .abbr abbr {
-    border-radius: 0 !important;
-    background-color: var(--global-theme-color) !important;
-    color: #ffffff !important;
-    font-size: 0.75rem;
-    font-weight: 600;
+  /* Use the space previously occupied by the badges */
+  .publications ol.bibliography li .col-sm-8,
+  .publications ol.bibliography li .col-sm-10 {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    flex: 0 0 100%;
   }
 
   /* Publication title */
   .publications .title {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.3rem !important;
     color: var(--global-text-color);
     font-size: 1.12rem !important;
     font-weight: 600 !important;
@@ -108,6 +111,7 @@ nav_order: 2
 
   .publications .periodical em {
     color: var(--global-text-color);
+    font-weight: 500;
   }
 
   /* DOI and other links */
@@ -138,8 +142,7 @@ nav_order: 2
     color: #ffffff !important;
   }
 
-  /* Extra publication information */
-  .publications .periodical + .additional-info,
+  /* Extra information */
   .publications .additional-info {
     margin-top: 0.3rem;
     color: var(--global-text-color-light);
@@ -150,7 +153,7 @@ nav_order: 2
   /* Mobile layout */
   @media (max-width: 575px) {
     .post-header {
-      margin-bottom: 0.8rem !important;
+      margin-bottom: 0.7rem !important;
     }
 
     .post-header .post-title {
@@ -163,7 +166,14 @@ nav_order: 2
     }
 
     .publications h2.bibliography {
+      margin-top: 0.35rem !important;
+      padding-top: 0.8rem;
       font-size: 0.82rem !important;
+    }
+
+    .publications ol.bibliography {
+      margin-top: 0.35rem !important;
+      padding-top: 0.8rem;
     }
 
     .publications ol.bibliography > li {
@@ -172,6 +182,7 @@ nav_order: 2
 
     .publications .title {
       font-size: 1rem !important;
+      line-height: 1.35;
     }
 
     .publications .author {
@@ -182,17 +193,13 @@ nav_order: 2
       font-size: 0.83rem;
     }
 
-    .publications .abbr {
-      display: none;
+    .publications .links {
+      margin-left: 0.25rem;
     }
 
-    .publications ol.bibliography li .col-sm-8,
-    .publications ol.bibliography li .col-sm-10 {
-      width: 100%;
-      max-width: 100%;
-      padding-right: 0;
-      padding-left: 0;
-      flex: 0 0 100%;
+    .publications .links a {
+      padding: 0.13rem 0.4rem !important;
+      font-size: 0.66rem !important;
     }
   }
 </style>
