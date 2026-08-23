@@ -18,14 +18,6 @@ profile:
       <a href="https://www.linkedin.com/in/leegh" target="_blank" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a>
       <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">Email</a>
     </div>
-    <div class="affiliation-logos">
-      <a href="https://www.purdue.edu/" target="_blank" rel="external nofollow noopener" aria-label="Purdue University" title="Purdue University">
-        <img src="/assets/img/purdue-logo.png" alt="Purdue University logo" class="affiliation-logo purdue-logo">
-      </a>
-      <a href="https://www.yonsei.ac.kr/" target="_blank" rel="external nofollow noopener" aria-label="Yonsei University" title="Yonsei University">
-        <img src="/assets/img/yonsei-logo.png" alt="Yonsei University logo" class="affiliation-logo yonsei-logo">
-      </a>
-    </div>
 
 selected_papers: false
 social: false
@@ -42,14 +34,14 @@ latest_posts:
 ---
 
 <style>
-  /* Page title */
+  /* Main name */
   h1.post-title {
     font-size: 3.4rem !important;
     line-height: 1.1;
   }
 
   /* Profile picture */
-  .profile > img {
+  .profile img {
     border-radius: 0 !important;
   }
 
@@ -76,58 +68,6 @@ latest_posts:
     border-color: var(--global-theme-color);
     background-color: var(--global-theme-color);
     color: #ffffff !important;
-  }
-
-  /* University logos */
-  .affiliation-logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.15rem;
-    margin-top: 1.7rem;
-    padding-top: 1.1rem;
-    border-top: 1px solid var(--global-divider-color);
-  }
-
-  .affiliation-logos a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-    background: transparent;
-    text-decoration: none;
-  }
-
-  .affiliation-logos a:hover {
-    border: 0;
-    background: transparent;
-  }
-
-  .affiliation-logo {
-    display: block;
-    width: auto !important;
-    max-width: none !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    object-fit: contain;
-    opacity: 0.82;
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease;
-  }
-
-  .purdue-logo {
-    height: 38px !important;
-  }
-
-  .yonsei-logo {
-    height: 34px !important;
-  }
-
-  .affiliation-logos a:hover .affiliation-logo {
-    opacity: 1;
-    transform: translateY(-2px);
   }
 
   /* CV toggles */
@@ -193,6 +133,42 @@ latest_posts:
     color: var(--global-text-color-light);
   }
 
+  /* University logos above the footer */
+  .affiliation-logos-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 1.4rem 0 0.7rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .affiliation-logos-bottom a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 58px;
+    padding: 0.35rem 0.5rem;
+    text-decoration: none;
+  }
+
+  .affiliation-logos-bottom img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    max-height: 42px;
+    object-fit: contain;
+  }
+
+  .affiliation-logos-bottom a:hover img {
+    opacity: 0.72;
+  }
+
   /* Desktop profile layout */
   @media (min-width: 576px) {
     .profile {
@@ -219,23 +195,27 @@ latest_posts:
       font-size: 0.72rem;
     }
 
-    .affiliation-logos {
-      gap: 0.9rem;
-      margin-top: 1.2rem;
-      padding-top: 0.9rem;
-    }
-
-    .purdue-logo {
-      height: 30px !important;
-    }
-
-    .yonsei-logo {
-      height: 27px !important;
-    }
-
     .cv-toggle summary {
       width: 220px;
       max-width: 100%;
+    }
+
+    .affiliation-logos-bottom {
+      justify-content: center;
+      gap: 0.45rem;
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+    }
+
+    .affiliation-logos-bottom a {
+      width: 105px;
+      height: 46px;
+      padding: 0.25rem;
+    }
+
+    .affiliation-logos-bottom img {
+      max-width: 92px;
+      max-height: 32px;
     }
   }
 </style>
@@ -256,7 +236,10 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>Ph.D. in Chemistry</strong><br>
       <span>Yonsei University, South Korea · 2018–2025</span><br>
       <span>Research Advisor: Professor Moonhyun Oh</span><br>
-      <span>Dissertation: Construction of Hybrid Metal–Organic Frameworks via Structural Adjustment Process</span>
+      <span
+        >Dissertation: Construction of Hybrid Metal–Organic Frameworks via
+        Structural Adjustment Process</span
+      >
     </p>
 
     <p class="cv-entry">
@@ -275,7 +258,10 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       <strong>Postdoctoral Research Associate</strong><br>
       <span>Purdue University · 2025–Present</span><br>
       <span>Research Advisor: Professor Christopher Uyeda</span><br>
-      <span>Photoswitchable ligands and stimulus-responsive coordination frameworks</span>
+      <span
+        >Photoswitchable ligands and stimulus-responsive coordination
+        frameworks</span
+      >
     </p>
   </div>
 </details>
@@ -296,12 +282,16 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
     <p class="cv-entry">
       <strong>Best Oral Presentation Award</strong><br>
-      <span>Inorganic Chemistry Division, Korean Chemical Society · 2022</span>
+      <span
+        >Inorganic Chemistry Division, Korean Chemical Society · 2022</span
+      >
     </p>
 
     <p class="cv-entry">
       <strong>Excellent Poster Presentation Prize</strong><br>
-      <span>129th Korean Chemical Society Meeting, RSC Poster Prize · 2022</span>
+      <span
+        >129th Korean Chemical Society Meeting, RSC Poster Prize · 2022</span
+      >
     </p>
   </div>
 </details>
@@ -312,17 +302,67 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
   <div class="cv-toggle-content">
     <p class="cv-entry">
       <strong>Synthesis and Sample Preparation</strong><br>
-      <span>Organic ligands, metal–organic frameworks, coordination compounds, Schlenk-line and glovebox techniques</span>
+      <span
+        >Organic ligands, metal–organic frameworks, coordination compounds,
+        Schlenk-line and glovebox techniques</span
+      >
     </p>
 
     <p class="cv-entry">
       <strong>Instrumentation and Data Analysis</strong><br>
-      <span>PXRD, SEM–EDS, FTIR, Raman, TGA, DSC, gas adsorption, NMR and UV–Vis spectroscopy</span>
+      <span
+        >PXRD, SEM–EDS, FTIR, Raman, TGA, DSC, gas adsorption, NMR and UV–Vis
+        spectroscopy</span
+      >
     </p>
 
     <p class="cv-entry">
       <strong>Computational Chemistry</strong><br>
-      <span>Gaussian 16, GaussView 6, constrained DFT optimization and vibrational frequency analysis</span>
+      <span
+        >Gaussian 16, GaussView 6, constrained DFT optimization and vibrational
+        frequency analysis</span
+      >
     </p>
   </div>
 </details>
+
+<div class="affiliation-logos-bottom">
+  <a
+    href="https://www.purdue.edu/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="Purdue University"
+    title="Purdue University"
+  >
+    <img
+      src="{{ '/assets/img/purdue-logo.png' | relative_url }}"
+      alt="Purdue University"
+    >
+  </a>
+
+  <a
+    href="https://www.yonsei.ac.kr/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="Yonsei University"
+    title="Yonsei University"
+  >
+    <img
+      src="{{ '/assets/img/yonsei-logo.png' | relative_url }}"
+      alt="Yonsei University"
+    >
+  </a>
+
+  <a
+    href="https://www.uvic.ca/"
+    target="_blank"
+    rel="external nofollow noopener"
+    aria-label="University of Victoria"
+    title="University of Victoria"
+  >
+    <img
+      src="{{ '/assets/img/uvic-logo.png' | relative_url }}"
+      alt="University of Victoria"
+    >
+  </a>
+</div>
