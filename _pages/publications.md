@@ -8,6 +8,12 @@ nav_order: 2
 ---
 
 <style>
+  /* Widen the Publications page */
+  .container[role="main"] {
+    width: 92% !important;
+    max-width: 1500px !important;
+  }
+
   /* Page heading */
   .post-header {
     margin-bottom: 1rem !important;
@@ -30,6 +36,7 @@ nav_order: 2
     display: grid;
     grid-template-columns: 75px minmax(0, 1fr);
     column-gap: 1.5rem;
+    width: 100%;
     align-items: start;
   }
 
@@ -52,6 +59,7 @@ nav_order: 2
   /* Publication list for each year */
   .publications ol.bibliography {
     grid-column: 2;
+    width: 100%;
     margin: 0.5rem 0 0 !important;
     padding-top: 1rem;
     padding-left: 0;
@@ -59,32 +67,36 @@ nav_order: 2
   }
 
   .publications ol.bibliography > li {
+    width: 100%;
     margin-bottom: 1.7rem !important;
   }
 
   .publications ol.bibliography li .row {
-    align-items: flex-start;
+    width: 100%;
     margin-right: 0;
     margin-left: 0;
+    align-items: flex-start;
   }
 
-  /* Hide journal abbreviation badges */
-  .publications .abbr {
+  /* Completely remove journal abbreviation badges */
+  body .publications ol.bibliography li .row > .abbr,
+  body .publications .abbr {
     display: none !important;
   }
 
-  /* Use the space previously occupied by the badges */
-  .publications ol.bibliography li .col-sm-8,
-  .publications ol.bibliography li .col-sm-10 {
-    width: 100%;
-    max-width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    flex: 0 0 100%;
+  /* Let publication information use the entire available width */
+  body .publications ol.bibliography li .row > .col-sm-8,
+  body .publications ol.bibliography li .row > .col-sm-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    flex: 0 0 100% !important;
   }
 
   /* Publication title */
   .publications .title {
+    max-width: none !important;
     margin-bottom: 0.3rem !important;
     color: var(--global-text-color);
     font-size: 1.12rem !important;
@@ -94,6 +106,7 @@ nav_order: 2
 
   /* Authors */
   .publications .author {
+    max-width: none !important;
     margin-bottom: 0.2rem !important;
     color: var(--global-text-color);
     font-size: 0.94rem;
@@ -103,6 +116,7 @@ nav_order: 2
   /* Journal, volume, pages and year */
   .publications .periodical {
     display: inline;
+    max-width: none !important;
     margin: 0 !important;
     color: var(--global-text-color-light);
     font-size: 0.9rem;
@@ -142,7 +156,7 @@ nav_order: 2
     color: #ffffff !important;
   }
 
-  /* Extra information */
+  /* Extra publication information */
   .publications .additional-info {
     margin-top: 0.3rem;
     color: var(--global-text-color-light);
@@ -152,6 +166,13 @@ nav_order: 2
 
   /* Mobile layout */
   @media (max-width: 575px) {
+    .container[role="main"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+    }
+
     .post-header {
       margin-bottom: 0.7rem !important;
     }
