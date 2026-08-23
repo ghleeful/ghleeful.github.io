@@ -217,7 +217,8 @@ latest_posts:
   }
 </style>
 
-Hi there! Welcome to my website.
+Hi there! 
+Welcome to my website :)
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
