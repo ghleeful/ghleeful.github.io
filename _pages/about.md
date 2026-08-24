@@ -76,6 +76,7 @@ latest_posts:
     line-height: 1.1;
   }
 
+  /* Profile image */
   .profile img {
     width: 100% !important;
     height: 430px !important;
@@ -89,6 +90,7 @@ latest_posts:
     opacity: 0.25;
   }
 
+  /* Slideshow dots */
   .profile-dots {
     display: flex;
     justify-content: center;
@@ -120,6 +122,7 @@ latest_posts:
     background-color: var(--global-theme-color);
   }
 
+  /* Profile links */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -148,14 +151,14 @@ latest_posts:
     text-decoration: none;
   }
 
+  /* CV toggles */
   .cv-section {
     width: 100%;
-    max-width: 350px;
-    margin-top: 2rem;
+    max-width: 520px;
+    margin-top: 2.2rem;
   }
 
-  details.cv-toggle,
-  details.cv-toggle:last-of-type {
+  details.cv-toggle {
     padding: 0.55rem 0;
     border: 0 !important;
   }
@@ -163,7 +166,7 @@ latest_posts:
   .cv-toggle summary {
     display: flex;
     align-items: center;
-    width: 250px;
+    width: 480px;
     max-width: 100%;
     padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--global-divider-color);
@@ -172,6 +175,7 @@ latest_posts:
     color: var(--global-text-color);
     font-size: 1rem;
     font-weight: 600;
+    white-space: nowrap;
   }
 
   .cv-toggle summary::-webkit-details-marker {
@@ -183,7 +187,7 @@ latest_posts:
   }
 
   .cv-toggle summary::before {
-    width: 1.2rem;
+    flex: 0 0 1.2rem;
     margin-right: 0.25rem;
     color: var(--global-theme-color);
     font-size: 1.1rem;
@@ -214,14 +218,15 @@ latest_posts:
     color: var(--global-text-color-light);
   }
 
+  /* Institution logos */
   .institution-logos {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: clamp(2rem, 5vw, 4.5rem);
     width: 100%;
-    margin: 2rem auto 0.5rem;
-    padding: 1rem 0 0.4rem;
+    margin: 2rem auto 0.4rem;
+    padding: 1rem 0 0.35rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
@@ -229,6 +234,7 @@ latest_posts:
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
   }
 
   .institution-logos img {
@@ -257,6 +263,7 @@ latest_posts:
     height: 39px;
   }
 
+  /* Left-side fanfare */
   .welcome-fanfare {
     position: fixed;
     z-index: 2000;
@@ -298,6 +305,7 @@ latest_posts:
     }
   }
 
+  /* Desktop */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -308,6 +316,7 @@ latest_posts:
     }
   }
 
+  /* Mobile */
   @media (max-width: 575px) {
     h1.post-title {
       font-size: 2.6rem !important;
@@ -327,11 +336,13 @@ latest_posts:
     }
 
     .cv-section {
+      max-width: 100%;
       margin-top: 1.5rem;
     }
 
     .cv-toggle summary {
-      width: 220px;
+      width: 100%;
+      white-space: normal;
     }
 
     .institution-logos {
@@ -372,8 +383,7 @@ latest_posts:
   }
 </style>
 
-Hi there!  
-Welcome to my website. :)
+Hi there! Welcome to my website. :)
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
@@ -491,12 +501,20 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const profileImage = document.querySelector(".profile img");
-    const profilePicture = profileImage
-      ? profileImage.closest("picture")
-      : null;
     const profileDots = Array.from(document.querySelectorAll(".profile-dot"));
 
     if (profileImage && profileDots.length > 0) {
+      const picture = profileImage.closest("picture");
+
+      if (picture) {
+        picture.querySelectorAll("source").forEach(function (source) {
+          source.remove();
+        });
+      }
+
+      profileImage.removeAttribute("srcset");
+      profileImage.removeAttribute("sizes");
+
       profileDots.forEach(function (dot) {
         dot.addEventListener("click", function () {
           const nextImage = dot.dataset.image;
@@ -510,12 +528,6 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
           const imageLoader = new Image();
 
           imageLoader.addEventListener("load", function () {
-            if (profilePicture) {
-              profilePicture.querySelectorAll("source").forEach(function (source) {
-                source.remove();
-              });
-            }
-
             profileImage.removeAttribute("srcset");
             profileImage.removeAttribute("sizes");
             profileImage.src = nextImage;
@@ -551,13 +563,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     fanfare.className = "welcome-fanfare";
     fanfare.setAttribute("aria-hidden", "true");
 
-    const colors = [
-      "#8c6a24",
-      "#cfb991",
-      "#f1d6dc",
-      "#26231f",
-      "#ffffff",
-    ];
+    const colors = ["#8c6a24", "#cfb991", "#f1d6dc", "#26231f", "#ffffff"];
 
     for (let index = 0; index < 34; index += 1) {
       const confetti = document.createElement("span");
@@ -592,4 +598,3 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     }, 1900);
   });
 </script>
-<image name=[Image #1] path="C:\Users\rhaeh\AppData\Local\Temp\codex-clipboard-bbaa2924-5d7e-4547-a593-d8da45808b1e.png"><<ImageDisplayed>></image>
