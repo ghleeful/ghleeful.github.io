@@ -8,7 +8,7 @@ nav_order: 3
 
 publications:
   - year: 2025
-    date: "00.00"
+    date: "04.16"
     title: Activating the Gate-Opening of a Metal–Organic Framework and Maximizing Its Adsorption Capacity
     doi: https://doi.org/10.1021/jacs.5c01399
     authors: >-
@@ -16,10 +16,10 @@ publications:
       Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Journal of the American Chemical Society</em>, 147, 12811–12820.
-    impact_factor: ""
+    impact_factor: "16.6"
 
   - year: 2025
-    date: "00.00"
+    date: "04.16"
     title: Compositional Complexity of Metal–Organic Frameworks with Programmable Spatial Arrangement of Multi-Metallic Components
     doi: https://doi.org/10.1002/smll.202408119
     authors: >-
@@ -28,10 +28,10 @@ publications:
       Jeehyoun Lee, and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Small</em>, 21, 2408119.
-    impact_factor: ""
+    impact_factor: "11.8"
 
   - year: 2024
-    date: "00.00"
+    date: "11.05"
     title: "MOF-on-MOF Growth: Inducing Naturally Nonpreferred MOFs and Atypical MOF Growth"
     doi: https://doi.org/10.1021/acs.accounts.4c00469
     authors: >-
@@ -40,10 +40,10 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Accounts of Chemical Research</em>, 57, 3113–3125.
-    impact_factor: ""
+    impact_factor: "17.7"
 
   - year: 2024
-    date: ""
+    date: "06.19"
     title: A Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites
     doi: https://doi.org/10.1002/smll.202306543
     authors: >-
@@ -52,10 +52,10 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Small</em>, 20, 2306543.
-    impact_factor: ""
+    impact_factor: "12.1"
 
   - year: 2024
-    date: "00.00"
+    date: "01.29"
     title: Enhanced Early-Stage Adsorption of Chemical Warfare Agent Simulant by MIL-68-(X%OH)
     doi: https://doi.org/10.1002/bkcs.12794
     authors: >-
@@ -63,10 +63,10 @@ publications:
       Sojin Oh<sup>†</sup>, and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Bulletin of the Korean Chemical Society</em>, 45, 67–73.
-    impact_factor: ""
+    impact_factor: "2.2"
 
   - year: 2023
-    date: "00.00"
+    date: "06.20"
     title: Structural Compromise Between Conflicted Spatial Arrangements of Two Linkers in Metal–Organic Frameworks
     doi: https://doi.org/10.1002/smtd.202201586
     authors: >-
@@ -74,10 +74,10 @@ publications:
       Sujeong Lee, and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Small Methods</em>, 7, 2201586.
-    impact_factor: ""
+    impact_factor: "10.7"
 
   - year: 2023
-    date: "00.00"
+    date: "09.06"
     title: Induced Production of Atypical Naturally Non-Preferred Metal–Organic Frameworks and Their Detachment via Provoking Post-Mismatching
     doi: https://doi.org/10.1002/smll.202303580
     authors: >-
@@ -85,10 +85,10 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Small</em>, 19, 2303580.
-    impact_factor: ""
+    impact_factor: "13.0"
 
   - year: 2023
-    date: "00.00"
+    date: "07.28"
     title: Enhanced Adsorption Capacity of ZIF-8 for Chemical Warfare Agent Simulants Caused by Its Morphology and Surface Charge
     doi: https://doi.org/10.1038/s41598-023-39507-6
     authors: >-
@@ -96,10 +96,10 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Scientific Reports</em>, 13, 12250.
-    impact_factor: ""
+    impact_factor: "3.8"
 
   - year: 2023
-    date: "00.00"
+    date: "08.12"
     title: Defective MOF-74 with Ancillary Open Metal Sites for the Enhanced Adsorption of Chemical Warfare Agent Simulants
     doi: https://doi.org/10.1039/D3DT02025H
     authors: >-
@@ -107,10 +107,10 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Dalton Transactions</em>, 52, 12143–12151.
-    impact_factor: ""
+    impact_factor: "3.5"
 
   - year: 2023
-    date: "00.00"
+    date: "10.07"
     title: Boosted Ability of ZIF-8 for Early-Stage Adsorption and Degradation of Chemical Warfare Agent Simulants
     doi: https://doi.org/10.1039/D3NA00807J
     authors: >-
@@ -118,10 +118,10 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Nanoscale Advances</em>, 5, 6449–6457.
-    impact_factor: ""
+    impact_factor: "4.6"
 
   - year: 2023
-    date: "00.00"
+    date: "12.20"
     title: "Au Octahedral Nanosponges: 3D Plasmonic Nanolenses for Near-Field Focusing"
     doi: https://doi.org/10.1021/jacs.3c08315
     authors: >-
@@ -130,10 +130,10 @@ publications:
       Moonhyun Oh<sup>*</sup>, and Sungho Park
     citation: >-
       <em>Journal of the American Chemical Society</em>, 145, 27397–27406.
-    impact_factor: ""
+    impact_factor: "14.5"
 
   - year: 2023
-    date: "00.00"
+    date: "03.13"
     title: Construction of Defected MOF-74 with Preserved Crystallinity for Efficient Catalytic Cyanosilylation of Benzaldehyde
     doi: https://doi.org/10.1039/D3RA01222K
     authors: >-
@@ -141,10 +141,10 @@ publications:
       <span class="my-name">Gihyun Lee</span>, and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>RSC Advances</em>, 13, 8220–8226.
-    impact_factor: ""
+    impact_factor: "3.9"
 
   - year: 2022
-    date: "00.00"
+    date: "08.30"
     title: Enhanced Catalytic Activity of MOF-74 via Providing Additional Open Metal Sites for Cyanosilylation of Aldehydes
     doi: https://doi.org/10.1038/s41598-022-18932-z
     authors: >-
@@ -152,10 +152,10 @@ publications:
       <span class="my-name">Gihyun Lee</span>, and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Scientific Reports</em>, 12, 14735.
-    impact_factor: ""
+    impact_factor: "4.6"
 
   - year: 2022
-    date: "00.00"
+    date: "08.23"
     title: Investigating the Effect of Phospholipids on Droplet Formation and Surface Property Evolution in Microfluidic Devices for Droplet Interface Bilayer Formation
     doi: https://doi.org/10.1063/5.0096193
     authors: >-
@@ -164,10 +164,10 @@ publications:
       John M. Frostad, and Katherine S. Elvira
     citation: >-
       <em>Biomicrofluidics</em>, 16, 044112.
-    impact_factor: ""
+    impact_factor: "3.2"
 
   - year: 2021
-    date: "00.00"
+    date: "11.23"
     title: Lattice-Guided Construction and Harvest of a Naturally Nonpreferred Metal–Organic Framework
     doi: https://doi.org/10.1021/acsnano.1c06207
     authors: >-
@@ -176,10 +176,10 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>ACS Nano</em>, 15, 17907–17916.
-    impact_factor: ""
+    impact_factor: "18.027"
 
   - year: 2021
-    date: "00.00"
+    date: "03.02"
     title: Rational Manufacture of Yolk–Shell and Core–Shell Metal Oxide Double Layers from Silica-Templated Coordination Polymer Double Layers
     doi: https://doi.org/10.1039/D1QM00034A
     authors: >-
@@ -188,10 +188,10 @@ publications:
       Sujeong Lee, and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Materials Chemistry Frontiers</em>, 5, 3404–3412.
-    impact_factor: ""
+    impact_factor: "8.683"
 
   - year: 2020
-    date: "00.00"
+    date: "02.12"
     title: Tip-to-Middle Anisotropic MOF-on-MOF Growth with a Structural Adjustment
     doi: https://doi.org/10.1021/jacs.9b12193
     authors: >-
@@ -199,10 +199,10 @@ publications:
       Dooyoung Kim, and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Journal of the American Chemical Society</em>, 142, 3042–3049.
-    impact_factor: ""
+    impact_factor: "15.419"
 
   - year: 2019
-    date: "00.00"
+    date: "11.22"
     title: Unbalanced MOF-on-MOF Growth for the Production of Lopsided Core–Shell MIL-88B@MIL-88A with Mismatched Cell Parameters
     doi: https://doi.org/10.1039/C8CC08456D
     authors: >-
@@ -210,7 +210,7 @@ publications:
       and Moonhyun Oh<sup>*</sup>
     citation: >-
       <em>Chemical Communications</em>, 55, 43–46.
-    impact_factor: ""
+    impact_factor: "5.996"
 ---
 
 <style>
