@@ -71,13 +71,21 @@ latest_posts:
 ---
 
 <style>
+  /* Main profile heading */
   h1.post-title {
     font-size: 3.4rem !important;
     line-height: 1.1;
   }
 
+  /* Profile container */
+  .profile {
+    position: relative;
+    overflow: visible !important;
+  }
+
   /* Profile image */
   .profile img {
+    display: block;
     width: 100% !important;
     height: 430px !important;
     border-radius: 0 !important;
@@ -94,13 +102,13 @@ latest_posts:
   .profile-dots {
     display: flex;
     justify-content: center;
-    gap: 0.45rem;
+    gap: 0.5rem;
     margin: 0.65rem 0 0.7rem;
   }
 
   .profile-dot {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     padding: 0;
     border: 1px solid var(--global-text-color-light);
     border-radius: 50%;
@@ -114,7 +122,7 @@ latest_posts:
 
   .profile-dot:hover {
     border-color: var(--global-theme-color);
-    transform: scale(1.12);
+    transform: scale(1.15);
   }
 
   .profile-dot.active {
@@ -122,7 +130,7 @@ latest_posts:
     background-color: var(--global-theme-color);
   }
 
-  /* Profile links */
+  /* Links below profile image */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -151,14 +159,15 @@ latest_posts:
     text-decoration: none;
   }
 
-  /* CV toggles */
+  /* CV toggle section */
   .cv-section {
     width: 100%;
-    max-width: 520px;
-    margin-top: 2.2rem;
+    max-width: 430px;
+    margin-top: 2rem;
   }
 
-  details.cv-toggle {
+  details.cv-toggle,
+  details.cv-toggle:last-of-type {
     padding: 0.55rem 0;
     border: 0 !important;
   }
@@ -166,8 +175,8 @@ latest_posts:
   .cv-toggle summary {
     display: flex;
     align-items: center;
-    width: 480px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 430px;
     padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
@@ -188,6 +197,7 @@ latest_posts:
 
   .cv-toggle summary::before {
     flex: 0 0 1.2rem;
+    width: 1.2rem;
     margin-right: 0.25rem;
     color: var(--global-theme-color);
     font-size: 1.1rem;
@@ -225,8 +235,8 @@ latest_posts:
     justify-content: center;
     gap: clamp(2rem, 5vw, 4.5rem);
     width: 100%;
-    margin: 2rem auto 0.4rem;
-    padding: 1rem 0 0.35rem;
+    margin: 2.2rem auto 0.7rem;
+    padding: 1.2rem 0 0.6rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
@@ -263,22 +273,22 @@ latest_posts:
     height: 39px;
   }
 
-  /* Left-side fanfare */
+  /* Fanfare from the upper-left corner of the profile image */
   .welcome-fanfare {
-    position: fixed;
+    position: absolute;
     z-index: 2000;
-    top: 4.5rem;
-    left: 0;
-    width: 190px;
-    height: 230px;
-    overflow: hidden;
+    top: -15px;
+    left: -15px;
+    width: 230px;
+    height: 250px;
+    overflow: visible;
     pointer-events: none;
   }
 
   .welcome-confetti {
     position: absolute;
-    top: 45%;
-    left: -15px;
+    top: 18px;
+    left: 18px;
     width: 7px;
     height: 13px;
     border-radius: 1px;
@@ -305,7 +315,7 @@ latest_posts:
     }
   }
 
-  /* Desktop */
+  /* Desktop profile layout */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -316,7 +326,7 @@ latest_posts:
     }
   }
 
-  /* Mobile */
+  /* Mobile layout */
   @media (max-width: 575px) {
     h1.post-title {
       font-size: 2.6rem !important;
@@ -342,6 +352,7 @@ latest_posts:
 
     .cv-toggle summary {
       width: 100%;
+      max-width: 100%;
       white-space: normal;
     }
 
@@ -364,9 +375,10 @@ latest_posts:
     }
 
     .welcome-fanfare {
-      top: 3.5rem;
-      width: 135px;
-      height: 180px;
+      top: -10px;
+      left: -10px;
+      width: 165px;
+      height: 190px;
     }
   }
 
@@ -383,7 +395,8 @@ latest_posts:
   }
 </style>
 
-Hi there! Welcome to my website. :)
+Hi there!  
+Welcome to my website. :)
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
@@ -500,21 +513,13 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const profileImage = document.querySelector(".profile img");
+    const profileElement = document.querySelector(".profile");
+    const profileImage =
+      document.querySelector(".profile > img") ||
+      document.querySelector(".profile img");
     const profileDots = Array.from(document.querySelectorAll(".profile-dot"));
 
     if (profileImage && profileDots.length > 0) {
-      const picture = profileImage.closest("picture");
-
-      if (picture) {
-        picture.querySelectorAll("source").forEach(function (source) {
-          source.remove();
-        });
-      }
-
-      profileImage.removeAttribute("srcset");
-      profileImage.removeAttribute("sizes");
-
       profileDots.forEach(function (dot) {
         dot.addEventListener("click", function () {
           const nextImage = dot.dataset.image;
@@ -528,6 +533,19 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
           const imageLoader = new Image();
 
           imageLoader.addEventListener("load", function () {
+            /*
+             * al-folio may wrap the image in <picture> and provide responsive
+             * <source> elements. Those sources must be removed or the browser
+             * can continue showing the first image.
+             */
+            const picture = profileImage.closest("picture");
+
+            if (picture) {
+              picture.querySelectorAll("source").forEach(function (source) {
+                source.remove();
+              });
+            }
+
             profileImage.removeAttribute("srcset");
             profileImage.removeAttribute("sizes");
             profileImage.src = nextImage;
@@ -545,12 +563,17 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
             }, 60);
           });
 
+          imageLoader.addEventListener("error", function () {
+            profileImage.classList.remove("profile-image-changing");
+          });
+
           imageLoader.src = nextImage;
         });
       });
     }
 
     if (
+      !profileElement ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
       sessionStorage.getItem("profile-fanfare-shown") === "true"
     ) {
@@ -567,8 +590,8 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
     for (let index = 0; index < 34; index += 1) {
       const confetti = document.createElement("span");
-      const angle = -38 + Math.random() * 156;
-      const distance = 125 + Math.random() * 115;
+      const angle = 5 + Math.random() * 110;
+      const distance = 105 + Math.random() * 135;
       const radians = (angle * Math.PI) / 180;
 
       confetti.className = "welcome-confetti";
@@ -591,7 +614,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       fanfare.appendChild(confetti);
     }
 
-    document.body.appendChild(fanfare);
+    profileElement.appendChild(fanfare);
 
     window.setTimeout(function () {
       fanfare.remove();
