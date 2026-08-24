@@ -9,7 +9,7 @@ subtitle: >
 
 profile:
   align: right
-  image: profile-01.png
+  image: profile-01.png, profile-02.jpg
   image_circular: false
   more_info: >
     <div class="profile-dots" aria-label="Profile image selector">
