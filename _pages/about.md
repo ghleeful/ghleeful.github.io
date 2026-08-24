@@ -12,41 +12,19 @@ profile:
   image: profile-01.png
   image_circular: false
   more_info: >
-    <div id="profile-carousel" class="carousel slide profile-carousel" data-bs-ride="false">
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="/assets/img/profile-01.png"
-            alt="Gihyun Lee profile photograph 1"
-          >
-        </div>
-
-        <div class="carousel-item">
-          <img
-            src="/assets/img/profile-02.jpg"
-            alt="Gihyun Lee profile photograph 2"
-          >
-        </div>
-      </div>
-
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#profile-carousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Profile photograph 1"
-        ></button>
-
-        <button
-          type="button"
-          data-bs-target="#profile-carousel"
-          data-bs-slide-to="1"
-          aria-label="Profile photograph 2"
-        ></button>
-      </div>
+    <div class="profile-dots" aria-label="Profile image selector">
+      <button
+        class="profile-dot active"
+        type="button"
+        data-image="/assets/img/profile-01.png"
+        aria-label="Show profile image 1"
+      ></button>
+      <button
+        class="profile-dot"
+        type="button"
+        data-image="/assets/img/profile-02.jpg"
+        aria-label="Show profile image 2"
+      ></button>
     </div>
 
     <div class="profile-links">
@@ -57,7 +35,6 @@ profile:
         aria-label="CV"
         title="Open CV"
       >CV</a>
-
       <a
         href="https://scholar.google.com/citations?user=FmEf7ccAAAAJ"
         target="_blank"
@@ -65,7 +42,6 @@ profile:
         aria-label="Google Scholar"
         title="Google Scholar"
       >Scholar</a>
-
       <a
         href="https://www.linkedin.com/in/leegh"
         target="_blank"
@@ -73,7 +49,6 @@ profile:
         aria-label="LinkedIn"
         title="LinkedIn"
       >LinkedIn</a>
-
       <a
         href="mailto:lee5919@purdue.edu"
         aria-label="Email"
@@ -96,88 +71,64 @@ latest_posts:
 ---
 
 <style>
-  /* =========================================================
-     Profile title
-     ========================================================= */
-
+  /* Main profile heading */
   h1.post-title {
-    font-size: 3.5rem !important;
-    font-weight: 400;
-    line-height: 1.08;
+    font-size: 3.4rem !important;
+    line-height: 1.1;
   }
 
-  /* =========================================================
-     Profile photograph carousel
-     ========================================================= */
-
-  /* Hide the single image generated automatically by al-folio */
-  .profile > picture,
-  .profile > figure,
-  .profile > img {
-    display: none !important;
-  }
-
-  .profile-carousel {
-    position: relative;
-    width: 100%;
-  }
-
-  .profile-carousel .carousel-inner,
-  .profile-carousel .carousel-item {
-    width: 100%;
-    height: 500px;
-  }
-
-  .profile-carousel .carousel-item img {
-    display: block;
-    width: 100%;
-    height: 500px;
+  /* Profile image */
+  .profile img {
+    width: 100% !important;
+    height: 430px !important;
     border-radius: 0 !important;
     object-fit: cover;
     object-position: center;
+    transition: opacity 0.22s ease;
   }
 
-  /* Remove previous and next arrows */
-  .profile-carousel .carousel-control-prev,
-  .profile-carousel .carousel-control-next {
-    display: none !important;
+  .profile img.profile-image-changing {
+    opacity: 0.25;
   }
 
-  /* Dots below the photographs */
-  .profile-carousel .carousel-indicators {
-    position: static;
+  /* Slideshow dots */
+  .profile-dots {
     display: flex;
     justify-content: center;
     gap: 0.45rem;
-    margin: 0.75rem 0 0;
+    margin: 0.65rem 0 0.7rem;
   }
 
-  .profile-carousel .carousel-indicators [data-bs-target] {
+  .profile-dot {
     width: 9px;
     height: 9px;
-    margin: 0;
     padding: 0;
     border: 1px solid var(--global-text-color-light);
     border-radius: 50%;
-    background-color: transparent;
-    opacity: 1;
+    background: transparent;
+    cursor: pointer;
+    transition:
+      background-color 0.18s ease,
+      border-color 0.18s ease,
+      transform 0.18s ease;
   }
 
-  .profile-carousel .carousel-indicators .active {
+  .profile-dot:hover {
+    border-color: var(--global-theme-color);
+    transform: scale(1.12);
+  }
+
+  .profile-dot.active {
     border-color: var(--global-theme-color);
     background-color: var(--global-theme-color);
   }
 
-  /* =========================================================
-     Buttons below the profile photographs
-     ========================================================= */
-
+  /* Links below profile image */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.45rem;
-    margin-top: 0.75rem;
   }
 
   .profile-links a {
@@ -188,6 +139,10 @@ latest_posts:
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
+    transition:
+      color 0.18s ease,
+      border-color 0.18s ease,
+      background-color 0.18s ease;
   }
 
   .profile-links a:hover {
@@ -197,18 +152,15 @@ latest_posts:
     text-decoration: none;
   }
 
-  /* =========================================================
-     Education, Experience, Awards, and Expertise toggles
-     ========================================================= */
-
-  .profile-sections {
-    width: 250px;
-    max-width: 100%;
+  /* Education, Experience, Awards and Expertise toggles */
+  .cv-section {
+    width: 100%;
+    max-width: 350px;
     margin-top: 2rem;
   }
 
-  details.cv-toggle {
-    margin: 0;
+  details.cv-toggle,
+  details.cv-toggle:last-of-type {
     padding: 0.55rem 0;
     border: 0 !important;
   }
@@ -249,7 +201,8 @@ latest_posts:
   }
 
   .cv-toggle-content {
-    padding: 0.8rem 0 0.1rem 1.2rem;
+    padding: 0.8rem 0 0.1rem 1.45rem;
+    color: var(--global-text-color);
     font-size: 0.92rem;
     line-height: 1.5;
   }
@@ -266,50 +219,94 @@ latest_posts:
     color: var(--global-text-color-light);
   }
 
-  /* =========================================================
-     University logos
-     ========================================================= */
-
-  .affiliation-logos {
+  /* Institution logos */
+  .institution-logos {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4.5rem;
+    gap: clamp(2rem, 5vw, 4.5rem);
     width: 100%;
-    margin-top: 2.5rem;
-    padding: 1.3rem 0 1rem;
+    margin: 2.2rem auto 0.7rem;
+    padding: 1.2rem 0 0.6rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
-  .affiliation-logos a {
+  .institution-logos a {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
   }
 
-  .affiliation-logos img {
+  .institution-logos img {
     display: block;
     width: auto;
     object-fit: contain;
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
   }
 
-  /* Optical sizes are intentionally different */
-  .affiliation-logo-uvic {
+  .institution-logos a:hover img {
+    opacity: 0.78;
+    transform: translateY(-2px);
+  }
+
+  .institution-logo-uvic {
     height: 42px;
   }
 
-  .affiliation-logo-yonsei {
-    height: 49px;
+  .institution-logo-yonsei {
+    height: 45px;
   }
 
-  .affiliation-logo-purdue {
-    height: 44px;
+  .institution-logo-purdue {
+    height: 39px;
   }
 
-  /* =========================================================
-     Desktop profile positioning
-     ========================================================= */
+  /* Left-side welcome fanfare */
+  .welcome-fanfare {
+    position: fixed;
+    z-index: 2000;
+    top: 4.5rem;
+    left: 0;
+    width: 190px;
+    height: 230px;
+    overflow: hidden;
+    pointer-events: none;
+  }
 
+  .welcome-confetti {
+    position: absolute;
+    top: 45%;
+    left: -15px;
+    width: 7px;
+    height: 13px;
+    border-radius: 1px;
+    opacity: 0;
+    animation: welcome-confetti-burst 1.45s ease-out forwards;
+  }
+
+  @keyframes welcome-confetti-burst {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0) rotate(0deg) scale(0.7);
+    }
+
+    12% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform:
+        translate(var(--confetti-x), var(--confetti-y))
+        rotate(var(--confetti-rotation))
+        scale(1);
+    }
+  }
+
+  /* Desktop profile layout */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -320,23 +317,18 @@ latest_posts:
     }
   }
 
-  /* =========================================================
-     Mobile layout
-     ========================================================= */
-
+  /* Mobile layout */
   @media (max-width: 575px) {
     h1.post-title {
-      font-size: 2.55rem !important;
+      font-size: 2.6rem !important;
     }
 
-    .profile-carousel .carousel-inner,
-    .profile-carousel .carousel-item,
-    .profile-carousel .carousel-item img {
-      height: 390px;
+    .profile img {
+      height: 360px !important;
     }
 
     .profile-links {
-      margin-top: 0.6rem;
+      margin-top: 0.5rem;
     }
 
     .profile-links a {
@@ -344,31 +336,48 @@ latest_posts:
       font-size: 0.72rem;
     }
 
-    .profile-sections {
-      width: 220px;
+    .cv-section {
+      margin-top: 1.5rem;
     }
 
     .cv-toggle summary {
       width: 220px;
     }
 
-    .affiliation-logos {
-      flex-wrap: wrap;
-      gap: 1.6rem 2.2rem;
-      margin-top: 2rem;
-      padding: 1rem 0 0.75rem;
+    .institution-logos {
+      gap: 1.3rem;
+      margin-top: 1.6rem;
+      padding-top: 1rem;
     }
 
-    .affiliation-logo-uvic {
+    .institution-logo-uvic {
+      height: 28px;
+    }
+
+    .institution-logo-yonsei {
       height: 31px;
     }
 
-    .affiliation-logo-yonsei {
-      height: 36px;
+    .institution-logo-purdue {
+      height: 26px;
     }
 
-    .affiliation-logo-purdue {
-      height: 33px;
+    .welcome-fanfare {
+      top: 3.5rem;
+      width: 135px;
+      height: 180px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .welcome-fanfare {
+      display: none;
+    }
+
+    .profile img,
+    .institution-logos img,
+    .profile-dot {
+      transition: none;
     }
   }
 </style>
@@ -381,15 +390,15 @@ My research interests lie in functional and responsive coordination materials, p
 
 Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you are interested in collaborating. You are always welcome!
 
-<div class="profile-sections">
+<div class="cv-section">
   <details class="cv-toggle">
     <summary>Education</summary>
 
     <div class="cv-toggle-content">
       <p class="cv-entry">
         <strong>Ph.D. in Chemistry</strong><br>
-        <span>Yonsei University · 20XX–20XX</span><br>
-        <span>Advisor: Professor Moonhyun Oh</span>
+        <span>University Name · 20XX–20XX</span><br>
+        <span>Advisor: Professor Name</span>
       </p>
 
       <p class="cv-entry">
@@ -426,12 +435,12 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     <div class="cv-toggle-content">
       <p class="cv-entry">
         <strong>Award Name</strong><br>
-        <span>Organization · Year</span>
+        <span>Awarding organization · Year</span>
       </p>
 
       <p class="cv-entry">
         <strong>Award Name</strong><br>
-        <span>Organization · Year</span>
+        <span>Awarding organization · Year</span>
       </p>
     </div>
   </details>
@@ -441,15 +450,17 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
     <div class="cv-toggle-content">
       <p class="cv-entry">
-        Metal–organic frameworks, coordination chemistry, ligand synthesis,
-        single-crystal X-ray diffraction, responsive crystalline materials,
-        and structure–property relationships.
+        Metal–organic frameworks · Coordination chemistry · Functional crystalline solids
+      </p>
+
+      <p class="cv-entry">
+        Single-crystal X-ray diffraction · Materials characterization · Ligand synthesis
       </p>
     </div>
   </details>
 </div>
 
-<div class="affiliation-logos">
+<div class="institution-logos">
   <a
     href="https://www.uvic.ca/"
     target="_blank"
@@ -457,7 +468,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     aria-label="University of Victoria"
   >
     <img
-      class="affiliation-logo-uvic"
+      class="institution-logo-uvic"
       src="/assets/img/uvic-logo.png"
       alt="University of Victoria"
     >
@@ -470,7 +481,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     aria-label="Yonsei University"
   >
     <img
-      class="affiliation-logo-yonsei"
+      class="institution-logo-yonsei"
       src="/assets/img/yonsei-logo.png"
       alt="Yonsei University"
     >
@@ -483,34 +494,96 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     aria-label="Purdue University"
   >
     <img
-      class="affiliation-logo-purdue"
+      class="institution-logo-purdue"
       src="/assets/img/purdue-logo.png"
       alt="Purdue University"
     >
   </a>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const profileImage = document.querySelector(".profile img");
+    const profileDots = Array.from(document.querySelectorAll(".profile-dot"));
+
+    if (profileImage && profileDots.length > 0) {
+      profileDots.forEach(function (dot) {
+        dot.addEventListener("click", function () {
+          const nextImage = dot.dataset.image;
+
+          if (!nextImage || dot.classList.contains("active")) {
+            return;
+          }
+
+          profileImage.classList.add("profile-image-changing");
+
+          const imageLoader = new Image();
+
+          imageLoader.addEventListener("load", function () {
+            profileImage.src = nextImage;
+            profileImage.alt = dot.getAttribute("aria-label") || "Profile image";
+
+            profileDots.forEach(function (item) {
+              item.classList.remove("active");
+            });
+
+            dot.classList.add("active");
+
+            window.setTimeout(function () {
+              profileImage.classList.remove("profile-image-changing");
+            }, 60);
+          });
+
+          imageLoader.src = nextImage;
+        });
+      });
+    }
+
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      sessionStorage.getItem("profile-fanfare-shown") === "true"
+    ) {
       return;
     }
 
-    confetti({
-      particleCount: 80,
-      angle: 55,
-      spread: 65,
-      startVelocity: 42,
-      gravity: 0.9,
-      ticks: 180,
-      origin: {
-        x: 0,
-        y: 0.85,
-      },
-      colors: ["#8c6a24", "#cfb991", "#f5f3ee", "#ffffff"],
-      disableForReducedMotion: true,
-    });
+    sessionStorage.setItem("profile-fanfare-shown", "true");
+
+    const fanfare = document.createElement("div");
+    fanfare.className = "welcome-fanfare";
+    fanfare.setAttribute("aria-hidden", "true");
+
+    const colors = ["#8c6a24", "#cfb991", "#f1d6dc", "#26231f", "#ffffff"];
+
+    for (let index = 0; index < 34; index += 1) {
+      const confetti = document.createElement("span");
+      const angle = -78 + Math.random() * 156;
+      const distance = 75 + Math.random() * 115;
+      const radians = (angle * Math.PI) / 180;
+
+      confetti.className = "welcome-confetti";
+      confetti.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDelay = `${Math.random() * 0.22}s`;
+      confetti.style.setProperty(
+        "--confetti-x",
+        `${Math.cos(radians) * distance}px`,
+      );
+      confetti.style.setProperty(
+        "--confetti-y",
+        `${Math.sin(radians) * distance}px`,
+      );
+      confetti.style.setProperty(
+        "--confetti-rotation",
+        `${180 + Math.random() * 520}deg`,
+      );
+
+      fanfare.appendChild(confetti);
+    }
+
+    document.body.appendChild(fanfare);
+
+    window.setTimeout(function () {
+      fanfare.remove();
+    }, 1900);
   });
 </script>
