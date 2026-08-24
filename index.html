@@ -8,6 +8,7 @@
     line-height: 1.1;
   }
 
+  /* Profile image */
   .profile img {
     width: 100% !important;
     height: 430px !important;
@@ -21,6 +22,7 @@
     opacity: 0.25;
   }
 
+  /* Slideshow dots */
   .profile-dots {
     display: flex;
     justify-content: center;
@@ -52,6 +54,7 @@
     background-color: var(--global-theme-color);
   }
 
+  /* Profile links */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -80,14 +83,14 @@
     text-decoration: none;
   }
 
+  /* CV toggles */
   .cv-section {
     width: 100%;
-    max-width: 350px;
-    margin-top: 2rem;
+    max-width: 520px;
+    margin-top: 2.2rem;
   }
 
-  details.cv-toggle,
-  details.cv-toggle:last-of-type {
+  details.cv-toggle {
     padding: 0.55rem 0;
     border: 0 !important;
   }
@@ -95,7 +98,7 @@
   .cv-toggle summary {
     display: flex;
     align-items: center;
-    width: 250px;
+    width: 480px;
     max-width: 100%;
     padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--global-divider-color);
@@ -104,6 +107,7 @@
     color: var(--global-text-color);
     font-size: 1rem;
     font-weight: 600;
+    white-space: nowrap;
   }
 
   .cv-toggle summary::-webkit-details-marker {
@@ -115,7 +119,7 @@
   }
 
   .cv-toggle summary::before {
-    width: 1.2rem;
+    flex: 0 0 1.2rem;
     margin-right: 0.25rem;
     color: var(--global-theme-color);
     font-size: 1.1rem;
@@ -146,14 +150,15 @@
     color: var(--global-text-color-light);
   }
 
+  /* Institution logos */
   .institution-logos {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: clamp(2rem, 5vw, 4.5rem);
     width: 100%;
-    margin: 2rem auto 0.5rem;
-    padding: 1rem 0 0.4rem;
+    margin: 2rem auto 0.4rem;
+    padding: 1rem 0 0.35rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
@@ -161,6 +166,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
   }
 
   .institution-logos img {
@@ -189,6 +195,7 @@
     height: 39px;
   }
 
+  /* Left-side fanfare */
   .welcome-fanfare {
     position: fixed;
     z-index: 2000;
@@ -230,6 +237,7 @@
     }
   }
 
+  /* Desktop */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -240,6 +248,7 @@
     }
   }
 
+  /* Mobile */
   @media (max-width: 575px) {
     h1.post-title {
       font-size: 2.6rem !important;
@@ -259,11 +268,13 @@
     }
 
     .cv-section {
+      max-width: 100%;
       margin-top: 1.5rem;
     }
 
     .cv-toggle summary {
-      width: 220px;
+      width: 100%;
+      white-space: normal;
     }
 
     .institution-logos {
@@ -302,15 +313,23 @@
       transition: none;
     }
   }
-</style> <p>Hi there!<br> Welcome to my website. :)</p> <p>I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.</p> <p>My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids. Please take a look at my publication list in the tab in the upper right corner for more information.</p> <p>Feel free to <a href="mailto:lee5919@purdue.edu" title="lee5919@purdue.edu">email</a> me if you are interested in collaborating. You are always welcome!</p> <div class="cv-section"> <details class="cv-toggle"> <summary>Education</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Ph.D. in Chemistry</strong><br> <span>Yonsei University · 2018–2025</span><br> <span>Advisor: Moonhyun Oh</span> </p> <p class="cv-entry"> <strong>B.Sc. in Chemistry</strong><br> <span>University of Victoria · 2013–2018</span> </p> </div> </details> <details class="cv-toggle"> <summary>Experience</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Postdoctoral Research Associate</strong><br> <span>Purdue University · 2025–Present</span> </p> </div> </details> <details class="cv-toggle"> <summary>Selected Awards &amp; Scholarships</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Outstanding BK21 Participant Recognition Award</strong><br> <span>Yonsei University · 2026</span> </p> <p class="cv-entry"> <strong>Graduate Student Idea Incubation Fund: Academic Research Fellowship</strong><br> <span>Yonsei University · 2023</span> </p> <p class="cv-entry"> <strong>Best Oral Presentation Award</strong><br> <span>Inorganic Chemistry Division of Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Excellent RSC Poster Presentation Prize</strong><br> <span>129th General Meeting of the Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Merit Academic Paper Award</strong><br> <span>Yonsei University · 2020</span> </p> <p class="cv-entry"> <strong>Entrance Scholarship</strong><br> <span>University of Victoria · 2013</span> </p> </div> </details> </div> <div class="institution-logos"> <a href="https://www.uvic.ca/" target="_blank" rel="noopener" aria-label="University of Victoria"> <img class="institution-logo-uvic" src="/assets/img/uvic-logo.png" alt="University of Victoria"> </a> <a href="https://www.yonsei.ac.kr/" target="_blank" rel="noopener" aria-label="Yonsei University"> <img class="institution-logo-yonsei" src="/assets/img/yonsei-logo.png" alt="Yonsei University"> </a> <a href="https://www.purdue.edu/" target="_blank" rel="noopener" aria-label="Purdue University"> <img class="institution-logo-purdue" src="/assets/img/purdue-logo.png" alt="Purdue University"> </a> </div> <script>
+</style> <p>Hi there! Welcome to my website. :)</p> <p>I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.</p> <p>My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids. Please take a look at my publication list in the tab in the upper right corner for more information.</p> <p>Feel free to <a href="mailto:lee5919@purdue.edu" title="lee5919@purdue.edu">email</a> me if you are interested in collaborating. You are always welcome!</p> <div class="cv-section"> <details class="cv-toggle"> <summary>Education</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Ph.D. in Chemistry</strong><br> <span>Yonsei University · 2018–2025</span><br> <span>Advisor: Moonhyun Oh</span> </p> <p class="cv-entry"> <strong>B.Sc. in Chemistry</strong><br> <span>University of Victoria · 2013–2018</span> </p> </div> </details> <details class="cv-toggle"> <summary>Experience</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Postdoctoral Research Associate</strong><br> <span>Purdue University · 2025–Present</span> </p> </div> </details> <details class="cv-toggle"> <summary>Selected Awards &amp; Scholarships</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Outstanding BK21 Participant Recognition Award</strong><br> <span>Yonsei University · 2026</span> </p> <p class="cv-entry"> <strong>Graduate Student Idea Incubation Fund: Academic Research Fellowship</strong><br> <span>Yonsei University · 2023</span> </p> <p class="cv-entry"> <strong>Best Oral Presentation Award</strong><br> <span>Inorganic Chemistry Division of Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Excellent RSC Poster Presentation Prize</strong><br> <span>129th General Meeting of the Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Merit Academic Paper Award</strong><br> <span>Yonsei University · 2020</span> </p> <p class="cv-entry"> <strong>Entrance Scholarship</strong><br> <span>University of Victoria · 2013</span> </p> </div> </details> </div> <div class="institution-logos"> <a href="https://www.uvic.ca/" target="_blank" rel="noopener" aria-label="University of Victoria"> <img class="institution-logo-uvic" src="/assets/img/uvic-logo.png" alt="University of Victoria"> </a> <a href="https://www.yonsei.ac.kr/" target="_blank" rel="noopener" aria-label="Yonsei University"> <img class="institution-logo-yonsei" src="/assets/img/yonsei-logo.png" alt="Yonsei University"> </a> <a href="https://www.purdue.edu/" target="_blank" rel="noopener" aria-label="Purdue University"> <img class="institution-logo-purdue" src="/assets/img/purdue-logo.png" alt="Purdue University"> </a> </div> <script>
   document.addEventListener("DOMContentLoaded", function () {
     const profileImage = document.querySelector(".profile img");
-    const profilePicture = profileImage
-      ? profileImage.closest("picture")
-      : null;
     const profileDots = Array.from(document.querySelectorAll(".profile-dot"));
 
     if (profileImage && profileDots.length > 0) {
+      const picture = profileImage.closest("picture");
+
+      if (picture) {
+        picture.querySelectorAll("source").forEach(function (source) {
+          source.remove();
+        });
+      }
+
+      profileImage.removeAttribute("srcset");
+      profileImage.removeAttribute("sizes");
+
       profileDots.forEach(function (dot) {
         dot.addEventListener("click", function () {
           const nextImage = dot.dataset.image;
@@ -324,12 +343,6 @@
           const imageLoader = new Image();
 
           imageLoader.addEventListener("load", function () {
-            if (profilePicture) {
-              profilePicture.querySelectorAll("source").forEach(function (source) {
-                source.remove();
-              });
-            }
-
             profileImage.removeAttribute("srcset");
             profileImage.removeAttribute("sizes");
             profileImage.src = nextImage;
@@ -365,13 +378,7 @@
     fanfare.className = "welcome-fanfare";
     fanfare.setAttribute("aria-hidden", "true");
 
-    const colors = [
-      "#8c6a24",
-      "#cfb991",
-      "#f1d6dc",
-      "#26231f",
-      "#ffffff",
-    ];
+    const colors = ["#8c6a24", "#cfb991", "#f1d6dc", "#26231f", "#ffffff"];
 
     for (let index = 0; index < 34; index += 1) {
       const confetti = document.createElement("span");
@@ -405,7 +412,7 @@
       fanfare.remove();
     }, 1900);
   });
-</script> <p>&lt;image name=[Image #1] path=”C:\Users\rhaeh\AppData\Local\Temp\codex-clipboard-bbaa2924-5d7e-4547-a593-d8da45808b1e.png”&gt;«ImageDisplayed»&lt;/image&gt;</p> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gihyun Lee. Department of Chemistry · Purdue University · 560 Oval Drive · West Lafayette, IN 47907, USA </div> </footer> <script>
+</script> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gihyun Lee. Department of Chemistry · Purdue University · 560 Oval Drive · West Lafayette, IN 47907, USA </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
