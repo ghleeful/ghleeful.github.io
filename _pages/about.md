@@ -77,15 +77,8 @@ latest_posts:
     line-height: 1.1;
   }
 
-  /* Profile container */
-  .profile {
-    position: relative;
-    overflow: visible !important;
-  }
-
   /* Profile image */
   .profile img {
-    display: block;
     width: 100% !important;
     height: 430px !important;
     border-radius: 0 !important;
@@ -98,17 +91,17 @@ latest_posts:
     opacity: 0.25;
   }
 
-  /* Slideshow dots */
+  /* Profile image dots */
   .profile-dots {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.45rem;
     margin: 0.65rem 0 0.7rem;
   }
 
   .profile-dot {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     padding: 0;
     border: 1px solid var(--global-text-color-light);
     border-radius: 50%;
@@ -122,7 +115,7 @@ latest_posts:
 
   .profile-dot:hover {
     border-color: var(--global-theme-color);
-    transform: scale(1.15);
+    transform: scale(1.12);
   }
 
   .profile-dot.active {
@@ -159,15 +152,16 @@ latest_posts:
     text-decoration: none;
   }
 
-  /* CV toggle section */
+  /* Education, Experience, and Awards */
   .cv-section {
     width: 100%;
-    max-width: 430px;
+    max-width: 720px;
     margin-top: 2rem;
   }
 
   details.cv-toggle,
   details.cv-toggle:last-of-type {
+    width: 100%;
     padding: 0.55rem 0;
     border: 0 !important;
   }
@@ -175,8 +169,8 @@ latest_posts:
   .cv-toggle summary {
     display: flex;
     align-items: center;
-    width: 100%;
-    max-width: 430px;
+    width: 520px;
+    max-width: 100%;
     padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
@@ -184,7 +178,6 @@ latest_posts:
     color: var(--global-text-color);
     font-size: 1rem;
     font-weight: 600;
-    white-space: nowrap;
   }
 
   .cv-toggle summary::-webkit-details-marker {
@@ -210,18 +203,25 @@ latest_posts:
   }
 
   .cv-toggle-content {
-    padding: 0.8rem 0 0.1rem 1.45rem;
+    width: 680px;
+    max-width: 100%;
+    padding: 0.9rem 0 0.1rem 1.45rem;
     color: var(--global-text-color);
     font-size: 0.92rem;
     line-height: 1.5;
   }
 
   .cv-entry {
-    margin: 0 0 0.9rem;
+    margin: 0 0 1rem;
   }
 
   .cv-entry:last-child {
     margin-bottom: 0.3rem;
+  }
+
+  .cv-entry strong {
+    color: var(--global-text-color);
+    font-weight: 500;
   }
 
   .cv-entry span {
@@ -273,22 +273,22 @@ latest_posts:
     height: 39px;
   }
 
-  /* Fanfare from the upper-left corner of the profile image */
+  /* Welcome fanfare from upper-left corner */
   .welcome-fanfare {
-    position: absolute;
+    position: fixed;
     z-index: 2000;
-    top: -15px;
-    left: -15px;
-    width: 230px;
+    top: 0;
+    left: 0;
+    width: 240px;
     height: 250px;
-    overflow: visible;
+    overflow: hidden;
     pointer-events: none;
   }
 
   .welcome-confetti {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 0;
+    left: 0;
     width: 7px;
     height: 13px;
     border-radius: 1px;
@@ -352,8 +352,13 @@ latest_posts:
 
     .cv-toggle summary {
       width: 100%;
-      max-width: 100%;
-      white-space: normal;
+      font-size: 0.96rem;
+    }
+
+    .cv-toggle-content {
+      width: 100%;
+      padding-left: 1.35rem;
+      font-size: 0.86rem;
     }
 
     .institution-logos {
@@ -375,9 +380,7 @@ latest_posts:
     }
 
     .welcome-fanfare {
-      top: -10px;
-      left: -10px;
-      width: 165px;
+      width: 170px;
       height: 190px;
     }
   }
@@ -513,10 +516,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const profileElement = document.querySelector(".profile");
-    const profileImage =
-      document.querySelector(".profile > img") ||
-      document.querySelector(".profile img");
+    const profileImage = document.querySelector(".profile img");
     const profileDots = Array.from(document.querySelectorAll(".profile-dot"));
 
     if (profileImage && profileDots.length > 0) {
@@ -533,17 +533,14 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
           const imageLoader = new Image();
 
           imageLoader.addEventListener("load", function () {
-            /*
-             * al-folio may wrap the image in <picture> and provide responsive
-             * <source> elements. Those sources must be removed or the browser
-             * can continue showing the first image.
-             */
-            const picture = profileImage.closest("picture");
+            const profilePicture = profileImage.closest("picture");
 
-            if (picture) {
-              picture.querySelectorAll("source").forEach(function (source) {
-                source.remove();
-              });
+            if (profilePicture) {
+              profilePicture
+                .querySelectorAll("source")
+                .forEach(function (source) {
+                  source.remove();
+                });
             }
 
             profileImage.removeAttribute("srcset");
@@ -563,17 +560,12 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
             }, 60);
           });
 
-          imageLoader.addEventListener("error", function () {
-            profileImage.classList.remove("profile-image-changing");
-          });
-
           imageLoader.src = nextImage;
         });
       });
     }
 
     if (
-      !profileElement ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
       sessionStorage.getItem("profile-fanfare-shown") === "true"
     ) {
@@ -590,8 +582,8 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
     for (let index = 0; index < 34; index += 1) {
       const confetti = document.createElement("span");
-      const angle = 5 + Math.random() * 110;
-      const distance = 105 + Math.random() * 135;
+      const angle = 5 + Math.random() * 105;
+      const distance = 125 + Math.random() * 120;
       const radians = (angle * Math.PI) / 180;
 
       confetti.className = "welcome-confetti";
@@ -614,7 +606,7 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
       fanfare.appendChild(confetti);
     }
 
-    profileElement.appendChild(fanfare);
+    document.body.appendChild(fanfare);
 
     window.setTimeout(function () {
       fanfare.remove();
