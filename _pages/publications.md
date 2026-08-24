@@ -7,8 +7,8 @@ nav: true
 nav_order: 3
 
 publications:
-  - year: 2025
-    date: "04.16"
+  - year: "2025"
+    month_day: "04.16"
     title: Activating the Gate-Opening of a Metal–Organic Framework and Maximizing Its Adsorption Capacity
     doi: https://doi.org/10.1021/jacs.5c01399
     authors: >-
@@ -18,8 +18,8 @@ publications:
       <em>Journal of the American Chemical Society</em>, 147, 12811–12820.
     impact_factor: "16.6"
 
-  - year: 2025
-    date: "04.16"
+  - year: "2025"
+    month_day: "04.16"
     title: Compositional Complexity of Metal–Organic Frameworks with Programmable Spatial Arrangement of Multi-Metallic Components
     doi: https://doi.org/10.1002/smll.202408119
     authors: >-
@@ -30,8 +30,8 @@ publications:
       <em>Small</em>, 21, 2408119.
     impact_factor: "11.8"
 
-  - year: 2024
-    date: "11.05"
+  - year: "2024"
+    month_day: "11.05"
     title: "MOF-on-MOF Growth: Inducing Naturally Nonpreferred MOFs and Atypical MOF Growth"
     doi: https://doi.org/10.1021/acs.accounts.4c00469
     authors: >-
@@ -42,8 +42,8 @@ publications:
       <em>Accounts of Chemical Research</em>, 57, 3113–3125.
     impact_factor: "17.7"
 
-  - year: 2024
-    date: "06.19"
+  - year: "2024"
+    month_day: "06.19"
     title: A Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites
     doi: https://doi.org/10.1002/smll.202306543
     authors: >-
@@ -54,8 +54,8 @@ publications:
       <em>Small</em>, 20, 2306543.
     impact_factor: "12.1"
 
-  - year: 2024
-    date: "01.29"
+  - year: "2024"
+    month_day: "01.29"
     title: Enhanced Early-Stage Adsorption of Chemical Warfare Agent Simulant by MIL-68-(X%OH)
     doi: https://doi.org/10.1002/bkcs.12794
     authors: >-
@@ -65,8 +65,8 @@ publications:
       <em>Bulletin of the Korean Chemical Society</em>, 45, 67–73.
     impact_factor: "2.2"
 
-  - year: 2023
-    date: "06.20"
+  - year: "2023"
+    month_day: "06.20"
     title: Structural Compromise Between Conflicted Spatial Arrangements of Two Linkers in Metal–Organic Frameworks
     doi: https://doi.org/10.1002/smtd.202201586
     authors: >-
@@ -76,8 +76,8 @@ publications:
       <em>Small Methods</em>, 7, 2201586.
     impact_factor: "10.7"
 
-  - year: 2023
-    date: "09.06"
+  - year: "2023"
+    month_day: "09.06"
     title: Induced Production of Atypical Naturally Non-Preferred Metal–Organic Frameworks and Their Detachment via Provoking Post-Mismatching
     doi: https://doi.org/10.1002/smll.202303580
     authors: >-
@@ -87,8 +87,8 @@ publications:
       <em>Small</em>, 19, 2303580.
     impact_factor: "13.0"
 
-  - year: 2023
-    date: "07.28"
+  - year: "2023"
+    month_day: "07.28"
     title: Enhanced Adsorption Capacity of ZIF-8 for Chemical Warfare Agent Simulants Caused by Its Morphology and Surface Charge
     doi: https://doi.org/10.1038/s41598-023-39507-6
     authors: >-
@@ -98,8 +98,8 @@ publications:
       <em>Scientific Reports</em>, 13, 12250.
     impact_factor: "3.8"
 
-  - year: 2023
-    date: "08.12"
+  - year: "2023"
+    month_day: "08.12"
     title: Defective MOF-74 with Ancillary Open Metal Sites for the Enhanced Adsorption of Chemical Warfare Agent Simulants
     doi: https://doi.org/10.1039/D3DT02025H
     authors: >-
@@ -109,8 +109,8 @@ publications:
       <em>Dalton Transactions</em>, 52, 12143–12151.
     impact_factor: "3.5"
 
-  - year: 2023
-    date: "10.07"
+  - year: "2023"
+    month_day: "10.07"
     title: Boosted Ability of ZIF-8 for Early-Stage Adsorption and Degradation of Chemical Warfare Agent Simulants
     doi: https://doi.org/10.1039/D3NA00807J
     authors: >-
@@ -120,20 +120,20 @@ publications:
       <em>Nanoscale Advances</em>, 5, 6449–6457.
     impact_factor: "4.6"
 
-  - year: 2023
-    date: "12.20"
+  - year: "2023"
+    month_day: "12.20"
     title: "Au Octahedral Nanosponges: 3D Plasmonic Nanolenses for Near-Field Focusing"
     doi: https://doi.org/10.1021/jacs.3c08315
     authors: >-
       Sunwoo Kwon, Myeong Jin Oh, Soohyun Lee,
-      <span class="my-name">Gihyun Lee</span>, Insub Jung<sup>*<sup>,
+      <span class="my-name">Gihyun Lee</span>, Insub Jung<sup>*</sup>,
       Moonhyun Oh<sup>*</sup>, and Sungho Park<sup>*</sup>
     citation: >-
       <em>Journal of the American Chemical Society</em>, 145, 27397–27406.
     impact_factor: "14.5"
 
-  - year: 2023
-    date: "03.13"
+  - year: "2023"
+    month_day: "03.13"
     title: Construction of Defected MOF-74 with Preserved Crystallinity for Efficient Catalytic Cyanosilylation of Benzaldehyde
     doi: https://doi.org/10.1039/D3RA01222K
     authors: >-
@@ -143,8 +143,8 @@ publications:
       <em>RSC Advances</em>, 13, 8220–8226.
     impact_factor: "3.9"
 
-  - year: 2022
-    date: "08.30"
+  - year: "2022"
+    month_day: "08.30"
     title: Enhanced Catalytic Activity of MOF-74 via Providing Additional Open Metal Sites for Cyanosilylation of Aldehydes
     doi: https://doi.org/10.1038/s41598-022-18932-z
     authors: >-
@@ -154,8 +154,8 @@ publications:
       <em>Scientific Reports</em>, 12, 14735.
     impact_factor: "4.6"
 
-  - year: 2022
-    date: "08.23"
+  - year: "2022"
+    month_day: "08.23"
     title: Investigating the Effect of Phospholipids on Droplet Formation and Surface Property Evolution in Microfluidic Devices for Droplet Interface Bilayer Formation
     doi: https://doi.org/10.1063/5.0096193
     authors: >-
@@ -166,8 +166,8 @@ publications:
       <em>Biomicrofluidics</em>, 16, 044112.
     impact_factor: "3.2"
 
-  - year: 2021
-    date: "11.23"
+  - year: "2021"
+    month_day: "11.23"
     title: Lattice-Guided Construction and Harvest of a Naturally Nonpreferred Metal–Organic Framework
     doi: https://doi.org/10.1021/acsnano.1c06207
     authors: >-
@@ -178,8 +178,8 @@ publications:
       <em>ACS Nano</em>, 15, 17907–17916.
     impact_factor: "18.027"
 
-  - year: 2021
-    date: "03.02"
+  - year: "2021"
+    month_day: "03.02"
     title: Rational Manufacture of Yolk–Shell and Core–Shell Metal Oxide Double Layers from Silica-Templated Coordination Polymer Double Layers
     doi: https://doi.org/10.1039/D1QM00034A
     authors: >-
@@ -190,8 +190,8 @@ publications:
       <em>Materials Chemistry Frontiers</em>, 5, 3404–3412.
     impact_factor: "8.683"
 
-  - year: 2020
-    date: "02.12"
+  - year: "2020"
+    month_day: "02.12"
     title: Tip-to-Middle Anisotropic MOF-on-MOF Growth with a Structural Adjustment
     doi: https://doi.org/10.1021/jacs.9b12193
     authors: >-
@@ -201,8 +201,8 @@ publications:
       <em>Journal of the American Chemical Society</em>, 142, 3042–3049.
     impact_factor: "15.419"
 
-  - year: 2019
-    date: "11.22"
+  - year: "2019"
+    month_day: "11.22"
     title: Unbalanced MOF-on-MOF Growth for the Production of Lopsided Core–Shell MIL-88B@MIL-88A with Mismatched Cell Parameters
     doi: https://doi.org/10.1039/C8CC08456D
     authors: >-
@@ -214,7 +214,11 @@ publications:
 ---
 
 <style>
-  /* Hide the title generated automatically by the page layout */
+  .container[role="main"] {
+    width: 86%;
+    max-width: 1320px;
+  }
+
   .post-header {
     display: none;
   }
@@ -226,22 +230,20 @@ publications:
 
   .publications-page {
     width: 100%;
-    max-width: 100%;
   }
 
-  /* Page heading */
   .publications-header {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 2rem;
-    margin: 0 0 2.5rem;
+    margin: 0 0 2.2rem;
   }
 
   .publications-header h1 {
     margin: 0;
     color: var(--global-text-color);
-    font-size: 2.65rem;
+    font-size: 2.5rem;
     font-weight: 400;
     line-height: 1.15;
   }
@@ -257,80 +259,72 @@ publications:
     line-height: 1.4;
   }
 
-  /* Year group: year on the left, entries on the right */
+  /* Patent page와 동일: year | date | information */
   .publication-year-group {
     display: grid;
-    grid-template-columns: 120px minmax(0, 1fr);
-    gap: 2rem;
-    width: 100%;
-    padding: 1.8rem 0;
+    grid-template-columns: 100px 70px minmax(0, 1fr);
+    column-gap: 1.5rem;
+    align-items: start;
+    padding: 1.3rem 0 1.55rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
   .publication-year {
     margin: 0;
     color: var(--global-text-color);
-    font-size: 1.9rem;
-    font-weight: 700;
-    line-height: 1.15;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
   }
 
   .publication-list {
-    min-width: 0;
-    width: 100%;
+    display: contents;
   }
 
-  /* Each entry: date on the left, content on the right */
   .publication-entry {
-    display: grid;
-    grid-template-columns: 68px minmax(0, 1fr);
-    gap: 1.1rem;
-    width: 100%;
-    margin: 0 0 1.8rem;
+    display: contents;
   }
 
-  .publication-entry:last-child {
-    margin-bottom: 0;
+  .publication-entry + .publication-entry::before {
+    content: "";
+    grid-column: 1 / -1;
+    height: 0.9rem;
   }
 
   .publication-date {
-    margin: 0.12rem 0 0;
+    margin: 0;
+    padding-top: 0.32rem;
     color: var(--global-text-color-light);
-    font-size: 0.78rem;
-    font-weight: 600;
-    line-height: 1.35;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
   }
 
   .publication-content {
     min-width: 0;
-    width: 100%;
+    padding-bottom: 1.1rem;
   }
 
-  /* Publication title */
   .publication-title {
-    display: block;
-    width: 100%;
-    margin: 0;
+    margin: 0 0 0.32rem;
     color: var(--global-text-color);
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     font-weight: 700;
-    line-height: 1.4;
-    white-space: normal;
+    line-height: 1.35;
     overflow-wrap: break-word;
-    word-break: normal;
   }
 
-  /* DOI directly below title */
   .doi-row {
-    margin: 0.5rem 0 0.55rem;
+    margin: 0.35rem 0 0.5rem;
   }
 
   .doi-link {
     display: inline-block;
-    padding: 0.3rem 0.75rem;
+    padding: 0.27rem 0.65rem;
     border: 1px solid var(--global-divider-color);
     color: var(--global-text-color) !important;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
@@ -343,12 +337,11 @@ publications:
     text-decoration: none;
   }
 
-  /* Authors */
   .publication-authors {
     margin: 0 0 0.2rem;
     color: var(--global-text-color);
-    font-size: 0.88rem;
-    line-height: 1.45;
+    font-size: 0.82rem;
+    line-height: 1.4;
   }
 
   .my-name {
@@ -356,7 +349,7 @@ publications:
     font-style: normal;
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-underline-offset: 0.14em;
+    text-underline-offset: 0.15rem;
   }
 
   .publication-authors sup {
@@ -367,12 +360,11 @@ publications:
     font-size: 0.7em;
   }
 
-  /* Citation */
   .publication-citation {
     margin: 0;
     color: var(--global-text-color-light);
-    font-size: 0.84rem;
-    line-height: 1.45;
+    font-size: 0.78rem;
+    line-height: 1.4;
   }
 
   .publication-citation em {
@@ -385,32 +377,18 @@ publications:
     white-space: nowrap;
   }
 
-  /* Tablet */
-  @media (max-width: 991px) {
-    .publication-year-group {
-      grid-template-columns: 90px minmax(0, 1fr);
-      gap: 1.4rem;
+  @media (max-width: 575px) {
+    .container[role="main"] {
+      width: calc(100% - 2rem);
     }
 
-    .publication-year {
-      font-size: 1.65rem;
-    }
-
-    .publication-entry {
-      grid-template-columns: 58px minmax(0, 1fr);
-      gap: 0.9rem;
-    }
-  }
-
-  /* Mobile */
-  @media (max-width: 767px) {
     .publications-header {
       display: block;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.5rem;
     }
 
     .publications-header h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     .publication-legend {
@@ -420,33 +398,47 @@ publications:
 
     .publication-year-group {
       display: block;
-      padding: 1.5rem 0;
+      padding: 1rem 0 1.2rem;
     }
 
     .publication-year {
-      margin-bottom: 1.1rem;
-      font-size: 1.6rem;
+      margin-bottom: 0.25rem;
+      font-size: 1.4rem;
+    }
+
+    .publication-list {
+      display: block;
     }
 
     .publication-entry {
       display: block;
-      margin-bottom: 1.6rem;
+      margin-top: 1.1rem;
+    }
+
+    .publication-entry + .publication-entry::before {
+      display: none;
     }
 
     .publication-date {
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.45rem;
+      padding-top: 0;
+      font-size: 0.74rem;
+    }
+
+    .publication-content {
+      padding-bottom: 0;
     }
 
     .publication-title {
-      font-size: 1rem;
+      font-size: 1.02rem;
     }
 
     .publication-authors {
-      font-size: 0.85rem;
+      font-size: 0.78rem;
     }
 
     .publication-citation {
-      font-size: 0.82rem;
+      font-size: 0.74rem;
     }
   }
 </style>
@@ -468,9 +460,17 @@ publications:
 
       <div class="publication-list">
         {% for publication in year_group.items %}
-          <article class="publication-entry">
-            <p class="publication-date">{{ publication.date }}</p>
+          {% unless forloop.first %}
+            <div></div>
+          {% endunless %}
 
+          {% if forloop.first %}
+            <p class="publication-date">{{ publication.month_day }}</p>
+          {% else %}
+            <p class="publication-date"></p>
+          {% endif %}
+
+          <article class="publication-entry">
             <div class="publication-content">
               <h3 class="publication-title">{{ publication.title }}</h3>
 
@@ -489,7 +489,7 @@ publications:
 
               <p class="publication-citation">
                 {{ publication.citation }}
-                {% if publication.impact_factor != "" %}
+                {% if publication.impact_factor and publication.impact_factor != "" %}
                   <span class="impact-factor">
                     (IF = {{ publication.impact_factor }})
                   </span>
