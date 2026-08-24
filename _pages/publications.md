@@ -8,7 +8,7 @@ nav_order: 3
 
 publications:
   - year: 2025
-    date: ""
+    date: "00.00"
     title: Activating the Gate-Opening of a Metal–Organic Framework and Maximizing Its Adsorption Capacity
     doi: https://doi.org/10.1021/jacs.5c01399
     authors: >-
@@ -19,7 +19,7 @@ publications:
     impact_factor: ""
 
   - year: 2025
-    date: ""
+    date: "00.00"
     title: Compositional Complexity of Metal–Organic Frameworks with Programmable Spatial Arrangement of Multi-Metallic Components
     doi: https://doi.org/10.1002/smll.202408119
     authors: >-
@@ -31,7 +31,7 @@ publications:
     impact_factor: ""
 
   - year: 2024
-    date: ""
+    date: "00.00"
     title: "MOF-on-MOF Growth: Inducing Naturally Nonpreferred MOFs and Atypical MOF Growth"
     doi: https://doi.org/10.1021/acs.accounts.4c00469
     authors: >-
@@ -55,7 +55,7 @@ publications:
     impact_factor: ""
 
   - year: 2024
-    date: ""
+    date: "00.00"
     title: Enhanced Early-Stage Adsorption of Chemical Warfare Agent Simulant by MIL-68-(X%OH)
     doi: https://doi.org/10.1002/bkcs.12794
     authors: >-
@@ -66,7 +66,7 @@ publications:
     impact_factor: ""
 
   - year: 2023
-    date: ""
+    date: "00.00"
     title: Structural Compromise Between Conflicted Spatial Arrangements of Two Linkers in Metal–Organic Frameworks
     doi: https://doi.org/10.1002/smtd.202201586
     authors: >-
@@ -77,7 +77,7 @@ publications:
     impact_factor: ""
 
   - year: 2023
-    date: ""
+    date: "00.00"
     title: Induced Production of Atypical Naturally Non-Preferred Metal–Organic Frameworks and Their Detachment via Provoking Post-Mismatching
     doi: https://doi.org/10.1002/smll.202303580
     authors: >-
@@ -88,7 +88,7 @@ publications:
     impact_factor: ""
 
   - year: 2023
-    date: ""
+    date: "00.00"
     title: Enhanced Adsorption Capacity of ZIF-8 for Chemical Warfare Agent Simulants Caused by Its Morphology and Surface Charge
     doi: https://doi.org/10.1038/s41598-023-39507-6
     authors: >-
@@ -99,7 +99,7 @@ publications:
     impact_factor: ""
 
   - year: 2023
-    date: ""
+    date: "00.00"
     title: Defective MOF-74 with Ancillary Open Metal Sites for the Enhanced Adsorption of Chemical Warfare Agent Simulants
     doi: https://doi.org/10.1039/D3DT02025H
     authors: >-
@@ -110,7 +110,7 @@ publications:
     impact_factor: ""
 
   - year: 2023
-    date: ""
+    date: "00.00"
     title: Boosted Ability of ZIF-8 for Early-Stage Adsorption and Degradation of Chemical Warfare Agent Simulants
     doi: https://doi.org/10.1039/D3NA00807J
     authors: >-
@@ -121,7 +121,7 @@ publications:
     impact_factor: ""
 
   - year: 2023
-    date: ""
+    date: "00.00"
     title: "Au Octahedral Nanosponges: 3D Plasmonic Nanolenses for Near-Field Focusing"
     doi: https://doi.org/10.1021/jacs.3c08315
     authors: >-
@@ -133,7 +133,7 @@ publications:
     impact_factor: ""
 
   - year: 2023
-    date: ""
+    date: "00.00"
     title: Construction of Defected MOF-74 with Preserved Crystallinity for Efficient Catalytic Cyanosilylation of Benzaldehyde
     doi: https://doi.org/10.1039/D3RA01222K
     authors: >-
@@ -144,7 +144,7 @@ publications:
     impact_factor: ""
 
   - year: 2022
-    date: ""
+    date: "00.00"
     title: Enhanced Catalytic Activity of MOF-74 via Providing Additional Open Metal Sites for Cyanosilylation of Aldehydes
     doi: https://doi.org/10.1038/s41598-022-18932-z
     authors: >-
@@ -155,7 +155,7 @@ publications:
     impact_factor: ""
 
   - year: 2022
-    date: ""
+    date: "00.00"
     title: Investigating the Effect of Phospholipids on Droplet Formation and Surface Property Evolution in Microfluidic Devices for Droplet Interface Bilayer Formation
     doi: https://doi.org/10.1063/5.0096193
     authors: >-
@@ -167,7 +167,7 @@ publications:
     impact_factor: ""
 
   - year: 2021
-    date: ""
+    date: "00.00"
     title: Lattice-Guided Construction and Harvest of a Naturally Nonpreferred Metal–Organic Framework
     doi: https://doi.org/10.1021/acsnano.1c06207
     authors: >-
@@ -179,7 +179,7 @@ publications:
     impact_factor: ""
 
   - year: 2021
-    date: ""
+    date: "00.00"
     title: Rational Manufacture of Yolk–Shell and Core–Shell Metal Oxide Double Layers from Silica-Templated Coordination Polymer Double Layers
     doi: https://doi.org/10.1039/D1QM00034A
     authors: >-
@@ -191,7 +191,7 @@ publications:
     impact_factor: ""
 
   - year: 2020
-    date: ""
+    date: "00.00"
     title: Tip-to-Middle Anisotropic MOF-on-MOF Growth with a Structural Adjustment
     doi: https://doi.org/10.1021/jacs.9b12193
     authors: >-
@@ -202,7 +202,7 @@ publications:
     impact_factor: ""
 
   - year: 2019
-    date: ""
+    date: "00.00"
     title: Unbalanced MOF-on-MOF Growth for the Production of Lopsided Core–Shell MIL-88B@MIL-88A with Mismatched Cell Parameters
     doi: https://doi.org/10.1039/C8CC08456D
     authors: >-
