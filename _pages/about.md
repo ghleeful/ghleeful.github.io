@@ -71,13 +71,11 @@ latest_posts:
 ---
 
 <style>
-  /* Main profile heading */
   h1.post-title {
     font-size: 3.4rem !important;
     line-height: 1.1;
   }
 
-  /* Profile image */
   .profile img {
     width: 100% !important;
     height: 430px !important;
@@ -91,7 +89,6 @@ latest_posts:
     opacity: 0.25;
   }
 
-  /* Slideshow dots */
   .profile-dots {
     display: flex;
     justify-content: center;
@@ -123,7 +120,6 @@ latest_posts:
     background-color: var(--global-theme-color);
   }
 
-  /* Links below profile image */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -152,10 +148,9 @@ latest_posts:
     text-decoration: none;
   }
 
-  /* Education, Experience, Awards and Expertise toggles */
   .cv-section {
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
     margin-top: 2rem;
   }
 
@@ -219,15 +214,14 @@ latest_posts:
     color: var(--global-text-color-light);
   }
 
-  /* Institution logos */
   .institution-logos {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: clamp(2rem, 5vw, 4.5rem);
     width: 100%;
-    margin: 2.2rem auto 0.7rem;
-    padding: 1.2rem 0 0.6rem;
+    margin: 2rem auto 0.5rem;
+    padding: 1rem 0 0.4rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
@@ -235,7 +229,6 @@ latest_posts:
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
   }
 
   .institution-logos img {
@@ -264,7 +257,6 @@ latest_posts:
     height: 39px;
   }
 
-  /* Left-side welcome fanfare */
   .welcome-fanfare {
     position: fixed;
     z-index: 2000;
@@ -306,7 +298,6 @@ latest_posts:
     }
   }
 
-  /* Desktop profile layout */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -317,7 +308,6 @@ latest_posts:
     }
   }
 
-  /* Mobile layout */
   @media (max-width: 575px) {
     h1.post-title {
       font-size: 2.6rem !important;
@@ -382,7 +372,7 @@ latest_posts:
   }
 </style>
 
-Hi there! 
+Hi there!  
 Welcome to my website. :)
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
@@ -433,13 +423,13 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
         <strong>Graduate Student Idea Incubation Fund: Academic Research Fellowship</strong><br>
         <span>Yonsei University · 2023</span>
       </p>
-      
+
       <p class="cv-entry">
         <strong>Best Oral Presentation Award</strong><br>
         <span>Inorganic Chemistry Division of Korean Chemical Society · 2022</span>
       </p>
 
-       <p class="cv-entry">
+      <p class="cv-entry">
         <strong>Excellent RSC Poster Presentation Prize</strong><br>
         <span>129th General Meeting of the Korean Chemical Society · 2022</span>
       </p>
@@ -501,6 +491,9 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const profileImage = document.querySelector(".profile img");
+    const profilePicture = profileImage
+      ? profileImage.closest("picture")
+      : null;
     const profileDots = Array.from(document.querySelectorAll(".profile-dot"));
 
     if (profileImage && profileDots.length > 0) {
@@ -517,8 +510,17 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
           const imageLoader = new Image();
 
           imageLoader.addEventListener("load", function () {
+            if (profilePicture) {
+              profilePicture.querySelectorAll("source").forEach(function (source) {
+                source.remove();
+              });
+            }
+
+            profileImage.removeAttribute("srcset");
+            profileImage.removeAttribute("sizes");
             profileImage.src = nextImage;
-            profileImage.alt = dot.getAttribute("aria-label") || "Profile image";
+            profileImage.alt =
+              dot.getAttribute("aria-label") || "Profile image";
 
             profileDots.forEach(function (item) {
               item.classList.remove("active");
@@ -549,7 +551,13 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     fanfare.className = "welcome-fanfare";
     fanfare.setAttribute("aria-hidden", "true");
 
-    const colors = ["#8c6a24", "#cfb991", "#f1d6dc", "#26231f", "#ffffff"];
+    const colors = [
+      "#8c6a24",
+      "#cfb991",
+      "#f1d6dc",
+      "#26231f",
+      "#ffffff",
+    ];
 
     for (let index = 0; index < 34; index += 1) {
       const confetti = document.createElement("span");
@@ -584,3 +592,4 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     }, 1900);
   });
 </script>
+<image name=[Image #1] path="C:\Users\rhaeh\AppData\Local\Temp\codex-clipboard-bbaa2924-5d7e-4547-a593-d8da45808b1e.png"><<ImageDisplayed>></image>
