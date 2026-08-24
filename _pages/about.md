@@ -155,7 +155,7 @@ latest_posts:
   /* Education, Experience, Awards and Expertise toggles */
   .cv-section {
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
     margin-top: 2rem;
   }
 
