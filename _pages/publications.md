@@ -460,17 +460,9 @@ publications:
 
       <div class="publication-list">
         {% for publication in year_group.items %}
-          {% unless forloop.first %}
-            <div></div>
-          {% endunless %}
-
-          {% if forloop.first %}
-            <p class="publication-date">{{ publication.month_day }}</p>
-          {% else %}
-            <p class="publication-date"></p>
-          {% endif %}
-
           <article class="publication-entry">
+            <p class="publication-date">{{ publication.date }}</p>
+
             <div class="publication-content">
               <h3 class="publication-title">{{ publication.title }}</h3>
 
@@ -501,4 +493,5 @@ publications:
       </div>
     </section>
   {% endfor %}
+</div>
 </div>
