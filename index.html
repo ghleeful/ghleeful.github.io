@@ -3,13 +3,21 @@
     --max-content-width: 1050px;
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="apple-touch-icon" href="/assets/img/gl-icon.png?v=8dcf76bf9a082a90adbb848c56d35b65"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://ghleeful.github.io/"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">Profile <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">Research </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/patents/">Patents </a> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">Gihyun</span> Lee </h1> <p class="desc"><b>Postdoctoral Research Associate</b> at <a href="https://www.purdue.edu/" rel="external nofollow noopener" target="_blank">Purdue University</a>, Department of Chemistry </p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/profile-01-480.webp 480w,/assets/img/profile-01-800.webp 800w,/assets/img/profile-01-1400.webp 1400w," type="image/webp" sizes="(min-width: 1050px) 306.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/profile-01.png?v=8c7cf4d78d8c1c44601bcada49eeb3c0" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="profile-01.png" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="more-info"> <div class="profile-dots" aria-label="Profile image selector"> <button class="profile-dot active" type="button" data-image="/assets/img/profile-01.png" aria-label="Show profile image 1"></button> <button class="profile-dot" type="button" data-image="/assets/img/profile-02.jpg" aria-label="Show profile image 2"></button> </div> <div class="profile-links"> <a href="/assets/pdf/Gihyun%20Lee_CV.pdf" target="_blank" rel="noopener" aria-label="CV" title="Open CV">CV</a> <a href="https://scholar.google.com/citations?user=FmEf7ccAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">Scholar</a> <a href="https://www.linkedin.com/in/leegh" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a> <a href="mailto:lee5919@purdue.edu" aria-label="Email" title="Email">Email</a> </div> </div> </div> <div class="clearfix"> <style>
+  /* Main profile heading */
   h1.post-title {
     font-size: 3.4rem !important;
     line-height: 1.1;
   }
 
+  /* Profile container */
+  .profile {
+    position: relative;
+    overflow: visible !important;
+  }
+
   /* Profile image */
   .profile img {
+    display: block;
     width: 100% !important;
     height: 430px !important;
     border-radius: 0 !important;
@@ -26,13 +34,13 @@
   .profile-dots {
     display: flex;
     justify-content: center;
-    gap: 0.45rem;
+    gap: 0.5rem;
     margin: 0.65rem 0 0.7rem;
   }
 
   .profile-dot {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     padding: 0;
     border: 1px solid var(--global-text-color-light);
     border-radius: 50%;
@@ -46,7 +54,7 @@
 
   .profile-dot:hover {
     border-color: var(--global-theme-color);
-    transform: scale(1.12);
+    transform: scale(1.15);
   }
 
   .profile-dot.active {
@@ -54,7 +62,7 @@
     background-color: var(--global-theme-color);
   }
 
-  /* Profile links */
+  /* Links below profile image */
   .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -83,14 +91,15 @@
     text-decoration: none;
   }
 
-  /* CV toggles */
+  /* CV toggle section */
   .cv-section {
     width: 100%;
-    max-width: 520px;
-    margin-top: 2.2rem;
+    max-width: 430px;
+    margin-top: 2rem;
   }
 
-  details.cv-toggle {
+  details.cv-toggle,
+  details.cv-toggle:last-of-type {
     padding: 0.55rem 0;
     border: 0 !important;
   }
@@ -98,8 +107,8 @@
   .cv-toggle summary {
     display: flex;
     align-items: center;
-    width: 480px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 430px;
     padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
@@ -120,6 +129,7 @@
 
   .cv-toggle summary::before {
     flex: 0 0 1.2rem;
+    width: 1.2rem;
     margin-right: 0.25rem;
     color: var(--global-theme-color);
     font-size: 1.1rem;
@@ -157,8 +167,8 @@
     justify-content: center;
     gap: clamp(2rem, 5vw, 4.5rem);
     width: 100%;
-    margin: 2rem auto 0.4rem;
-    padding: 1rem 0 0.35rem;
+    margin: 2.2rem auto 0.7rem;
+    padding: 1.2rem 0 0.6rem;
     border-top: 1px solid var(--global-divider-color);
   }
 
@@ -195,22 +205,22 @@
     height: 39px;
   }
 
-  /* Left-side fanfare */
+  /* Fanfare from the upper-left corner of the profile image */
   .welcome-fanfare {
-    position: fixed;
+    position: absolute;
     z-index: 2000;
-    top: 4.5rem;
-    left: 0;
-    width: 190px;
-    height: 230px;
-    overflow: hidden;
+    top: -15px;
+    left: -15px;
+    width: 230px;
+    height: 250px;
+    overflow: visible;
     pointer-events: none;
   }
 
   .welcome-confetti {
     position: absolute;
-    top: 45%;
-    left: -15px;
+    top: 18px;
+    left: 18px;
     width: 7px;
     height: 13px;
     border-radius: 1px;
@@ -237,7 +247,7 @@
     }
   }
 
-  /* Desktop */
+  /* Desktop profile layout */
   @media (min-width: 576px) {
     .profile {
       width: 26% !important;
@@ -248,7 +258,7 @@
     }
   }
 
-  /* Mobile */
+  /* Mobile layout */
   @media (max-width: 575px) {
     h1.post-title {
       font-size: 2.6rem !important;
@@ -274,6 +284,7 @@
 
     .cv-toggle summary {
       width: 100%;
+      max-width: 100%;
       white-space: normal;
     }
 
@@ -296,9 +307,10 @@
     }
 
     .welcome-fanfare {
-      top: 3.5rem;
-      width: 135px;
-      height: 180px;
+      top: -10px;
+      left: -10px;
+      width: 165px;
+      height: 190px;
     }
   }
 
@@ -313,23 +325,15 @@
       transition: none;
     }
   }
-</style> <p>Hi there! Welcome to my website. :)</p> <p>I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.</p> <p>My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids. Please take a look at my publication list in the tab in the upper right corner for more information.</p> <p>Feel free to <a href="mailto:lee5919@purdue.edu" title="lee5919@purdue.edu">email</a> me if you are interested in collaborating. You are always welcome!</p> <div class="cv-section"> <details class="cv-toggle"> <summary>Education</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Ph.D. in Chemistry</strong><br> <span>Yonsei University · 2018–2025</span><br> <span>Advisor: Moonhyun Oh</span> </p> <p class="cv-entry"> <strong>B.Sc. in Chemistry</strong><br> <span>University of Victoria · 2013–2018</span> </p> </div> </details> <details class="cv-toggle"> <summary>Experience</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Postdoctoral Research Associate</strong><br> <span>Purdue University · 2025–Present</span> </p> </div> </details> <details class="cv-toggle"> <summary>Selected Awards &amp; Scholarships</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Outstanding BK21 Participant Recognition Award</strong><br> <span>Yonsei University · 2026</span> </p> <p class="cv-entry"> <strong>Graduate Student Idea Incubation Fund: Academic Research Fellowship</strong><br> <span>Yonsei University · 2023</span> </p> <p class="cv-entry"> <strong>Best Oral Presentation Award</strong><br> <span>Inorganic Chemistry Division of Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Excellent RSC Poster Presentation Prize</strong><br> <span>129th General Meeting of the Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Merit Academic Paper Award</strong><br> <span>Yonsei University · 2020</span> </p> <p class="cv-entry"> <strong>Entrance Scholarship</strong><br> <span>University of Victoria · 2013</span> </p> </div> </details> </div> <div class="institution-logos"> <a href="https://www.uvic.ca/" target="_blank" rel="noopener" aria-label="University of Victoria"> <img class="institution-logo-uvic" src="/assets/img/uvic-logo.png" alt="University of Victoria"> </a> <a href="https://www.yonsei.ac.kr/" target="_blank" rel="noopener" aria-label="Yonsei University"> <img class="institution-logo-yonsei" src="/assets/img/yonsei-logo.png" alt="Yonsei University"> </a> <a href="https://www.purdue.edu/" target="_blank" rel="noopener" aria-label="Purdue University"> <img class="institution-logo-purdue" src="/assets/img/purdue-logo.png" alt="Purdue University"> </a> </div> <script>
+</style> <p>Hi there!<br> Welcome to my website. :)</p> <p>I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.</p> <p>My research interests lie in functional and responsive coordination materials, particularly in understanding how molecular properties change upon incorporation into crystalline solids. Please take a look at my publication list in the tab in the upper right corner for more information.</p> <p>Feel free to <a href="mailto:lee5919@purdue.edu" title="lee5919@purdue.edu">email</a> me if you are interested in collaborating. You are always welcome!</p> <div class="cv-section"> <details class="cv-toggle"> <summary>Education</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Ph.D. in Chemistry</strong><br> <span>Yonsei University · 2018–2025</span><br> <span>Advisor: Moonhyun Oh</span> </p> <p class="cv-entry"> <strong>B.Sc. in Chemistry</strong><br> <span>University of Victoria · 2013–2018</span> </p> </div> </details> <details class="cv-toggle"> <summary>Experience</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Postdoctoral Research Associate</strong><br> <span>Purdue University · 2025–Present</span> </p> </div> </details> <details class="cv-toggle"> <summary>Selected Awards &amp; Scholarships</summary> <div class="cv-toggle-content"> <p class="cv-entry"> <strong>Outstanding BK21 Participant Recognition Award</strong><br> <span>Yonsei University · 2026</span> </p> <p class="cv-entry"> <strong>Graduate Student Idea Incubation Fund: Academic Research Fellowship</strong><br> <span>Yonsei University · 2023</span> </p> <p class="cv-entry"> <strong>Best Oral Presentation Award</strong><br> <span>Inorganic Chemistry Division of Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Excellent RSC Poster Presentation Prize</strong><br> <span>129th General Meeting of the Korean Chemical Society · 2022</span> </p> <p class="cv-entry"> <strong>Merit Academic Paper Award</strong><br> <span>Yonsei University · 2020</span> </p> <p class="cv-entry"> <strong>Entrance Scholarship</strong><br> <span>University of Victoria · 2013</span> </p> </div> </details> </div> <div class="institution-logos"> <a href="https://www.uvic.ca/" target="_blank" rel="noopener" aria-label="University of Victoria"> <img class="institution-logo-uvic" src="/assets/img/uvic-logo.png" alt="University of Victoria"> </a> <a href="https://www.yonsei.ac.kr/" target="_blank" rel="noopener" aria-label="Yonsei University"> <img class="institution-logo-yonsei" src="/assets/img/yonsei-logo.png" alt="Yonsei University"> </a> <a href="https://www.purdue.edu/" target="_blank" rel="noopener" aria-label="Purdue University"> <img class="institution-logo-purdue" src="/assets/img/purdue-logo.png" alt="Purdue University"> </a> </div> <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const profileImage = document.querySelector(".profile img");
+    const profileElement = document.querySelector(".profile");
+    const profileImage =
+      document.querySelector(".profile > img") ||
+      document.querySelector(".profile img");
     const profileDots = Array.from(document.querySelectorAll(".profile-dot"));
 
     if (profileImage && profileDots.length > 0) {
-      const picture = profileImage.closest("picture");
-
-      if (picture) {
-        picture.querySelectorAll("source").forEach(function (source) {
-          source.remove();
-        });
-      }
-
-      profileImage.removeAttribute("srcset");
-      profileImage.removeAttribute("sizes");
-
       profileDots.forEach(function (dot) {
         dot.addEventListener("click", function () {
           const nextImage = dot.dataset.image;
@@ -343,6 +347,19 @@
           const imageLoader = new Image();
 
           imageLoader.addEventListener("load", function () {
+            /*
+             * al-folio may wrap the image in <picture> and provide responsive
+             * <source> elements. Those sources must be removed or the browser
+             * can continue showing the first image.
+             */
+            const picture = profileImage.closest("picture");
+
+            if (picture) {
+              picture.querySelectorAll("source").forEach(function (source) {
+                source.remove();
+              });
+            }
+
             profileImage.removeAttribute("srcset");
             profileImage.removeAttribute("sizes");
             profileImage.src = nextImage;
@@ -360,12 +377,17 @@
             }, 60);
           });
 
+          imageLoader.addEventListener("error", function () {
+            profileImage.classList.remove("profile-image-changing");
+          });
+
           imageLoader.src = nextImage;
         });
       });
     }
 
     if (
+      !profileElement ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
       sessionStorage.getItem("profile-fanfare-shown") === "true"
     ) {
@@ -382,8 +404,8 @@
 
     for (let index = 0; index < 34; index += 1) {
       const confetti = document.createElement("span");
-      const angle = -38 + Math.random() * 156;
-      const distance = 125 + Math.random() * 115;
+      const angle = 5 + Math.random() * 110;
+      const distance = 105 + Math.random() * 135;
       const radians = (angle * Math.PI) / 180;
 
       confetti.className = "welcome-confetti";
@@ -406,7 +428,7 @@
       fanfare.appendChild(confetti);
     }
 
-    document.body.appendChild(fanfare);
+    profileElement.appendChild(fanfare);
 
     window.setTimeout(function () {
       fanfare.remove();
