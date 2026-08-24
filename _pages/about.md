@@ -382,7 +382,8 @@ latest_posts:
   }
 </style>
 
-Hi there! Welcome to my website. :)
+Hi there! 
+Welcome to my website. :)
 
 I’m Gihyun Lee, a postdoctoral research associate at Purdue University, USA.
 
@@ -397,18 +398,13 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     <div class="cv-toggle-content">
       <p class="cv-entry">
         <strong>Ph.D. in Chemistry</strong><br>
-        <span>University Name · 20XX–20XX</span><br>
-        <span>Advisor: Professor Name</span>
+        <span>Yonsei University · 2018–2025</span><br>
+        <span>Advisor: Moonhyun Oh</span>
       </p>
 
       <p class="cv-entry">
-        <strong>M.S. in Chemistry</strong><br>
-        <span>University Name · 20XX–20XX</span>
-      </p>
-
-      <p class="cv-entry">
-        <strong>B.S. in Chemistry</strong><br>
-        <span>University Name · 20XX–20XX</span>
+        <strong>B.Sc. in Chemistry</strong><br>
+        <span>University of Victoria · 2013–2018</span>
       </p>
     </div>
   </details>
@@ -419,42 +415,43 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
     <div class="cv-toggle-content">
       <p class="cv-entry">
         <strong>Postdoctoral Research Associate</strong><br>
-        <span>Purdue University · 20XX–Present</span>
-      </p>
-
-      <p class="cv-entry">
-        <strong>Previous Position</strong><br>
-        <span>Institution Name · 20XX–20XX</span>
+        <span>Purdue University · 2025–Present</span>
       </p>
     </div>
   </details>
 
   <details class="cv-toggle">
-    <summary>Selected Awards</summary>
+    <summary>Selected Awards & Scholarships</summary>
 
     <div class="cv-toggle-content">
       <p class="cv-entry">
-        <strong>Award Name</strong><br>
-        <span>Awarding organization · Year</span>
+        <strong>Outstanding BK21 Participant Recognition Award</strong><br>
+        <span>Yonsei University · 2026</span>
       </p>
 
       <p class="cv-entry">
-        <strong>Award Name</strong><br>
-        <span>Awarding organization · Year</span>
+        <strong>Graduate Student Idea Incubation Fund: Academic Research Fellowship</strong><br>
+        <span>Yonsei University · 2023</span>
       </p>
-    </div>
-  </details>
-
-  <details class="cv-toggle">
-    <summary>Expertise</summary>
-
-    <div class="cv-toggle-content">
+      
       <p class="cv-entry">
-        Metal–organic frameworks · Coordination chemistry · Functional crystalline solids
+        <strong>Best Oral Presentation Award</strong><br>
+        <span>Inorganic Chemistry Division of Korean Chemical Society · 2022</span>
       </p>
 
+       <p class="cv-entry">
+        <strong>Excellent RSC Poster Presentation Prize</strong><br>
+        <span>129th General Meeting of the Korean Chemical Society · 2022</span>
+      </p>
+
       <p class="cv-entry">
-        Single-crystal X-ray diffraction · Materials characterization · Ligand synthesis
+        <strong>Merit Academic Paper Award</strong><br>
+        <span>Yonsei University · 2020</span>
+      </p>
+
+      <p class="cv-entry">
+        <strong>Entrance Scholarship</strong><br>
+        <span>University of Victoria · 2013</span>
       </p>
     </div>
   </details>
@@ -556,8 +553,8 @@ Feel free to [email](mailto:lee5919@purdue.edu "lee5919@purdue.edu") me if you a
 
     for (let index = 0; index < 34; index += 1) {
       const confetti = document.createElement("span");
-      const angle = -78 + Math.random() * 156;
-      const distance = 75 + Math.random() * 115;
+      const angle = -38 + Math.random() * 156;
+      const distance = 125 + Math.random() * 115;
       const radians = (angle * Math.PI) / 180;
 
       confetti.className = "welcome-confetti";
