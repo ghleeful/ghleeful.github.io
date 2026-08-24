@@ -8,13 +8,11 @@ nav_order: 4
 ---
 
 <style>
-  /* Page width */
   .container[role="main"] {
     width: 86%;
     max-width: 1320px;
   }
 
-  /* Page title */
   h1.post-title {
     margin-bottom: 2.2rem;
     font-size: 2.5rem !important;
@@ -22,7 +20,7 @@ nav_order: 4
     line-height: 1.15;
   }
 
-  /* Patent entry: year | date | information */
+  /* year | date | information */
   .patent-entry {
     display: grid;
     grid-template-columns: 100px 70px minmax(0, 1fr);
@@ -32,7 +30,6 @@ nav_order: 4
     border-top: 1px solid var(--global-divider-color);
   }
 
-  /* Year */
   .patent-year {
     margin: 0;
     color: var(--global-text-color);
@@ -41,7 +38,6 @@ nav_order: 4
     line-height: 1.2;
   }
 
-  /* Filing or registration date */
   .patent-date {
     margin: 0;
     padding-top: 0.32rem;
@@ -52,12 +48,10 @@ nav_order: 4
     white-space: nowrap;
   }
 
-  /* Patent content */
   .patent-content {
     min-width: 0;
   }
 
-  /* Patent title */
   .patent-title {
     margin: 0 0 0.32rem;
     color: var(--global-text-color);
@@ -66,7 +60,6 @@ nav_order: 4
     line-height: 1.35;
   }
 
-  /* Inventors */
   .patent-inventors {
     margin: 0 0 0.2rem;
     color: var(--global-text-color);
@@ -74,7 +67,6 @@ nav_order: 4
     line-height: 1.4;
   }
 
-  /* Patent number */
   .patent-details {
     margin: 0;
     color: var(--global-text-color-light);
@@ -82,7 +74,6 @@ nav_order: 4
     line-height: 1.4;
   }
 
-  /* Current author's name */
   .patent-inventors .current-author {
     color: var(--global-text-color);
     text-decoration: underline;
@@ -90,7 +81,6 @@ nav_order: 4
     text-underline-offset: 0.15rem;
   }
 
-  /* Mobile layout */
   @media (max-width: 575px) {
     .container[role="main"] {
       width: calc(100% - 2rem);
@@ -139,13 +129,12 @@ nav_order: 4
 <div class="patent-list">
   <article class="patent-entry">
     <p class="patent-year">2026</p>
-
-    <!-- 실제 등록 월·일로 변경 -->
     <p class="patent-date">06.30</p>
 
     <div class="patent-content">
       <h2 class="patent-title">
-        Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites
+        Drop-and-Drain Method for Convenient and Efficient Fabrication of
+        MOF/Fiber Composites
       </h2>
 
       <p class="patent-inventors">
@@ -161,13 +150,12 @@ nav_order: 4
 
   <article class="patent-entry">
     <p class="patent-year">2023</p>
-
-    <!-- 실제 출원 월·일로 변경 -->
     <p class="patent-date">10.12</p>
 
     <div class="patent-content">
       <h2 class="patent-title">
-        Drop-and-Drain Method for Convenient and Efficient Fabrication of MOF/Fiber Composites
+        Drop-and-Drain Method for Convenient and Efficient Fabrication of
+        MOF/Fiber Composites
       </h2>
 
       <p class="patent-inventors">
