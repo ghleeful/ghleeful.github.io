@@ -454,6 +454,7 @@ publications:
   </header>
 
   {% assign publication_years = page.publications | group_by: "year" %}
+
   {% for year_group in publication_years %}
     <section class="publication-year-group">
       <h2 class="publication-year">{{ year_group.name }}</h2>
@@ -464,7 +465,9 @@ publications:
             <p class="publication-date">{{ publication.date }}</p>
 
             <div class="publication-content">
-              <h3 class="publication-title">{{ publication.title }}</h3>
+              <h3 class="publication-title">
+                {{ publication.title }}
+              </h3>
 
               <div class="doi-row">
                 <a
@@ -477,10 +480,13 @@ publications:
                 </a>
               </div>
 
-              <p class="publication-authors">{{ publication.authors }}</p>
+              <p class="publication-authors">
+                {{ publication.authors }}
+              </p>
 
               <p class="publication-citation">
                 {{ publication.citation }}
+
                 {% if publication.impact_factor and publication.impact_factor != "" %}
                   <span class="impact-factor">
                     (IF = {{ publication.impact_factor }})
@@ -493,5 +499,4 @@ publications:
       </div>
     </section>
   {% endfor %}
-</div>
 </div>
