@@ -126,8 +126,8 @@ publications:
     doi: https://doi.org/10.1021/jacs.3c08315
     authors: >-
       Sunwoo Kwon, Myeong Jin Oh, Soohyun Lee,
-      <span class="my-name">Gihyun Lee</span>, Insub Jung,
-      Moonhyun Oh<sup>*</sup>, and Sungho Park
+      <span class="my-name">Gihyun Lee</span>, Insub Jung<sup>*<sup>,
+      Moonhyun Oh<sup>*</sup>, and Sungho Park<sup>*</sup>
     citation: >-
       <em>Journal of the American Chemical Society</em>, 145, 27397–27406.
     impact_factor: "14.5"
